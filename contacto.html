@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- Place your kit's code here -->
+    <script
+      src="https://kit.fontawesome.com/5d20ce5ce5.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- onwheel="myFunction(event)" -->
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><img
+              src="img/logo--white.png"
+              alt="logo Jose Ivan Acosta Figueroa"
+              class="header__logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Menu -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="amigos.html">Amigos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="estudios.html">Estudios</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Familia
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="papa.html">Papá</a></li>
+                  <li><a class="dropdown-item" href="papa.html">Mamá</a></li>
+                  <li>
+                    <a class="dropdown-item" href="papa.html">Hermanos</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="banner--2">
+      <div class="container py-5 pb-5 min-wh-100 centrador">
+        <div class="row">
+          <!-- Col-md-6 -->
+          <div class="col-md-6 centrador">
+            <!-- Google Maps -->
+            <div class="centrador">
+              <div class="gmap_canvas">
+                <iframe
+                  src="https://maps.google.com/maps?q=go%20plus%20peru&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                  id="gmap_canvas"
+                  frameborder="0"
+                  scrolling="no"
+                  style="width: 400px; height: 400px"
+                ></iframe
+                ><a
+                  href="https://fnftest.net/fnf-test-download/"
+                  style="display: none"
+                  >fnf test download</a
+                ><a
+                  href="https://www.jixplay.com/fnfmods/"
+                  style="display: none"
+                  >fnf mods</a
+                ><a href="https://fnfmod.net" style="display: none">fnf mods</a
+                ><style>
+                  .mapouter {
+                    position: relative;
+                    text-align: right;
+                    height: 400px;
+                    width: 600px;
+                  }</style
+                ><style>
+                  .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 400px;
+                    width: 400px;
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
+          <!-- /col-md-6 -->
+
+          <!-- Col-md-6 -->
+          <div class="col-md-6 text-light">
+            <!-- Contact Form -->
+            <h2 class="display-3">Contactanos</h2>
+            <div class="mb-1">
+              <h4>
+                <i class="far fa-envelope"></i>
+                Escribenos si tienes alguna duda o problema
+              </h4>
+            </div>
+
+            <p class="text-light">
+              Telefono: 51 000 0000 000 <br />
+              Email: <a href="#">contacto@mail.com</a>
+            </p>
+
+            <!-- Input -->
+            <form>
+              <div class="row">
+                <!-- Name -->
+                <div class="col-md-6 pb-3">
+                  <input
+                    type="text"
+                    class="form-control input"
+                    name="Nombre"
+                    data-form-field="Nombre"
+                    placeholder="Nombre Completo"
+                    required=""
+                  />
+                </div>
+                <!-- Phone -->
+                <div class="col-md-6 pb-3">
+                  <input
+                    type="tel"
+                    class="form-control input"
+                    name="Telefono"
+                    data-form-field="Telefono"
+                    placeholder="Telefono"
+                    required=""
+                  />
+                </div>
+                <!-- Email -->
+                <div class="col-md-12 pb-3">
+                  <input
+                    type="email"
+                    class="form-control input"
+                    name="email"
+                    data-form-field="Email"
+                    placeholder="Email"
+                    required=""
+                  />
+                </div>
+                <!-- Message -->
+                <div class="col-md-12 pb-3">
+                  <textarea
+                    class="form-control input"
+                    name="message"
+                    rows="3"
+                    maxlength="6000"
+                    data-form-field="Mensaje"
+                    placeholder="Mensaje"
+                    style="resize: none"
+                  ></textarea>
+                </div>
+                <div class="input-group-btn col-md-12 text-center">
+                  <button type="submit" class="form__button">Enviar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- /col-md-6 -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </main>
+
+    <!-- ============================================
+  ===================== FOOTER =================== -->
+    <footer class="border-top">
+      <div class="container">
+        <!-- Logo - About - Contact -->
+        <div class="row py-3 text-light">
+          <!-- Logo -->
+          <div class="col-md-3">
+            <img
+              src="img/logo--white.png"
+              class="img-fluid"
+              width="250"
+              draggable="false"
+              alt="Logo"
+            />
+          </div>
+
+          <!-- About -->
+          <div class="col-md-5">
+            <h3>Yo</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo
+              nec ultrices dui sapien eget mi proin.
+            </p>
+          </div>
+
+          <!-- Contact me -->
+          <div class="col-md-4">
+            <h3>Contactame</h3>
+            <p>
+              Si estas interesado en contar con mi trabajo o solo quieres decir
+              hola escribeme un mail. <br />
+              <strong>
+                Email:
+                <a href="#" class="text-white">contact@mail.com</a>
+              </strong>
+            </p>
+          </div>
+          <!-- /contact me -->
+        </div>
+        <!-- /Logo - About - Contact -->
+
+        <!-- Social icons -->
+        <p class="lead text-center text-light">SIGANME EN LAS REDES</p>
+        <div class="text-center py-3">
+          <a href="https://www.facebook.com" role="button">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a href="https://twitter.com" role="button">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+          <a href="https://youtube.com" role="button">
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          <a href="https://pinterest.com" role="button">
+            <i class="fab fa-pinterest-p fa-lg"></i>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row py-3 d-flex justify-content-center border-top">
+          <small class="d-block text-light">Copyright &copy; 2022 JIAF</small>
+        </div>
+        <!-- /Copyright -->
+      </div>
+      <!-- /container -->
+    </footer>
+
+    <!-- Mi JS -->
+    <script src="js/index.js"></script>
+    <!-- JQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- bootstrap -->
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/5d20ce5ce5.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
