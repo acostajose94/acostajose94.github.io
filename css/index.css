@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,400,600|Roboto:300,400,700");
+
+/* Header, footer */
+
+header {
+  position: fixed;
+  background-color: #0000008a;
+  width: 100vw;
+  top: 0;
+}
+
+footer {
+  background-color: #001074 !important;
+  padding: 3rem 0 0 0;
+}
+footer a {
+  color: transparent;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+/* Navbar */
+
+.navbar-brand {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-link,
+.dropdown-item {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+nav li {
+  padding: 0 18px;
+}
+
+nav li.active,
+nav li.active:before {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Social icons */
+footer i {
+  color: #fff;
+  padding: 0 12px;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+}
+
+/* Paragraph */
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+/* Link & Buttons */
+
+a.btn,
+button {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.header__logo {
+  width: 6vw;
+  height: auto;
+  min-width: 53px;
+}
+
+.banner {
+  background-image: url("../img/banner.jpg");
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+  padding: 0px;
+  height: 100vh;
+  /* position: relative; */
+}
+.banner--2 {
+  background-image: url("../img/fondo_futurista.webp");
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+  padding: 0px;
+  height: 100vh;
+  /* position: relative; */
+}
+.banner h1 {
+  max-width: 500px;
+  font-size: 4.8rem;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+.banner__scrolldown {
+  height: 80px;
+  width: 110px;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  right: 5%;
+  background-color: #222222;
+  text-align: center;
+  z-index: 6;
+  /* display: flex; */
+  justify-content: center;
+  align-items: end;
+}
+.banner__scrolldown i:before {
+  color: white;
+  font-size: 3rem;
+}
+
+/* Otros */
+/* Bounce */
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+.bounce {
+  animation: bounce 0.9s ease infinite alternate;
+}
+
+/* Centrador_flex */
+.centrador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.centrador--vertical {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* HABILIDADES */
+
+.habilidades__list {
+  list-style: none;
+  padding: 0;
+}
+.habilidades__list li {
+  display: flex;
+  justify-content: space-between;
+  color: #35b5ff;
+}
+
+/* GRADIENT START */
+.habilidades__list li span,
+.fa-star::before {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#9558ff),
+    to(#002ef7d9)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: initial;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* Form */
+
+.form__button {
+  background: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 9px;
+  width: 50%;
+  margin: auto;
+  color: #0000db;
+  font-weight: bold;
+}
+.display-3 {
+  line-height: 1;
+}
+
+/* multiples */
+
+.min-wh-100 {
+  min-height: 100vh;
+}
+
+/* Familia */
+.familia__data {
+  display: flex;
+  justify-content: center;
+}
+.familia__data p,
+.familia__data i {
+  padding: 0.5rem 1rem;
+}
+
+.familia__redes i {
+  color: #001074;
+  padding: 0 0.5rem;
+}
+.familia__redes a {
+  color: transparent;
+}
+
+/* estudios */
+.estudios_fondo {
+  background-image: url("../img/fondo_futurista.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: white !important;
+}
+
+.estudios__divider {
+  border: 1px solid white;
+  width: 100%;
+}
+.estudios__row {
+  font-size: 1.3rem;
+  padding: 2rem 0;
+}
+
+/* amigos */
+.amigo {
+  margin: 1.5rem 0;
+}
