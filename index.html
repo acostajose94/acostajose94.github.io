@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- Place your kit's code here -->
+    <script
+      src="https://kit.fontawesome.com/5d20ce5ce5.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- onwheel="myFunction(event)" -->
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><img
+              src="img/logo--white.png"
+              alt="logo Jose Ivan Acosta Figueroa"
+              class="header__logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Menu -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="amigos.html">Amigos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="estudios.html">Estudios</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Familia
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="papa.html">Papá</a></li>
+                  <li><a class="dropdown-item" href="papa.html">Mamá</a></li>
+                  <li>
+                    <a class="dropdown-item" href="papa.html">Hermanos</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- BANNER -->
+    <div class="banner centrador">
+      <div class="text-light">
+        <h1>Jose Ivan Acosta Figueroa</h1>
+        <p class="text-center">Exploremos el futuro juntos</p>
+      </div>
+      <div href="#" class="banner__scrolldown" id="boton__down__js">
+        <i class="fa-solid fa-chevron-down bounce"></i>
+      </div>
+    </div>
+    <!-- DESCRIPCION -->
+    <div class="container mt-5 mb-5 min-wh-100 centrador" id="descripcion_id">
+      <div class="row">
+        <div class="col-md-4 text-center centrador">
+          <h4>Sobre mi</h4>
+          <p class="text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            deleniti magnam omnis doloribus quibusdam, facilis saepe? Labore
+            minima sequi doloribus nulla rem? Amet, beatae blanditiis doloremque
+            nostrum incidunt totam nisi!
+          </p>
+        </div>
+        <div class="col-md-4 centrador">
+          <img
+            src="img/pa2.png"
+            alt="Jose Ivan Acosta Figueroa"
+            class="me__img w-100"
+          />
+        </div>
+        <div class="col-md-4 text-center centrador">
+          <h4>Detalles</h4>
+          <p>
+            <strong>Nombre</strong><br />
+            Jose Ivan Acosta Figueroa
+          </p>
+          <p>
+            <strong>Edad</strong><br />
+            27
+          </p>
+          <p>
+            <strong>Ubicación</strong><br />
+            Lima, Perú
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>Una Buena frase</h2>
+          <p class="frase">
+            “Siempre parece imposible hasta que se hace ” - Nelson Mandela
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- HABILIDADES -->
+    <div id="habilidades" class="container min-wh-100 centrador--vertical">
+      <h3>Habilidades TI</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="habilidades__list">
+            <li>
+              <span class="ability-title">Bootstrap Framework</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">CSS(3)</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">HTML(5)</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">JSON</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">MySQL</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">PHP</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">XML</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">Patron de Diseño</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">nterfaz de línea de comandos </span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">JQuery</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">Java</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="habilidades__list">
+            <li>
+              <span class="ability-title">Javascript</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">SASS / SCSS</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">Patron MVC</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+
+            <li>
+              <span class="ability-title">SASS / SCSS</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">SEO</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">Scrum</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">UML</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">Wordpress</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">BEM</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">AngularJS</span>
+              <span class="ability-score">
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+
+            <li>
+              <span class="ability-title">Ruby</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center project-referal">
+        <p>Este proyecto fue hecho con HTML, CSS Y JS</p>
+        <a
+          href="https://github.com/jiaf/resume"
+          class="btn btn-primary"
+          target="_blank"
+          >Ver proyectos en GITHUB</a
+        >
+      </div>
+    </div>
+    <div id="habilidades2 " class="container min-wh-100 centrador--vertical">
+      <h3>Lenguajes</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="habilidades__list">
+            <li>
+              <span class="ability-title">Español (Lengua Materna)</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="habilidades__list">
+            <li>
+              <span class="ability-title">English </span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <h3 id="Herramientas_titulo">Herramientas</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="habilidades__list">
+            <li>
+              <span class="ability-title">FileZilla </span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">Firefox </span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">MS Office </span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+
+            <li>
+              <span class="ability-title">Visual Studio Code</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+
+            <li>
+              <span class="ability-title">Windows </span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="habilidades__list">
+            <li>
+              <span class="ability-title">GitHUB</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">Brave</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">XAMP </span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+
+            <li>
+              <span class="ability-title">Balsamiq</span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li>
+              <span class="ability-title">Adobe Fireworks </span>
+              <span class="ability-score">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================
+  ===================== FOOTER =================== -->
+    <footer class="border-top">
+      <div class="container">
+        <!-- Logo - About - Contact -->
+        <div class="row py-3 text-light">
+          <!-- Logo -->
+          <div class="col-md-3">
+            <img
+              src="img/logo--white.png"
+              class="img-fluid"
+              width="250"
+              draggable="false"
+              alt="Logo"
+            />
+          </div>
+
+          <!-- About -->
+          <div class="col-md-5">
+            <h3>Yo</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo
+              nec ultrices dui sapien eget mi proin.
+            </p>
+          </div>
+
+          <!-- Contact me -->
+          <div class="col-md-4">
+            <h3>Contactame</h3>
+            <p>
+              Si estas interesado en contar con mi trabajo o solo quieres decir
+              hola escribeme un mail. <br />
+              <strong>
+                Email:
+                <a href="#" class="text-white">contact@mail.com</a>
+              </strong>
+            </p>
+          </div>
+          <!-- /contact me -->
+        </div>
+        <!-- /Logo - About - Contact -->
+
+        <!-- Social icons -->
+        <p class="lead text-center text-light">SIGANME EN LAS REDES</p>
+        <div class="text-center py-3">
+          <a href="https://www.facebook.com" role="button">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a href="https://twitter.com" role="button">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+          <a href="https://youtube.com" role="button">
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          <a href="https://pinterest.com" role="button">
+            <i class="fab fa-pinterest-p fa-lg"></i>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row py-3 d-flex justify-content-center border-top">
+          <small class="d-block text-light">Copyright &copy; 2022 JIAF</small>
+        </div>
+        <!-- /Copyright -->
+      </div>
+      <!-- /container -->
+    </footer>
+
+    <!-- Mi JS -->
+    <script src="js/index.js"></script>
+    <!-- JQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- bootstrap -->
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/5d20ce5ce5.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
