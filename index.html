@@ -12,9 +12,9 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>Document</title>
+    <title>Jose Ivan</title>
   </head>
-  <body>
+  <body id="body__index">
     <!-- onwheel="myFunction(event)" -->
     <!-- HEADER -->
     <header>
@@ -78,17 +78,21 @@
       </nav>
     </header>
     <!-- BANNER -->
-    <div class="banner centrador">
+    <div class="banner centrador" id="banner__js">
       <div class="text-light">
         <h1>Jose Ivan Acosta Figueroa</h1>
         <p class="text-center">Exploremos el futuro juntos</p>
       </div>
-      <div href="#" class="banner__scrolldown" id="boton__down__js">
-        <i class="fa-solid fa-chevron-down bounce"></i>
+      <div href="#" class="banner__scrolldown bounce_active">
+        <i
+          class="fa-solid fa-chevron-down rotar__180 d-none"
+          id="boton__up__js"
+        ></i>
+        <i class="fa-solid fa-chevron-down bounce" id="boton__down__js"></i>
       </div>
     </div>
     <!-- DESCRIPCION -->
-    <div class="container mt-5 mb-5 min-wh-100 centrador" id="descripcion_id">
+    <div class="container min-wh-100 centrador" id="descripcion_id">
       <div class="row">
         <div class="col-md-4 text-center centrador">
           <h4>Sobre mi</h4>
@@ -377,7 +381,8 @@
         >
       </div>
     </div>
-    <div id="habilidades2 " class="container min-wh-100 centrador--vertical">
+
+    <div id="habilidades__2" class="container min-wh-100 centrador--vertical">
       <h3>Lenguajes</h3>
       <div class="row">
         <div class="col-md-6">
@@ -526,9 +531,36 @@
       </div>
     </div>
 
+    <!-- Proyectos -->
+    <div class="container min-wh-100 centrador" id="proyectos__recientes">
+      <div class="row text-light">
+        <h1>Proyectos Recientes</h1>
+        <div class="col-md-4 text-center">
+          <a href="juego/index.html" class="text-light">
+            <img src="img/juego.jpg" alt="" class="proyectos__img w-100" />
+            <h4>Juego de Ahorcado</h4>
+            <p>HTML - CSS - JS</p>
+          </a>
+        </div>
+        <div class="col-md-4 text-center">
+          <a href="juego/index.html" class="text-light">
+            <img src="img/juego.jpg" alt="" class="proyectos__img w-100" />
+            <h4>Juego de Ahorcado</h4>
+            <p>HTML - CSS - JS</p>
+          </a>
+        </div>
+        <div class="col-md-4 text-center">
+          <a href="juego/index.html" class="text-light">
+            <img src="img/juego.jpg" alt="" class="proyectos__img w-100" />
+            <h4>Juego de Ahorcado</h4>
+            <p>HTML - CSS - JS</p>
+          </a>
+        </div>
+      </div>
+    </div>
     <!-- ============================================
   ===================== FOOTER =================== -->
-    <footer class="border-top">
+    <footer class="border-top" id="footer">
       <div class="container">
         <!-- Logo - About - Contact -->
         <div class="row py-3 text-light">
