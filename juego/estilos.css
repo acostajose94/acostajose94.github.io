@@ -1,0 +1,145 @@
+
+input:focus{
+    outline: none;
+}
+.img-reset{
+position: fixed;
+top: 0;
+right: 0;
+width: 60px;
+height: 60px;
+}
+.img-reset__fija{
+    width: 60px;
+    height: 60px;
+}
+body{
+    background-image: url("imagenes/Fondo.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+.palabra{
+    text-align: center;
+    color: rgb(0, 0, 0) !important;
+    text-transform: uppercase;
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+.input__container{
+    background: #fac100;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    border: 1px solid white;
+    display: flex;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+.input__container input{
+    color: white;
+    background: transparent;
+    border: solid transparent;
+    border-bottom: 1px solid #fff6;
+    margin-left: 15px;
+    font-size: 1.5rem;
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+.plantilla__juego{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(60, 39, 39, 0.259);
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+.plantilla__juego img{
+    width: 100%;
+    min-width: 300px;
+    max-width: 21vw;
+}
+.plantilla__juego__titulo{
+    color: white;
+    font-size: 3rem;
+}
+.popup{
+    position: fixed;
+    z-index: 3;
+    height: 100vh;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.426);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: white;
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+.popup input{
+    color: white;
+}
+.popup__center{
+    font-size: 4rem;
+    
+    display: flex;
+    flex-direction: column;
+   
+}
+.popup__center input{
+    background: transparent;
+    border: transparent;
+    color: white;
+    padding: 1rem;
+    border: 3px solid #fff;
+    background: #fac100;
+    margin-bottom: 1rem;
+    border-radius: 79px;
+    padding: 20px;
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+.popup_rules{
+    font-size: 1.5rem;
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+.img-gif{
+    position: fixed;
+top: 0;
+right: 0;
+width: 100%;
+}
+#popup_inicio{
+    z-index: 99 ;
+}
+#popup__reset{
+    border: black 10px solid;
+    color: black;
+    padding: 1rem;
+    border: 3px solid #fff;
+    background: #fac100;
+    margin-bottom: 1rem;
+    border-radius: 79px;
+    padding: 20px;
+}
+#resultado{
+    font-size: 1.7rem;
+    color: white;
+    margin-bottom: 2rem;
+    text-transform: uppercase   ;
+}
+#verificar{
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+}
+#imagen__final{
+    width: 80%;
+    margin: auto;
+}
