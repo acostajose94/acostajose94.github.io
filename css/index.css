@@ -255,3 +255,8 @@ footer .container {
 .amigo {
   margin: 1.5rem 0;
 }
+
+/* papa */
+.papa__img {
+  max-width: 400px;
+}
