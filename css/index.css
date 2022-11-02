@@ -85,40 +85,26 @@ button {
   height: auto;
   min-width: 53px;
 }
-
-.banner {
+body {
   background-image: url("../img/banner.jpg");
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center;
+  color: white !important;
+}
+.banner {
   margin-bottom: 0px;
   padding: 0px;
-  height: 100vh;
+  min-height: 100vh;
   /* position: relative; */
 }
-.banner--2 {
-  background-image: url("../img/fondo_futurista.webp");
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 0px;
-  padding: 0px;
-  height: 100vh;
-  /* position: relative; */
+#body__index .container {
+  background: #000000b5;
+}
+header .container,
+footer .container {
+  background: transparent !important;
 }
 .banner h1 {
   max-width: 500px;
@@ -129,20 +115,23 @@ button {
 .banner__scrolldown {
   height: 80px;
   width: 110px;
-  display: block;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   right: 5%;
   background-color: #222222;
   text-align: center;
   z-index: 6;
-  /* display: flex; */
+  display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
+  flex-direction: column;
 }
 .banner__scrolldown i:before {
   color: white;
   font-size: 3rem;
+}
+.rotar__180 {
+  rotate: 180deg;
 }
 
 /* Otros */
@@ -222,6 +211,7 @@ button {
 /* multiples */
 
 .min-wh-100 {
+  height: 100vh;
   min-height: 100vh;
 }
 
