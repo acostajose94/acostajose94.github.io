@@ -1,1 +1,2 @@
-<h1>Proyecto realizado para el curso de full Stack</h1>
+<h1>Jose Ivan Acosta Figueroa - Peru - Lima </h1>
+<p>Pagina web - Del curso de Html, CSS Y Javascript</p>
