@@ -234,6 +234,9 @@ footer .container {
 }
 
 /* estudios */
+#estudios {
+  height: auto !important;
+}
 .estudios_fondo {
   background-image: url("../img/fondo_futurista.webp");
   background-repeat: no-repeat;

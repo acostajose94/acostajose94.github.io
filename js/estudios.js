@@ -8,7 +8,7 @@
 //       .scrollIntoView({ behavior: "smooth" });
 //   }
 // }
-var headerHeight = document.getElementById("header__id").clientHeight+50;
+var headerHeight = document.getElementById("header__id").clientHeight+10;
 
 if (headerHeight) {
   document.getElementById("estudios").style.paddingTop = headerHeight + "px";
