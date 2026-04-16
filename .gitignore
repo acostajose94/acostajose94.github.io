@@ -1,0 +1,25 @@
+# Jekyll
+*.gem
+*.rbc
+/.jekyll-cache
+/.jekyll-metadata
+/_site/
+/_drafts/
+/vendor/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Logs
+*.log

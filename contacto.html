@@ -1,282 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <!-- Place your kit's code here -->
-    <script
-      src="https://kit.fontawesome.com/5d20ce5ce5.js"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- onwheel="myFunction(event)" -->
-    <!-- HEADER -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"
-            ><img
-              src="img/logo--white.png"
-              alt="logo Jose Ivan Acosta Figueroa"
-              class="header__logo"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Menu -->
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="experiencia.html">Experiencia</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="estudios.html">Estudios</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="https://acostajose94.github.io/"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Familia
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="papa.html">Papá</a></li>
-                  <li><a class="dropdown-item" href="papa.html">Mamá</a></li>
-                  <li>
-                    <a class="dropdown-item" href="papa.html">Hermanos</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">contacto</a>
-              </li>
-            </ul>
-          </div>
+  <title>Contacto | José Iván Acosta Figueroa</title>
+  <meta name="description" content="Contacta a José Iván Acosta Figueroa." />
+  <meta name="author" content="José Iván Acosta Figueroa" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0a1a" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin />
+
+  <link rel="icon" type="image/png" href="img/logo--white.png" />
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <script src="https://kit.fontawesome.com/5d20ce5ce5.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand" href="index.html">JIAF</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="experiencia.html">Experiencia</a></li>
+            <li class="nav-item"><a class="nav-link" href="estudios.html">Estudios</a></li>
+            <li class="nav-item"><a class="nav-link" href="portafolio.html">Portafolio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="banner--2">
-      <div class="container py-5 pb-5 min-wh-100 centrador">
-        <div class="row">
-          <!-- Col-md-6 -->
-          <div class="col-md-6 centrador">
-            <!-- Google Maps -->
-            <div class="centrador">
-              <div class="gmap_canvas">
-                <iframe
-                  src="https://maps.google.com/maps?q=go%20plus%20peru&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                  id="gmap_canvas"
-                  frameborder="0"
-                  scrolling="no"
-                  style="width: 400px; height: 400px"
-                ></iframe
-                ><a
-                  href="https://fnftest.net/fnf-test-download/"
-                  style="display: none"
-                  >fnf test download</a
-                ><a
-                  href="https://www.jixplay.com/fnfmods/"
-                  style="display: none"
-                  >fnf mods</a
-                ><a href="https://fnfmod.net" style="display: none">fnf mods</a
-                ><style>
-                  .mapouter {
-                    position: relative;
-                    text-align: right;
-                    height: 400px;
-                    width: 600px;
-                  }</style
-                ><style>
-                  .gmap_canvas {
-                    overflow: hidden;
-                    background: none !important;
-                    height: 400px;
-                    width: 400px;
-                  }
-                </style>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contacto</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <div class="contact-info-list">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <a href="mailto:gamar30@gmail.com">gamar30@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <h4>Teléfono</h4>
+                  <div class="contact-phones">
+                    <a href="tel:+51973418632" class="phone-link">
+                      <i class="fa-solid fa-phone"></i> 973 418 632
+                    </a>
+                    <a href="https://wa.me/51973418632" target="_blank" class="whatsapp-link" title="WhatsApp">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h4>Ubicación</h4>
+                  <p>Lima, Perú</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h4 class="mb-3" style="font-size: 1rem; color: var(--text-secondary);">Redes</h4>
+              <div class="social-links">
+                <a href="https://github.com/acostajose94" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ivan-acosta-figueroa/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
               </div>
             </div>
           </div>
-          <!-- /col-md-6 -->
 
-          <!-- Col-md-6 -->
-          <div class="col-md-6 text-light">
-            <!-- Contact Form -->
-            <h2 class="display-3">Contactanos</h2>
-            <div class="mb-1">
-              <h4>
-                <i class="far fa-envelope"></i>
-                Escribenos si tienes alguna duda o problema
-              </h4>
-            </div>
-
-            <p class="text-light">
-              Telefono: 51 000 0000 000 <br />
-              Email: <a href="https://acostajose94.github.io/">contacto@mail.com</a>
-            </p>
-
-            <!-- Input -->
-            <form>
-              <div class="row">
-                <!-- Name -->
-                <div class="col-md-6 pb-3">
-                  <input
-                    type="text"
-                    class="form-control input"
-                    name="Nombre"
-                    data-form-field="Nombre"
-                    placeholder="Nombre Completo"
-                    required=""
-                  />
+          <div class="col-lg-7">
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/gamar30@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="Nuevo mensaje desde portafolio">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required />
                 </div>
-                <!-- Phone -->
-                <div class="col-md-6 pb-3">
-                  <input
-                    type="tel"
-                    class="form-control input"
-                    name="Telefono"
-                    data-form-field="Telefono"
-                    placeholder="Telefono"
-                    required=""
-                  />
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="tu@email.com" required />
                 </div>
-                <!-- Email -->
-                <div class="col-md-12 pb-3">
-                  <input
-                    type="email"
-                    class="form-control input"
-                    name="email"
-                    data-form-field="Email"
-                    placeholder="Email"
-                    required=""
-                  />
+                <div class="col-12">
+                  <label for="asunto" class="form-label">Asunto</label>
+                  <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Motivo" required />
                 </div>
-                <!-- Message -->
-                <div class="col-md-12 pb-3">
-                  <textarea
-                    class="form-control input"
-                    name="message"
-                    rows="3"
-                    maxlength="6000"
-                    data-form-field="Mensaje"
-                    placeholder="Mensaje"
-                    style="resize: none"
-                  ></textarea>
+                <div class="col-12">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
                 </div>
-                <div class="input-group-btn col-md-12 text-center">
-                  <button type="submit" class="form__button">Enviar</button>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary-custom btn-lg w-100">
+                    <i class="fa-solid fa-paper-plane me-2"></i>Enviar
+                  </button>
                 </div>
               </div>
             </form>
           </div>
-          <!-- /col-md-6 -->
         </div>
-        <!-- /row -->
       </div>
-      <!-- /container -->
-    </main>
+    </section>
+  </main>
 
-    <!-- ============================================
-  ===================== FOOTER =================== -->
-    <footer class="border-top">
-      <div class="container">
-        <!-- Logo - About - Contact -->
-        <div class="row py-3 text-light">
-          <!-- Logo -->
-          <div class="col-md-3">
-            <img
-              src="img/logo--white.png"
-              class="img-fluid"
-              width="250"
-              draggable="false"
-              alt="Logo"
-            />
-          </div>
-
-          <!-- About -->
-          <div class="col-md-5">
-            <h3>Yo</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo
-              nec ultrices dui sapien eget mi proin.
-            </p>
-          </div>
-
-          <!-- Contact me -->
-          <div class="col-md-4">
-            <h3>Contactame</h3>
-            <p>
-              Si estas interesado en contar con mi trabajo o solo quieres decir
-              hola escribeme un mail. <br />
-              <strong>
-                Email:
-                <a href="https://acostajose94.github.io/" class="text-white">contact@mail.com</a>
-              </strong>
-            </p>
-          </div>
-          <!-- /contact me -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h3>JIAF</h3>
+          <p>José Iván Acosta Figueroa</p>
+          <p>Ingeniero de Sistemas | Analista TI</p>
         </div>
-        <!-- /Logo - About - Contact -->
-
-        <!-- Social icons -->
-        <p class="lead text-center text-light">SIGANME EN LAS REDES</p>
-        <div class="text-center py-3">
-          <a href="https://www.facebook.com" role="button">
-            <i class="fab fa-facebook fa-lg"></i>
-          </a>
-          <a href="https://twitter.com" role="button">
-            <i class="fab fa-twitter fa-lg"></i>
-          </a>
-          <a href="https://youtube.com" role="button">
-            <i class="fab fa-youtube fa-lg"></i>
-          </a>
-          <a href="https://pinterest.com" role="button">
-            <i class="fab fa-pinterest-p fa-lg"></i>
-          </a>
+        <div class="col-lg-4">
+          <h3>Contacto</h3>
+          <p><i class="fa-solid fa-envelope"></i> <a href="mailto:gamar30@gmail.com">gamar30@gmail.com</a></p>
+          <p><i class="fa-solid fa-phone"></i> 973 418 632</p>
         </div>
-
-        <!-- Copyright -->
-        <div class="row py-3 d-flex justify-content-center border-top">
-          <small class="d-block text-light">Copyright &copy; 2024 JIAF</small>
+        <div class="col-lg-4">
+          <h3>Redes</h3>
+          <div class="social-links">
+            <a href="https://github.com/acostajose94" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ivan-acosta-figueroa/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
         </div>
-        <!-- /Copyright -->
       </div>
-      <!-- /container -->
-    </footer>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 José Iván Acosta Figueroa</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Mi JS -->
-    <script src="js/index.js"></script>
-    <!-- JQuery -->
-    <script src="js/jquery.js"></script>
-    <!-- bootstrap -->
-    <script src="bootstrap/js/bootstrap.bundle.js"></script>
-    <!-- FontAwesome -->
-    <script
-      src="https://kit.fontawesome.com/5d20ce5ce5.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <script src="bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="js/index.js"></script>
+</body>
 </html>
