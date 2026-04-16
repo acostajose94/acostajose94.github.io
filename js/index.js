@@ -19,28 +19,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
+    contactForm.addEventListener("submit", async (e) => {
       e.preventDefault();
       
-      const nombre = document.getElementById("nombre").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const asunto = document.getElementById("asunto").value.trim();
-      const mensaje = document.getElementById("mensaje").value.trim();
-
-      if (!nombre || !email || !asunto || !mensaje) {
-        alert("Por favor, completa todos los campos requeridos.");
-        return;
+      const btn = document.getElementById("btnEnviar");
+      const resultado = document.getElementById("resultadoForm");
+      
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i>Enviando...';
+      resultado.innerHTML = '';
+      
+      const formData = new FormData(contactForm);
+      
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+          resultado.innerHTML = '<div class="alert alert-success"><i class="fa-solid fa-check-circle me-2"></i>¡Mensaje enviado! Te responderé pronto.</div>';
+          contactForm.reset();
+        } else {
+          resultado.innerHTML = '<div class="alert alert-danger"><i class="fa-solid fa-exclamation-circle me-2"></i>Error al enviar. Intenta de nuevo.</div>';
+        }
+      } catch (error) {
+        resultado.innerHTML = '<div class="alert alert-danger"><i class="fa-solid fa-exclamation-circle me-2"></i>Error de conexión. Intenta de nuevo.</div>';
       }
-
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        alert("Por favor, ingresa un email válido.");
-        return;
-      }
-
-      const mailtoLink = `mailto:gamar30@gmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(`Nombre: ${nombre}\nEmail: ${email}\n\nMensaje:\n${mensaje}`)}`;
-      window.location.href = mailtoLink;
-      contactForm.reset();
+      
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fa-solid fa-paper-plane me-2"></i>Enviar';
     });
   }
 

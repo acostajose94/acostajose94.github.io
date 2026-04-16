@@ -97,14 +97,13 @@
           </div>
 
           <div class="col-lg-7">
-            <form class="contact-form" id="contactForm" action="https://formsubmit.co/gamar30@gmail.com" method="POST">
-              <input type="hidden" name="_subject" value="Nuevo mensaje desde portafolio">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_template" value="table">
+            <form class="contact-form" id="contactForm">
+              <input type="hidden" name="access_key" value="e174203b-7c32-4fb7-b01a-d5fabb6bfe5f">
+              <input type="hidden" name="subject" value="Nuevo mensaje desde portafolio">
               <div class="row g-3">
                 <div class="col-md-6">
                   <label for="nombre" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required />
+                  <input type="text" class="form-control" id="nombre" name="name" placeholder="Tu nombre" required />
                 </div>
                 <div class="col-md-6">
                   <label for="email" class="form-label">Email</label>
@@ -112,19 +111,20 @@
                 </div>
                 <div class="col-12">
                   <label for="asunto" class="form-label">Asunto</label>
-                  <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Motivo" required />
+                  <input type="text" class="form-control" id="asunto" name="subject" placeholder="Motivo" required />
                 </div>
                 <div class="col-12">
                   <label for="mensaje" class="form-label">Mensaje</label>
-                  <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+                  <textarea class="form-control" id="mensaje" name="message" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary-custom btn-lg w-100">
+                  <button type="submit" class="btn btn-primary-custom btn-lg w-100" id="btnEnviar">
                     <i class="fa-solid fa-paper-plane me-2"></i>Enviar
                   </button>
                 </div>
               </div>
             </form>
+            <div id="resultadoForm" class="mt-3"></div>
           </div>
         </div>
       </div>
