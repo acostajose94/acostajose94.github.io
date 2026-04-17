@@ -36,7 +36,7 @@ body {
   background-color: var(--bg-dark);
   color: var(--text-primary);
   line-height: 1.7;
-  background-image: url("../img/banner.jpg");
+  background-image: url("../img/banner.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -109,6 +109,52 @@ header {
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navbar-collapse {
+  display: flex;
+  position: relative;
+  z-index: 1001;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
+    background: rgba(10, 10, 26, 0.98);
+    border-top: 1px solid rgba(108, 92, 231, 0.3);
+  }
+  .navbar-collapse.show {
+    display: flex;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ms-auto {
+  margin-left: auto;
 }
 
 .navbar-brand {
@@ -161,13 +207,22 @@ header {
 }
 
 .navbar-toggler {
+  display: none;
   border: 1px solid rgba(108, 92, 231, 0.5);
   padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  background: transparent;
 }
 
 .navbar-toggler:focus {
-  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.5);
   outline: none;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.5);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-toggler {
+    display: block;
+  }
 }
 
 /* ========== HERO / BANNER ========== */
@@ -354,6 +409,13 @@ header {
   background: rgba(255, 255, 255, 0.02);
   border-top: 1px solid rgba(108, 92, 231, 0.1);
   border-bottom: 1px solid rgba(108, 92, 231, 0.1);
+}
+
+.section-auto {
+  min-height: auto;
+  height: auto;
+  align-items: flex-start;
+  padding: 4rem 0;
 }
 
 .section-header {
@@ -687,9 +749,13 @@ footer p {
 footer p i {
   color: var(--primary-light);
   width: 20px;
-  margin-right: 0.5rem;
-}
+  margin-right: 0;
 
+}
+i.fa-brands.fa-whatsapp {
+  display: flex !important;
+  justify-content: center;
+}
 footer a {
   color: var(--text-secondary);
 }

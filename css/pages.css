@@ -668,13 +668,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
   background: #25D366;
   border-radius: 50%;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #fff;
   transition: transform var(--transition), background var(--transition);
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  line-height: 1;
 }
 
 .whatsapp-link:hover {
@@ -719,6 +722,20 @@
   background: rgba(239, 68, 68, 0.2);
   color: #ef4444;
   border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.toast-notification {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 9999;
+  max-width: 350px;
+  animation: toastSlideIn 0.3s ease;
+}
+
+@keyframes toastSlideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }
 
 /* ========== TECH MINI GRID ========== */

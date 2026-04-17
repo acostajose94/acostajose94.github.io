@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Navbar toggle
+  const toggler = document.querySelector(".navbar-toggler");
+  const nav = document.querySelector(".navbar-collapse");
+  if (toggler && nav) {
+    toggler.addEventListener("click", (e) => {
+      e.stopPropagation();
+      nav.classList.toggle("show");
+    });
+    document.addEventListener("click", (e) => {
+      if (!toggler.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove("show");
+      }
+    });
+    nav.querySelectorAll(".nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("show");
+      });
+    });
+  }
+
   const scrollBtn = document.querySelector(".scroll-down");
   if (scrollBtn) {
     scrollBtn.addEventListener("click", (e) => {
@@ -27,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
       
       btn.disabled = true;
       btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i>Enviando...';
-      resultado.innerHTML = '';
       
       const formData = new FormData(contactForm);
       
@@ -40,18 +59,31 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = await response.json();
         
         if (data.success) {
-          resultado.innerHTML = '<div class="alert alert-success"><i class="fa-solid fa-check-circle me-2"></i>¡Mensaje enviado! Te responderé pronto.</div>';
+          showToast('success', '<i class="fa-solid fa-check-circle me-2"></i>¡Mensaje enviado! Te responderé pronto.');
           contactForm.reset();
         } else {
-          resultado.innerHTML = '<div class="alert alert-danger"><i class="fa-solid fa-exclamation-circle me-2"></i>Error al enviar. Intenta de nuevo.</div>';
+          showToast('danger', '<i class="fa-solid fa-exclamation-circle me-2"></i>Error al enviar. Intenta de nuevo.');
         }
       } catch (error) {
-        resultado.innerHTML = '<div class="alert alert-danger"><i class="fa-solid fa-exclamation-circle me-2"></i>Error de conexión. Intenta de nuevo.</div>';
+        showToast('danger', '<i class="fa-solid fa-exclamation-circle me-2"></i>Error de conexión. Intenta de nuevo.');
       }
       
       btn.disabled = false;
       btn.innerHTML = '<i class="fa-solid fa-paper-plane me-2"></i>Enviar';
     });
+  }
+
+  function showToast(type, message) {
+    const toast = document.createElement('div');
+    toast.className = `alert alert-${type} toast-notification`;
+    toast.innerHTML = message;
+    toast.style.cssText = 'position:fixed;top:80px;right:20px;z-index:9999;max-width:350px;animation:fadeInUp 0.3s ease';
+    document.body.appendChild(toast);
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transition = 'opacity 0.5s ease';
+      setTimeout(() => toast.remove(), 500);
+    }, 4000);
   }
 
   const observerOptions = {

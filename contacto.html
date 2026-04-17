@@ -16,28 +16,26 @@
   <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin />
 
   <link rel="icon" type="image/png" href="img/logo--white.png" />
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/bootstrap-minimal.css" />
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/pages.css" />
   <script src="https://kit.fontawesome.com/5d20ce5ce5.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid px-4">
-        <a class="navbar-brand" href="index.html">JIAF</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="experiencia.html">Experiencia</a></li>
-            <li class="nav-item"><a class="nav-link" href="estudios.html">Estudios</a></li>
-            <li class="nav-item"><a class="nav-link" href="portafolio.html">Portafolio</a></li>
-            <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
-          </ul>
-        </div>
+    <nav class="navbar navbar-dark">
+      <a class="navbar-brand" href="index.html">JIAF</a>
+      <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiencia.html">Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="estudios.html">Estudios</a></li>
+          <li class="nav-item"><a class="nav-link" href="portafolio.html">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+        </ul>
       </div>
     </nav>
   </header>
@@ -118,7 +116,7 @@
                   <textarea class="form-control" id="mensaje" name="message" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary-custom btn-lg w-100" id="btnEnviar">
+                  <button type="submit" class="btn btn-primary-custom btn-lg w-100 mt-3" id="btnEnviar">
                     <i class="fa-solid fa-paper-plane me-2"></i>Enviar
                   </button>
                 </div>
@@ -142,7 +140,11 @@
         <div class="col-lg-4">
           <h3>Contacto</h3>
           <p><i class="fa-solid fa-envelope"></i> <a href="mailto:gamar30@gmail.com">gamar30@gmail.com</a></p>
-          <p><i class="fa-solid fa-phone"></i> 973 418 632</p>
+          <p>
+            <i class="fa-solid fa-phone"></i> <a href="tel:+51973418632">973 418 632</a>
+            <a href="https://wa.me/51973418632" target="_blank" class="whatsapp-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </p>
+          <p><i class="fa-solid fa-location-dot"></i> Lima, Perú</p>
         </div>
         <div class="col-lg-4">
           <h3>Redes</h3>
@@ -158,7 +160,6 @@
     </div>
   </footer>
 
-  <script src="bootstrap/js/bootstrap.bundle.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
