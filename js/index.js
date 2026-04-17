@@ -99,12 +99,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, observerOptions);
 
-  document.querySelectorAll(".stat-card, .skill-card, .timeline-item, .exp-card, .cert-card, .portfolio-card, .education-card").forEach(el => {
-    observer.observe(el);
-  });
+  const animatedElements = document.querySelectorAll(".stat-card, .skill-card, .timeline-item, .exp-card, .cert-card, .portfolio-card, .education-card");
+  animatedElements.forEach(el => observer.observe(el));
 
-  if (window.innerWidth >= 992) {
+  const mediaQuery = window.matchMedia('(min-width: 992px)');
+  
+  function initScrollSnapping() {
+    if (!mediaQuery.matches) return;
+    
     const sections = document.querySelectorAll('.section');
+    const windowHeight = window.innerHeight;
     let isScrolling = false;
     
     window.addEventListener('wheel', (e) => {
@@ -114,7 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (modal && modal.classList.contains('active')) return;
       
       const delta = e.deltaY;
-      const windowHeight = window.innerHeight;
       const currentScroll = window.scrollY;
       
       let targetSection = Math.round(currentScroll / windowHeight);
@@ -133,4 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => { isScrolling = false; }, 600);
     }, { passive: true });
   }
+  
+  mediaQuery.addEventListener('change', initScrollSnapping);
+  initScrollSnapping();
 });
