@@ -78,6 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('wheel', (e) => {
       if (isScrolling) return;
       
+      const modal = document.getElementById('imgModal');
+      if (modal && modal.classList.contains('active')) return;
+      
       const delta = e.deltaY;
       const windowHeight = window.innerHeight;
       const currentScroll = window.scrollY;

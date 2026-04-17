@@ -46,24 +46,42 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <h2>Proyectos Destacados</h2>
+          <h2>Proyectos</h2>
           <div class="section-divider"></div>
         </div>
-        <div class="portfolio-showcase">
-          <div class="portfolio-feature">
-            <div class="portfolio-feature-icon">
+        <div class="portfolio-grid-cards">
+          <div class="port-card port-card-clickable" onclick="openModal('img/sistemasperuweb.png')">
+            <div class="port-card-img port-card-img-full" style="background-image: url('img/sistemasperuweb.png')">
+              <img src="img/sistemasperuweb.png" alt="SistemasPeruWeb">
+            </div>
+            <h3><a href="https://sistemasperuweb.com/" target="_blank">SistemasPeruWeb <i class="fa-solid fa-external-link-alt" style="font-size:0.7em"></i></a></h3>
+            <p>Empresa de desarrollo de software en Lima, Perú. Soluciones tecnológicas personalizadas.</p>
+            <div class="port-card-tags">
+              <span>Desarrollo Web</span>
+              <span>Perú</span>
+            </div>
+          </div>
+          <div class="port-card port-card-clickable" onclick="openModal('img/tecnofil.png')">
+            <div class="port-card-img port-card-img-full" style="background-image: url('img/tecnofil.png')">
+              <img src="img/tecnofil.png" alt="Tecnofil">
+            </div>
+            <h3><a href="https://tecnofil.com.pe/" target="_blank">Tecnofil <i class="fa-solid fa-external-link-alt" style="font-size:0.7em"></i></a></h3>
+            <p>Sitio web para empresa de servicios tecnológicos y soluciones digitales.</p>
+            <div class="port-card-tags">
+              <span>Web</span>
+              <span>Tech</span>
+            </div>
+          </div>
+          <div class="port-card">
+            <div class="port-card-icon">
               <i class="fa-solid fa-database"></i>
             </div>
-            <div class="portfolio-feature-content">
-              <span class="portfolio-tag">Base de Datos</span>
-              <h2>Sistema de Gestión de Cobranzas</h2>
-              <p>Sistema integral para la gestión de cobranzas de múltiples marcas en Perú. Desarrollo de stored procedures, procesos ETL y reportes automatizados.</p>
-              <div class="portfolio-tech">
-                <span>SQL Server</span>
-                <span>Stored Procedures</span>
-                <span>ETL</span>
-                <span>Reporting</span>
-              </div>
+            <h3>Sistema de Gestión de Cobranzas</h3>
+            <p>Sistema integral para cobranzas de múltiples marcas. Stored procedures, ETL y reportes automatizados.</p>
+            <div class="port-card-tags">
+              <span>SQL Server</span>
+              <span>ETL</span>
+              <span>Reporting</span>
             </div>
           </div>
         </div>
@@ -73,7 +91,7 @@
     <section class="section section-alt">
       <div class="container">
         <div class="section-header">
-          <h2>Otros Proyectos</h2>
+          <h2>Apps y Juegos</h2>
           <div class="section-divider"></div>
         </div>
         <div class="portfolio-grid-cards">
@@ -83,12 +101,12 @@
               <i class="fa-brands fa-android"></i>
             </div>
             <h3>Sudoku Pro</h3>
-            <p>Aplicación Android de Sudoku con múltiples niveles de dificultad y estadísticas de juego.</p>
+            <p>Aplicación Android de Sudoku con múltiples niveles de dificultad y estadísticas.</p>
             <div class="port-card-tags">
               <span>Android</span>
               <span>Kotlin</span>
             </div>
-            <a href="https://play.google.com/store/apps/details?id=com.sudokupro.app" target="_blank" class="port-card-link">Ver en Play Store <i class="fa-solid fa-external-link-alt"></i></a>
+            <a href="https://play.google.com/store/apps/details?id=com.sudokupro.app" target="_blank" class="port-card-link">Play Store <i class="fa-solid fa-external-link-alt"></i></a>
           </div>
           <div class="port-card">
             <span class="port-badge-ia">IA</span>
@@ -96,19 +114,19 @@
               <i class="fa-brands fa-android"></i>
             </div>
             <h3>Sueno Dulce Bebé</h3>
-            <p>Aplicación móvil para ayudar a los padres con el sueño de sus bebés. Seguimiento y consejos personalizados.</p>
+            <p>Aplicación para padres con el sueño de sus bebés. Seguimiento y consejos personalizados.</p>
             <div class="port-card-tags">
               <span>Android</span>
               <span>Java</span>
             </div>
-            <a href="https://play.google.com/store/apps/details?id=com.suenodulce.bebe" target="_blank" class="port-card-link">Ver en Play Store <i class="fa-solid fa-external-link-alt"></i></a>
+            <a href="https://play.google.com/store/apps/details?id=com.suenodulce.bebe" target="_blank" class="port-card-link">Play Store <i class="fa-solid fa-external-link-alt"></i></a>
           </div>
           <div class="port-card">
             <div class="port-card-icon">
               <i class="fa-solid fa-heart"></i>
             </div>
             <h3>Coding With Love</h3>
-            <p>Sitio web dedicado a temas de programación, tutoriales y recursos para desarrolladores.</p>
+            <p>Sitio web sobre programación, tutoriales y recursos para desarrolladores.</p>
             <div class="port-card-tags">
               <span>Web</span>
               <span>Blog</span>
@@ -162,5 +180,37 @@
 
   <script src="bootstrap/js/bootstrap.bundle.js"></script>
   <script src="js/index.js"></script>
+  <script>
+    let scrollPos = 0;
+    function openModal(imgSrc) {
+      const modal = document.getElementById('imgModal');
+      const modalBg = document.getElementById('modalBg');
+      modalBg.style.backgroundImage = `url('${imgSrc}')`;
+      scrollPos = window.pageYOffset;
+      modal.classList.add('active');
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollPos}px`;
+      document.body.style.width = '100%';
+    }
+    function closeModal() {
+      const modal = document.getElementById('imgModal');
+      modal.classList.remove('active');
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollPos);
+    }
+    document.getElementById('imgModal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('imgModal')) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+
+  <div id="imgModal" class="modal-img">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <div id="modalBg"></div>
+  </div>
 </body>
 </html>

@@ -412,9 +412,102 @@
   margin-bottom: 1rem;
 }
 
+.port-card-img {
+  height: 120px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.port-card-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.port-card-img-full {
+  height: 160px;
+  cursor: pointer;
+  transition: transform var(--transition);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.port-card-img-full:hover {
+  transform: scale(1.02);
+}
+
+.port-card-img-full img {
+  display: none;
+}
+
+.port-card-clickable {
+  cursor: pointer;
+}
+
+.modal-img {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.95);
+  cursor: pointer;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-img.active {
+  display: block;
+  touch-action: pan-y;
+}
+
+#modalBg {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 20px 40px;
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  min-height: 400vh;
+}
+
+.modal-close {
+  position: fixed;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10001;
+  transition: color 0.3s;
+}
+
+.modal-close:hover {
+  color: var(--primary);
+}
+
 .port-card h3 {
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
+}
+
+.port-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.port-card h3 a:hover {
+  color: var(--primary-light);
 }
 
 .port-card p {
