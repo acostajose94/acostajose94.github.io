@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>José Acosta - Desarrollador Full Stack</title>
-  <meta name="description" content="Desarrollador Full Stack especializado en crear experiencias digitales excepcionales">
+  <title>José Iván Acosta Figueroa | Ingeniero de Sistemas y Analista TI</title>
+  <meta name="description" content="Ingeniero de Sistemas titulado con más de 5 años de experiencia en proyectos de tecnología de la información">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script>
     tailwind.config = {
       theme: {
@@ -41,33 +42,33 @@
   <nav class="fixed top-0 left-0 right-0 z-50" id="navbar">
     <div class="max-w-7xl mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
-        <button class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 via-blue-400 to-purple-600 p-[3px] shadow-lg transition-all duration-300" id="nav-logo" onclick="scrollTo('hero')">
+        <button class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 via-blue-400 to-purple-600 p-[3px] shadow-lg transition-all duration-300" id="nav-logo" onclick="scrollToSection('hero')">
           <div class="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-xl font-bold text-white">
             JA
           </div>
         </button>
         <div class="hidden md:flex items-center gap-8">
-          <button class="text-slate-300 hover:text-white transition-colors relative group nav-btn" onclick="scrollTo('hero')">
+          <button class="text-slate-300 hover:text-white transition-colors relative group nav-btn" onclick="scrollToSection('hero')">
             Inicio
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
           </button>
-          <button class="text-slate-300 hover:text-white transition-colors relative group nav-btn" onclick="scrollTo('about')">
+          <button class="text-slate-300 hover:text-white transition-colors relative group nav-btn" onclick="scrollToSection('about')">
             Sobre Mí
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
           </button>
-          <button class="text-slate-300 hover:text-white transition-colors relative group nav-btn" onclick="scrollTo('skills')">
+          <button class="text-slate-300 hover:text-white transition-colors relative group nav-btn" onclick="scrollToSection('skills')">
             Habilidades
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
           </button>
-          <button class="text-slate-300 hover:text-white transition-colors relative group nav-btn" onclick="scrollTo('projects')">
+          <button class="text-slate-300 hover:text-white transition-colors relative group nav-btn" onclick="scrollToSection('projects')">
             Proyectos
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
           </button>
-          <button class="text-slate-300 hover:text-white transition-colors relative group nav-btn" onclick="scrollTo('experience')">
+          <button class="text-slate-300 hover:text-white transition-colors relative group nav-btn" onclick="scrollToSection('experience')">
             Experiencia
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
           </button>
-          <button class="text-slate-300 hover:text-white transition-colors relative group nav-btn" onclick="scrollTo('contact')">
+          <button class="text-slate-300 hover:text-white transition-colors relative group nav-btn" onclick="scrollToSection('contact')">
             Contacto
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
           </button>
@@ -82,12 +83,12 @@
   <!-- Mobile Menu -->
   <div class="md:hidden fixed top-16 left-0 right-0 bg-slate-950/95 backdrop-blur-lg border-b border-white/10 p-4 hidden" id="mobileMenu">
     <div class="flex flex-col gap-4">
-      <button class="text-left text-slate-300 hover:text-white" onclick="scrollTo('hero'); toggleMobileMenu()">Inicio</button>
-      <button class="text-left text-slate-300 hover:text-white" onclick="scrollTo('about'); toggleMobileMenu()">Sobre Mí</button>
-      <button class="text-left text-slate-300 hover:text-white" onclick="scrollTo('skills'); toggleMobileMenu()">Habilidades</button>
-      <button class="text-left text-slate-300 hover:text-white" onclick="scrollTo('projects'); toggleMobileMenu()">Proyectos</button>
-      <button class="text-left text-slate-300 hover:text-white" onclick="scrollTo('experience'); toggleMobileMenu()">Experiencia</button>
-      <button class="text-left text-slate-300 hover:text-white" onclick="scrollTo('contact'); toggleMobileMenu()">Contacto</button>
+      <button class="text-left text-slate-300 hover:text-white" onclick="scrollToSection('hero'); toggleMobileMenu()">Inicio</button>
+      <button class="text-left text-slate-300 hover:text-white" onclick="scrollToSection('about'); toggleMobileMenu()">Sobre Mí</button>
+      <button class="text-left text-slate-300 hover:text-white" onclick="scrollToSection('skills'); toggleMobileMenu()">Habilidades</button>
+      <button class="text-left text-slate-300 hover:text-white" onclick="scrollToSection('projects'); toggleMobileMenu()">Proyectos</button>
+      <button class="text-left text-slate-300 hover:text-white" onclick="scrollToSection('experience'); toggleMobileMenu()">Experiencia</button>
+      <button class="text-left text-slate-300 hover:text-white" onclick="scrollToSection('contact'); toggleMobileMenu()">Contacto</button>
     </div>
   </div>
 
@@ -109,7 +110,7 @@
         </div> -->
 
         <h1 class="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-gradient">
-          José Acosta
+          José  Acosta 
         </h1>
 
         <div class="h-12 mb-8">
@@ -119,7 +120,7 @@
         </div>
 
         <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12">
-          Creando experiencias digitales excepcionales con código limpio y diseño innovador
+          Ingeniero de Sistemas titulado con más de 5 años de experiencia en proyectos de TI, abarcando desarrollo de software, administración de bases de datos y gestión de aplicaciones
         </p>
 
         <div class="flex gap-6 justify-center mb-12">
@@ -135,17 +136,17 @@
         </div>
 
         <div class="grid grid-cols-2 gap-4 w-fit mx-auto">
-          <button class="w-full px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105" onclick="scrollTo('projects')">
+          <button class="w-full px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105" onclick="scrollToSection('projects')">
             Ver Proyectos
           </button>
-          <button class="w-full px-8 py-4 bg-white/5 border border-white/20 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-105" onclick="scrollTo('contact')">
+          <button class="w-full px-8 py-4 bg-white/5 border border-white/20 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-105" onclick="scrollToSection('contact')">
             Contáctame
           </button>
         </div>
       </div>
 
-      <div class="absolute bottom-12 inset-x-0 flex justify-center">
-        <button class="animate-bounce" onclick="scrollTo('about')">
+      <div class="absolute   inset-x-0 flex justify-center" style="bottom: 7rem;">
+        <button class="animate-bounce" onclick="scrollToSection('about')">
           <i class="fas fa-chevron-down text-2xl text-slate-400"></i>
         </button>
       </div>
@@ -167,13 +168,13 @@
               <div class="absolute -inset-4 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl blur-xl"></div>
               <div class="relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <p class="text-lg text-slate-300 mb-6">
-                  Soy un desarrollador apasionado por crear experiencias digitales excepcionales. Con más de 5 años de experiencia en el sector tecnológico, me especializo en construir aplicaciones web modernas, escalables y de alto rendimiento.
+                  Ingeniero de Sistemas titulado con más de 5 años de experiencia en proyectos de tecnología de la información, abarcando desarrollo de software, administración de bases de datos y gestión de aplicaciones.
                 </p>
                 <p class="text-lg text-slate-300 mb-6">
-                  Mi enfoque está en escribir código limpio, mantener las mejores prácticas y mantenerme actualizado con las últimas tecnologías y tendencias del desarrollo web.
+                  Experiencia en el ciclo completo de desarrollo: análisis de requerimientos, construcción de componentes, pruebas e integración. Especializado en SQL Server, desarrollo web con React y Angular, y automatización con CI/CD.
                 </p>
                 <p class="text-lg text-slate-300">
-                  Siempre estoy buscando nuevos desafíos que me permitan crecer profesionalmente y contribuir al éxito de proyectos innovadores.
+                  Apasionado por la tecnología y el aprendizaje continuo, siempre en búsqueda de nuevos desafíos que me permitan crecer profesionalmente y aportar soluciones innovadoras.
                 </p>
               </div>
             </div>
@@ -183,8 +184,8 @@
             <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
               <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
               <div class="relative">
-                <div class="w-12 h-12 mb-4 text-purple-400">
-                  <i class="fas fa-code text-2xl"></i>
+                <div class="w-12 h-12 mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
+                  <i class="fas fa-code text-xl"></i>
                 </div>
                 <h3 class="text-xl font-semibold mb-2">Código Limpio</h3>
                 <p class="text-slate-400">Desarrollo con las mejores prácticas y estándares de la industria</p>
@@ -193,8 +194,8 @@
             <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
               <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
               <div class="relative">
-                <div class="w-12 h-12 mb-4 text-purple-400">
-                  <i class="fas fa-lightbulb text-2xl"></i>
+                <div class="w-12 h-12 mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
+                  <i class="fas fa-lightbulb text-xl"></i>
                 </div>
                 <h3 class="text-xl font-semibold mb-2">Innovación</h3>
                 <p class="text-slate-400">Soluciones creativas para problemas complejos</p>
@@ -203,8 +204,8 @@
             <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
               <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
               <div class="relative">
-                <div class="w-12 h-12 mb-4 text-purple-400">
-                  <i class="fas fa-rocket text-2xl"></i>
+                <div class="w-12 h-12 mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
+                  <i class="fas fa-rocket text-xl"></i>
                 </div>
                 <h3 class="text-xl font-semibold mb-2">Rendimiento</h3>
                 <p class="text-slate-400">Aplicaciones rápidas y optimizadas</p>
@@ -213,8 +214,8 @@
             <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
               <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
               <div class="relative">
-                <div class="w-12 h-12 mb-4 text-purple-400">
-                  <i class="fas fa-users text-2xl"></i>
+                <div class="w-12 h-12 mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
+                  <i class="fas fa-users text-xl"></i>
                 </div>
                 <h3 class="text-xl font-semibold mb-2">Colaboración</h3>
                 <p class="text-slate-400">Trabajo en equipo y comunicación efectiva</p>
@@ -238,8 +239,8 @@
             <div class="text-slate-400 mt-2">Certif.</div>
           </div>
           <div class="bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:border-purple-400/50 transition-all duration-300">
-            <div class="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">20+</div>
-            <div class="text-slate-400 mt-2">Proyectos</div>
+            <div class="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">1</div>
+            <div class="text-slate-400 mt-2">Reconocimiento</div>
           </div>
         </div>
       </div>
@@ -258,7 +259,35 @@
         <div class="grid md:grid-cols-3 gap-8">
           <div class="group bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-300">
             <h3 class="text-2xl font-semibold mb-6 text-purple-400">
-              <i class="fas fa-code mr-2"></i>Frontend
+              <i class="fas fa-code mr-2"></i>Lenguajes
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">JavaScript</span><span class="text-slate-400">90%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 90%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">Java</span><span class="text-slate-400">80%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 80%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">Python</span><span class="text-slate-400">82%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 82%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">SQL</span><span class="text-slate-400">88%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 88%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">TypeScript</span><span class="text-slate-400">85%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 85%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-300">
+            <h3 class="text-2xl font-semibold mb-6 text-purple-400">
+              <i class="fas fa-layer-group mr-2"></i>Frameworks
             </h3>
             <div class="space-y-4">
               <div>
@@ -266,39 +295,75 @@
                 <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 90%"></div></div>
               </div>
               <div>
-                <div class="flex justify-between mb-2"><span class="text-slate-300">TypeScript</span><span class="text-slate-400">85%</span></div>
-                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 85%"></div></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-2"><span class="text-slate-300">Tailwind</span><span class="text-slate-400">92%</span></div>
-                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 92%"></div></div>
-              </div>
-              <div>
                 <div class="flex justify-between mb-2"><span class="text-slate-300">Angular</span><span class="text-slate-400">80%</span></div>
                 <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 80%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">Spring Boot</span><span class="text-slate-400">75%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 75%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">Bootstrap</span><span class="text-slate-400">85%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 85%"></div></div>
               </div>
             </div>
           </div>
 
           <div class="group bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-300">
             <h3 class="text-2xl font-semibold mb-6 text-purple-400">
-              <i class="fas fa-server mr-2"></i>Backend
+              <i class="fas fa-database mr-2"></i>Bases de Datos
             </h3>
             <div class="space-y-4">
               <div>
-                <div class="flex justify-between mb-2"><span class="text-slate-300">Node.js</span><span class="text-slate-400">88%</span></div>
-                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 88%"></div></div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">SQL Server</span><span class="text-slate-400">90%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 90%"></div></div>
               </div>
               <div>
-                <div class="flex justify-between mb-2"><span class="text-slate-300">Python</span><span class="text-slate-400">82%</span></div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">MySQL</span><span class="text-slate-400">82%</span></div>
                 <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 82%"></div></div>
               </div>
               <div>
-                <div class="flex justify-between mb-2"><span class="text-slate-300">Java</span><span class="text-slate-400">75%</span></div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">MongoDB</span><span class="text-slate-400">75%</span></div>
                 <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 75%"></div></div>
               </div>
+            </div>
+          </div>
+
+          <div class="group bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-300">
+            <h3 class="text-2xl font-semibold mb-6 text-purple-400">
+              <i class="fas fa-code-branch mr-2"></i>Control de Versiones
+            </h3>
+            <div class="space-y-4">
               <div>
-                <div class="flex justify-between mb-2"><span class="text-slate-300">C#</span><span class="text-slate-400">70%</span></div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">Git</span><span class="text-slate-400">90%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 90%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">GitHub</span><span class="text-slate-400">88%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 88%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">Bitbucket</span><span class="text-slate-400">78%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 78%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-300">
+            <h3 class="text-2xl font-semibold mb-6 text-purple-400">
+              <i class="fas fa-cogs mr-2"></i>DevOps / CI-CD
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">Jenkins</span><span class="text-slate-400">80%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 80%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">Docker</span><span class="text-slate-400">83%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 83%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">Kubernetes</span><span class="text-slate-400">70%</span></div>
                 <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 70%"></div></div>
               </div>
             </div>
@@ -306,24 +371,20 @@
 
           <div class="group bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-300">
             <h3 class="text-2xl font-semibold mb-6 text-purple-400">
-              <i class="fas fa-database mr-2"></i>DevOps & Tools
+              <i class="fas fa-tasks mr-2"></i>Metodologías
             </h3>
             <div class="space-y-4">
               <div>
-                <div class="flex justify-between mb-2"><span class="text-slate-300">Docker</span><span class="text-slate-400">83%</span></div>
-                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 83%"></div></div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">Scrum</span><span class="text-slate-400">85%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 85%"></div></div>
               </div>
               <div>
-                <div class="flex justify-between mb-2"><span class="text-slate-300">AWS</span><span class="text-slate-400">76%</span></div>
-                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 76%"></div></div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">Análisis</span><span class="text-slate-400">82%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 82%"></div></div>
               </div>
               <div>
-                <div class="flex justify-between mb-2"><span class="text-slate-300">Git</span><span class="text-slate-400">90%</span></div>
-                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 90%"></div></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-2"><span class="text-slate-300">CI/CD</span><span class="text-slate-400">80%</span></div>
-                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 80%"></div></div>
+                <div class="flex justify-between mb-2"><span class="text-slate-300">UML</span><span class="text-slate-400">78%</span></div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 78%"></div></div>
               </div>
             </div>
           </div>
@@ -335,67 +396,214 @@
       </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education" class="relative py-32 px-6 bg-slate-900/30">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            Formación
+          </h2>
+          <div class="w-24 h-1 mx-auto bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="group bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-300">
+            <div class="w-16 h-16 mb-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
+              <i class="fas fa-graduation-cap text-2xl"></i>
+            </div>
+            <span class="inline-block px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300 mb-4">2021</span>
+            <h3 class="text-2xl font-semibold mb-2">Ingeniería de Sistemas</h3>
+            <p class="text-lg text-slate-300 mb-1">Universidad César Vallejo</p>
+            <p class="text-slate-400">Título Profesional por sustentación de tesis</p>
+          </div>
+
+          <div class="group bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-300">
+            <div class="w-16 h-16 mb-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
+              <i class="fas fa-trophy text-2xl"></i>
+            </div>
+            <span class="inline-block px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300 mb-4">2016</span>
+            <h3 class="text-2xl font-semibold mb-2">Primer Puesto – Expowork UCV</h3>
+            <p class="text-lg text-slate-300 mb-1">Universidad César Vallejo</p>
+            <p class="text-slate-400">Proyecto de tecnología e innovación</p>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="/estudios/" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105">
+            Ver formación completa
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects" class="relative py-32 px-6">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Proyectos Destacados
+            Proyectos
           </h2>
           <div class="w-24 h-1 mx-auto bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"></div>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105" onclick="openProjectModal('img/sistemasperuweb.png', 'SistemasPeruWeb')">
-            <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
-            <div class="relative">
-              <div class="aspect-video overflow-hidden">
-                <img src="img/sistemasperuweb.png" alt="SistemasPeruWeb" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        <!-- Swiper Carousel -->
+        <div class="swiper projectSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 h-full" onclick="openProjectModal('img/sistemasperuweb.png', 'SistemasPeruWeb')">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+                <div class="relative">
+                  <div class="aspect-video overflow-hidden">
+                    <img src="img/sistemasperuweb.png" alt="SistemasPeruWeb" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">
+                      <a href="https://sistemasperuweb.com/" target="_blank" class="hover:text-purple-400">SistemasPeruWeb <i class="fa-solid fa-external-link-alt" style="font-size:0.7em"></i></a>
+                    </h3>
+                    <p class="text-slate-400 mb-4">Empresa de desarrollo de software en Lima, Perú. Soluciones tecnológicas personalizadas.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Desarrollo Web</span>
+                      <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Perú</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="p-6">
-                <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">SistemasPeruWeb</h3>
-                <p class="text-slate-400 mb-4">Desarrollo web para empresa de tecnología en Lima.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">React</span>
-                  <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Node.js</span>
+            </div>
+            <div class="swiper-slide">
+              <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 h-full" onclick="openProjectModal('img/tecnofil.png', 'Tecnofil')">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+                <div class="relative">
+                  <div class="aspect-video overflow-hidden">
+                    <img src="img/tecnofil.png" alt="Tecnofil" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">
+                      <a href="https://tecnofil.com.pe/" target="_blank" class="hover:text-purple-400">Tecnofil <i class="fa-solid fa-external-link-alt" style="font-size:0.7em"></i></a>
+                    </h3>
+                    <p class="text-slate-400 mb-4">Sitio web para empresa de servicios tecnológicos y soluciones digitales.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Web</span>
+                      <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Tech</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 h-full">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+                <div class="relative">
+                  <div class="aspect-video overflow-hidden flex items-center justify-center bg-gradient-to-br from-purple-500/20 to-blue-500/20">
+                    <i class="fas fa-database text-6xl text-slate-600"></i>
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">Sistema de Gestión de Cobranzas</h3>
+                    <p class="text-slate-400 mb-4">Sistema integral para cobranzas de múltiples marcas. Stored procedures, ETL y reportes automatizados.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">SQL Server</span>
+                      <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">ETL</span>
+                      <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Reporting</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
 
-          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105" onclick="openProjectModal('img/tecnofil.png', 'Tecnofil')">
-            <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
-            <div class="relative">
-              <div class="aspect-video overflow-hidden">
-                <img src="img/tecnofil.png" alt="Tecnofil" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-              </div>
-              <div class="p-6">
-                <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">Tecnofil</h3>
-                <p class="text-slate-400 mb-4">Sitio web para servicios tecnológicos.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">HTML/CSS</span>
-                  <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">JS</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="text-center mt-12">
+          <a href="/portafolio/" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105">
+            Ver todos los proyectos
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
 
-          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
-            <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
-            <div class="relative">
-              <div class="aspect-video overflow-hidden flex items-center justify-center bg-gradient-to-br from-purple-500/20 to-blue-500/20">
-                <i class="fas fa-project-diagram text-6xl text-slate-600"></i>
+        <div class="text-center mt-16 mb-8">
+          <h3 class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            Apps y Juegos
+          </h3>
+          <div class="w-24 h-1 mx-auto bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"></div>
+        </div>
+
+        <div class="swiper appsSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 h-full">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+                <div class="relative p-6">
+                  <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
+                    <i class="fa-brands fa-android text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">Sudoku Pro</h3>
+                  <p class="text-slate-400 mb-4 text-sm">Aplicación Android de Sudoku con múltiples niveles de dificultad y estadísticas.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Android</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Kotlin</span>
+                  </div>
+                  <a href="https://play.google.com/store/apps/details?id=com.sudokupro.app" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm">Play Store <i class="fa-solid fa-external-link-alt"></i></a>
+                </div>
               </div>
-              <div class="p-6">
-                <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">FinanzApp</h3>
-                <p class="text-slate-400 mb-4">Aplicación de gestión financiera personal.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">React Native</span>
-                  <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Firebase</span>
+            </div>
+            <div class="swiper-slide">
+              <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 h-full">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+                <div class="relative p-6">
+                  <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
+                    <i class="fa-brands fa-android text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">Sueno Dulce Bebé</h3>
+                  <p class="text-slate-400 mb-4 text-sm">Aplicación para padres con el sueño de sus bebés. Seguimiento y consejos personalizados.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Android</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Java</span>
+                  </div>
+                  <a href="https://play.google.com/store/apps/details?id=com.suenodulce.bebe" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm">Play Store <i class="fa-solid fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 h-full">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+                <div class="relative p-6">
+                  <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
+                    <i class="fas fa-heart text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">Coding With Love</h3>
+                  <p class="text-slate-400 mb-4 text-sm">Sitio web sobre programación, tutoriales y recursos para desarrolladores.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Web</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Blog</span>
+                  </div>
+                  <a href="https://coding-with-love.github.io/" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm">Visitar <i class="fa-solid fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 h-full">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+                <div class="relative p-6">
+                  <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
+                    <i class="fas fa-gamepad text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">Juego del Ahorcado</h3>
+                  <p class="text-slate-400 mb-4 text-sm">Proyecto personal: juego interactivo con interfaz web.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">HTML</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">CSS</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">JS</span>
+                  </div>
+                  <a href="juego/" class="text-purple-400 hover:text-purple-300 text-sm">Jugar <i class="fa-solid fa-play"></i></a>
                 </div>
               </div>
             </div>
           </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </div>
     </section>
@@ -413,83 +621,163 @@
         <div class="relative">
           <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-400 via-blue-400 to-purple-400"></div>
 
-          <div class="relative mb-12">
+          <div class="relative mb-12 md:flex md:flex-row-reverse">
             <div class="absolute left-8 md:left-1/2 top-6 w-4 h-4 bg-purple-400 rounded-full -translate-x-1/2 ring-4 ring-slate-950"></div>
-            <div class="ml-16 md:ml-0 group">
+            <div class="ml-16 md:ml-0 md:w-1/2 md:mr-auto md:pr-12 group">
               <div class="relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-purple-400/50 transition-all duration-300">
                 <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
                 <div class="relative">
                   <div class="flex items-center gap-2 text-purple-400 mb-2">
-                    <i class="fas fa-briefcase"></i>
-                    <h3 class="text-xl font-semibold">Senior Full Stack Developer</h3>
+                    <i class="fas fa-database"></i>
+                    <h3 class="text-xl font-semibold">Analista de Base de Datos / Sistemas</h3>
                   </div>
-                  <div class="text-lg text-slate-300 mb-2">Tech Innovators Inc.</div>
+                  <div class="text-lg text-slate-300 mb-2">AVAL Perú S.A.</div>
                   <div class="flex items-center gap-2 text-slate-400 mb-4">
                     <i class="fas fa-calendar"></i>
-                    <span>2023 - Presente</span>
+                    <span>2021 – Actual</span>
                   </div>
-                  <p class="text-slate-400 mb-4">Liderando el desarrollo de aplicaciones web escalables usando React, Node.js y AWS.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">SQL Server</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">ETL</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Reporting</span>
+                  </div>
                   <ul class="space-y-2">
-                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Redujo el tiempo de carga en un 40%</span></li>
-                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Implementó arquitectura de microservicios</span></li>
-                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Lideró equipo de 5 desarrolladores</span></li>
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Análisis, diseño y mantenimiento de componentes de software para el sistema de gestión de cobranzas (aval_cob)</span></li>
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Desarrollo y optimización de stored procedures en SQL Server para procesos ETL, carga masiva y reportes automatizados</span></li>
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Validación, depuración y control de calidad de datos en bases de datos productivas</span></li>
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Participación en proyectos de migración y mejora de sistemas bajo metodologías estructuradas</span></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="relative mb-12">
+          <div class="relative mb-12 md:flex">
             <div class="absolute left-8 md:left-1/2 top-6 w-4 h-4 bg-purple-400 rounded-full -translate-x-1/2 ring-4 ring-slate-950"></div>
-            <div class="ml-16 md:ml-0 group">
+            <div class="ml-16 md:ml-0 md:w-1/2 md:ml-auto md:pl-12 group">
               <div class="relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-purple-400/50 transition-all duration-300">
                 <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
                 <div class="relative">
                   <div class="flex items-center gap-2 text-purple-400 mb-2">
-                    <i class="fas fa-briefcase"></i>
-                    <h3 class="text-xl font-semibold">Full Stack Developer</h3>
+                    <i class="fas fa-code"></i>
+                    <h3 class="text-xl font-semibold">Desarrollador Full Stack – Frontend</h3>
                   </div>
-                  <div class="text-lg text-slate-300 mb-2">Digital Solutions Ltd.</div>
+                  <div class="text-lg text-slate-300 mb-2">BC Tecnología</div>
                   <div class="flex items-center gap-2 text-slate-400 mb-4">
                     <i class="fas fa-calendar"></i>
-                    <span>2021 - 2023</span>
+                    <span>2024 – 2025</span>
                   </div>
-                  <p class="text-slate-400 mb-4">Desarrollo de aplicaciones web full stack con React, Vue.js y Node.js.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">React</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">C#</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">REST API</span>
+                  </div>
                   <ul class="space-y-2">
-                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Desarrolló 15+ aplicaciones web exitosas</span></li>
-                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Mejoró la cobertura de tests al 85%</span></li>
-                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Implementó CI/CD pipeline</span></li>
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Desarrollo de interfaces de usuario con React, componentes reutilizables y mantenibles</span></li>
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Integración con servicios REST y backend en C#</span></li>
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Control de versiones con Git y gestión de ramas (feature, release, master)</span></li>
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Pruebas unitarias e integrales de componentes desarrollados</span></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="relative mb-12">
+          <div class="relative mb-12 md:flex md:flex-row-reverse">
             <div class="absolute left-8 md:left-1/2 top-6 w-4 h-4 bg-purple-400 rounded-full -translate-x-1/2 ring-4 ring-slate-950"></div>
-            <div class="ml-16 md:ml-0 group">
+            <div class="ml-16 md:ml-0 md:w-1/2 md:mr-auto md:pr-12 group">
               <div class="relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-purple-400/50 transition-all duration-300">
                 <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
                 <div class="relative">
                   <div class="flex items-center gap-2 text-purple-400 mb-2">
-                    <i class="fas fa-briefcase"></i>
-                    <h3 class="text-xl font-semibold">Frontend Developer</h3>
+                    <i class="fas fa-code-branch"></i>
+                    <h3 class="text-xl font-semibold">Desarrollador – Integración y CI/CD</h3>
                   </div>
-                  <div class="text-lg text-slate-300 mb-2">Creative Web Agency</div>
+                  <div class="text-lg text-slate-300 mb-2">Canvia</div>
                   <div class="flex items-center gap-2 text-slate-400 mb-4">
                     <i class="fas fa-calendar"></i>
-                    <span>2019 - 2021</span>
+                    <span>2023</span>
                   </div>
-                  <p class="text-slate-400 mb-4">Creación de interfaces de usuario modernas y responsivas.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Java</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Jenkins</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">CI/CD</span>
+                  </div>
                   <ul class="space-y-2">
-                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Entregó 20+ proyectos a tiempo</span></li>
-                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Mejoró métricas de rendimiento web</span></li>
-                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Implementó design system</span></li>
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Desarrollo de funcionalidades en Java e integración con servicios REST</span></li>
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Uso de Jenkins para integración continua y automatización de despliegues (CI/CD pipeline)</span></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="relative mb-12 md:flex">
+            <div class="absolute left-8 md:left-1/2 top-6 w-4 h-4 bg-purple-400 rounded-full -translate-x-1/2 ring-4 ring-slate-950"></div>
+            <div class="ml-16 md:ml-0 md:w-1/2 md:ml-auto md:pl-12 group">
+              <div class="relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-purple-400/50 transition-all duration-300">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+                <div class="relative">
+                  <div class="flex items-center gap-2 text-purple-400 mb-2">
+                    <i class="fas fa-angular"></i>
+                    <h3 class="text-xl font-semibold">Desarrollador Frontend – Proyectos SUNAT</h3>
+                  </div>
+                  <div class="text-lg text-slate-300 mb-2">MDP Consulting</div>
+                  <div class="flex items-center gap-2 text-slate-400 mb-4">
+                    <i class="fas fa-calendar"></i>
+                    <span>2023</span>
+                  </div>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Angular</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">TypeScript</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">SUNAT</span>
+                  </div>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Desarrollo de interfaces web con Angular para proyectos integrados con SUNAT</span></li>
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Implementación de filtros dinámicos y consumo de servicios REST</span></li>
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Optimización de componentes front-end respetando estándares de rendimiento</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative mb-12 md:flex md:flex-row-reverse">
+            <div class="absolute left-8 md:left-1/2 top-6 w-4 h-4 bg-purple-400 rounded-full -translate-x-1/2 ring-4 ring-slate-950"></div>
+            <div class="ml-16 md:ml-0 md:w-1/2 md:mr-auto md:pr-12 group">
+              <div class="relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-purple-400/50 transition-all duration-300">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+                <div class="relative">
+                  <div class="flex items-center gap-2 text-purple-400 mb-2">
+                    <i class="fas fa-globe"></i>
+                    <h3 class="text-xl font-semibold">Desarrollador Web</h3>
+                  </div>
+                  <div class="text-lg text-slate-300 mb-2">Neurocomercial Consulting</div>
+                  <div class="flex items-center gap-2 text-slate-400 mb-4">
+                    <i class="fas fa-calendar"></i>
+                    <span>2018 – 2019</span>
+                  </div>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">PHP</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">WordPress</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">MySQL</span>
+                  </div>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Desarrollo y optimización de páginas web responsivas</span></li>
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Personalización de sitios WordPress</span></li>
+                    <li class="flex items-start gap-2 text-slate-400"><span class="text-purple-400 mt-1">•</span><span>Manejo de hosting y bases de datos</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/experiencia/" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105">
+            Ver experiencia completa
+            <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -534,8 +822,8 @@
             <h3 class="text-2xl font-semibold mb-6">Información de Contacto</h3>
             <div class="space-y-6 mb-12">
               <div class="flex items-start gap-4 bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300">
-                <div class="p-3 bg-purple-500/10 rounded-lg">
-                  <i class="fas fa-envelope text-purple-400 text-xl"></i>
+                <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
+                  <i class="fas fa-envelope text-xl"></i>
                 </div>
                 <div>
                   <h4 class="font-semibold mb-1">Email</h4>
@@ -543,17 +831,20 @@
                 </div>
               </div>
               <div class="flex items-start gap-4 bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300">
-                <div class="p-3 bg-purple-500/10 rounded-lg">
-                  <i class="fas fa-phone text-purple-400 text-xl"></i>
+                <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
+                  <i class="fas fa-phone text-xl"></i>
                 </div>
                 <div>
                   <h4 class="font-semibold mb-1">Teléfono</h4>
-                  <a href="tel:+51948484848" class="text-slate-400 hover:text-purple-400 transition-colors">+51 948 484 848</a>
+                  <div class="flex items-center gap-2">
+                    <a href="tel:+51973418632" class="text-slate-400 hover:text-purple-400 transition-colors">973 418 632</a>
+                    <a href="https://wa.me/51973418632" target="_blank" class="text-green-400 hover:text-green-300 transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                  </div>
                 </div>
               </div>
               <div class="flex items-start gap-4 bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300">
-                <div class="p-3 bg-purple-500/10 rounded-lg">
-                  <i class="fas fa-location-dot text-purple-400 text-xl"></i>
+                <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
+                  <i class="fas fa-location-dot text-xl"></i>
                 </div>
                 <div>
                   <h4 class="font-semibold mb-1">Ubicación</h4>
@@ -589,10 +880,11 @@
   <!-- Footer -->
   <footer class="relative border-t border-white/10 py-8">
     <div class="max-w-7xl mx-auto px-6 text-center text-slate-400">
-      <p>&copy; 2024 José Acosta. Todos los derechos reservados.</p>
+      <p>&copy; <span id="currentYear"></span> José Iván Acosta Figueroa. Todos los derechos reservados.</p>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>

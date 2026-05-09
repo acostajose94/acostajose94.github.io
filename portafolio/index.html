@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Jose Ivan Acosta Figueroa</title>
+  <meta name="description" content="Portafolio de proyectos de Jose Ivan Acosta Figueroa, Ingeniero de Sistemas.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { slate: { 950: '#020617' } },
+          animation: { 'gradient': 'gradient 3s ease infinite' },
+          keyframes: {
+            gradient: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white min-h-screen">
+  <div class="fixed inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
+  <div class="fixed inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent pointer-events-none"></div>
+
+  <nav class="fixed top-0 left-0 right-0 z-50" id="navbar">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="/" class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 via-blue-400 to-purple-600 p-[3px] shadow-lg transition-all duration-300">
+          <div class="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-xl font-bold text-white">JA</div>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/#hero" class="text-slate-300 hover:text-white transition-colors relative group">Inicio<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span></a>
+          <a href="/#about" class="text-slate-300 hover:text-white transition-colors relative group">Sobre Mi<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span></a>
+          <a href="/#skills" class="text-slate-300 hover:text-white transition-colors relative group">Habilidades<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span></a>
+          <a href="/#projects" class="text-slate-300 hover:text-white transition-colors relative group">Proyectos<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span></a>
+          <span class="text-white font-semibold">Portafolio</span>
+          <a href="/#contact" class="text-slate-300 hover:text-white transition-colors relative group">Contacto<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span></a>
+        </div>
+        <button class="md:hidden text-white" onclick="toggleMobileMenu()"><i class="fas fa-bars text-xl"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="md:hidden fixed top-16 left-0 right-0 bg-slate-950/95 backdrop-blur-lg border-b border-white/10 p-4 hidden" id="mobileMenu">
+    <div class="flex flex-col gap-4">
+      <a href="/#hero" class="text-left text-slate-300 hover:text-white" onclick="toggleMobileMenu()">Inicio</a>
+      <a href="/#about" class="text-left text-slate-300 hover:text-white" onclick="toggleMobileMenu()">Sobre Mi</a>
+      <a href="/#skills" class="text-left text-slate-300 hover:text-white" onclick="toggleMobileMenu()">Habilidades</a>
+      <a href="/#projects" class="text-left text-slate-300 hover:text-white" onclick="toggleMobileMenu()">Proyectos</a>
+      <span class="text-left text-white font-semibold">Portafolio</span>
+      <a href="/#contact" class="text-left text-slate-300 hover:text-white" onclick="toggleMobileMenu()">Contacto</a>
+    </div>
+  </div>
+
+  <main class="relative pt-32">
+    <section class="py-16 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Portafolio</h1>
+          <div class="w-24 h-1 mx-auto bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"></div>
+        </div>
+
+        <h2 class="text-3xl font-semibold mb-8 text-purple-400"><i class="fas fa-laptop-code mr-3"></i>Proyectos Web</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105" onclick="openProjectModal('../img/sistemasperuweb.png', 'SistemasPeruWeb')">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+            <div class="relative">
+              <div class="aspect-video overflow-hidden"><img src="../img/sistemasperuweb.png" alt="SistemasPeruWeb" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors"><a href="https://sistemasperuweb.com/" target="_blank" class="hover:text-purple-400">SistemasPeruWeb <i class="fa-solid fa-external-link-alt" style="font-size:0.7em"></i></a></h3>
+                <p class="text-slate-400 mb-4">Empresa de desarrollo de software en Lima, Peru. Soluciones tecnologicas personalizadas.</p>
+                <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Desarrollo Web</span><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Peru</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105" onclick="openProjectModal('../img/tecnofil.png', 'Tecnofil')">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+            <div class="relative">
+              <div class="aspect-video overflow-hidden"><img src="../img/tecnofil.png" alt="Tecnofil" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors"><a href="https://tecnofil.com.pe/" target="_blank" class="hover:text-purple-400">Tecnofil <i class="fa-solid fa-external-link-alt" style="font-size:0.7em"></i></a></h3>
+                <p class="text-slate-400 mb-4">Sitio web para empresa de servicios tecnologicos y soluciones digitales.</p>
+                <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Web</span><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Tech</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+            <div class="relative">
+              <div class="aspect-video overflow-hidden flex items-center justify-center bg-gradient-to-br from-purple-500/20 to-blue-500/20"><i class="fas fa-database text-6xl text-slate-600"></i></div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">Sistema de Gestion de Cobranzas</h3>
+                <p class="text-slate-400 mb-4">Sistema integral para cobranzas de multiples marcas. Stored procedures, ETL y reportes automatizados.</p>
+                <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">SQL Server</span><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">ETL</span><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Reporting</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-semibold mb-8 text-purple-400"><i class="fas fa-mobile-alt mr-3"></i>Apps y Juegos</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+            <div class="relative p-6">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400"><i class="fa-brands fa-android text-2xl"></i></div>
+              <h3 class="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">Sudoku Pro</h3>
+              <p class="text-slate-400 mb-4 text-sm">Aplicacion Android de Sudoku con multiples niveles de dificultad y estadisticas.</p>
+              <div class="flex flex-wrap gap-2 mb-4"><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Android</span><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Kotlin</span></div>
+              <a href="https://play.google.com/store/apps/details?id=com.sudokupro.app" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm">Play Store <i class="fa-solid fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+            <div class="relative p-6">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400"><i class="fa-brands fa-android text-2xl"></i></div>
+              <h3 class="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">Sueno Dulce Bebe</h3>
+              <p class="text-slate-400 mb-4 text-sm">Aplicacion para padres con el sueno de sus bebes. Seguimiento y consejos personalizados.</p>
+              <div class="flex flex-wrap gap-2 mb-4"><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Android</span><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Java</span></div>
+              <a href="https://play.google.com/store/apps/details?id=com.suenodulce.bebe" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm">Play Store <i class="fa-solid fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+            <div class="relative p-6">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400"><i class="fas fa-heart text-2xl"></i></div>
+              <h3 class="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">Coding With Love</h3>
+              <p class="text-slate-400 mb-4 text-sm">Sitio web sobre programacion, tutoriales y recursos para desarrolladores.</p>
+              <div class="flex flex-wrap gap-2 mb-4"><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Web</span><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">Blog</span></div>
+              <a href="https://coding-with-love.github.io/" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm">Visitar <i class="fa-solid fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
+            <div class="relative p-6">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400"><i class="fas fa-gamepad text-2xl"></i></div>
+              <h3 class="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">Juego del Ahorcado</h3>
+              <p class="text-slate-400 mb-4 text-sm">Proyecto personal: juego interactivo con interfaz web.</p>
+              <div class="flex flex-wrap gap-2 mb-4"><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">HTML</span><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">CSS</span><span class="px-3 py-1 bg-purple-500/10 border border-purple-400/20 rounded-full text-sm text-purple-300">JS</span></div>
+              <a href="/juego/" class="text-purple-400 hover:text-purple-300 text-sm">Jugar <i class="fa-solid fa-play"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative border-t border-white/10 py-8">
+    <div class="max-w-7xl mx-auto px-6 text-center text-slate-400">
+      <p>&copy; <span id="currentYear"></span> Jose Ivan Acosta Figueroa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Jose Ivan Acosta Figueroa</title>
+  <meta name="description" content="Contacta a Jose Ivan Acosta Figueroa, Ingeniero de Sistemas.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { slate: { 950: '#020617' } },
+          animation: { 'gradient': 'gradient 3s ease infinite' },
+          keyframes: {
+            gradient: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white min-h-screen">
+  <div class="fixed inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
+  <div class="fixed inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent pointer-events-none"></div>
+
+  <nav class="fixed top-0 left-0 right-0 z-50" id="navbar">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="/" class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 via-blue-400 to-purple-600 p-[3px] shadow-lg transition-all duration-300">
+          <div class="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-xl font-bold text-white">JA</div>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/#hero" class="text-slate-300 hover:text-white transition-colors relative group">Inicio<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span></a>
+          <a href="/#about" class="text-slate-300 hover:text-white transition-colors relative group">Sobre Mi<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span></a>
+          <a href="/#skills" class="text-slate-300 hover:text-white transition-colors relative group">Habilidades<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span></a>
+          <a href="/#projects" class="text-slate-300 hover:text-white transition-colors relative group">Proyectos<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300"></span></a>
+          <span class="text-white font-semibold">Contacto</span>
+        </div>
+        <button class="md:hidden text-white" onclick="toggleMobileMenu()"><i class="fas fa-bars text-xl"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="md:hidden fixed top-16 left-0 right-0 bg-slate-950/95 backdrop-blur-lg border-b border-white/10 p-4 hidden" id="mobileMenu">
+    <div class="flex flex-col gap-4">
+      <a href="/#hero" class="text-left text-slate-300 hover:text-white" onclick="toggleMobileMenu()">Inicio</a>
+      <a href="/#about" class="text-left text-slate-300 hover:text-white" onclick="toggleMobileMenu()">Sobre Mi</a>
+      <a href="/#skills" class="text-left text-slate-300 hover:text-white" onclick="toggleMobileMenu()">Habilidades</a>
+      <a href="/#projects" class="text-left text-slate-300 hover:text-white" onclick="toggleMobileMenu()">Proyectos</a>
+      <span class="text-left text-white font-semibold">Contacto</span>
+    </div>
+  </div>
+
+  <main class="relative pt-32">
+    <section class="py-16 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Contacto</h1>
+          <div class="w-24 h-1 mx-auto bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"></div>
+          <p class="text-slate-400 mt-6 text-lg">Tienes un proyecto en mente? Hablemos!</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-semibold mb-6">Enviame un mensaje</h3>
+            <form class="space-y-6" id="contactForm">
+              <input type="hidden" name="access_key" value="e174203b-7c32-4fb7-b01a-d5fabb6bfe5f">
+              <input type="hidden" name="subject" value="Nuevo mensaje desde portafolio">
+              <div>
+                <label for="name" class="block text-slate-300 mb-2">Nombre</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-lg focus:outline-none focus:border-purple-400 transition-colors text-white" placeholder="Tu nombre">
+              </div>
+              <div>
+                <label for="email" class="block text-slate-300 mb-2">Email</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-lg focus:outline-none focus:border-purple-400 transition-colors text-white" placeholder="tu@email.com">
+              </div>
+              <div>
+                <label for="message" class="block text-slate-300 mb-2">Mensaje</label>
+                <textarea id="message" name="message" required rows="6" class="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-lg focus:outline-none focus:border-purple-400 transition-colors text-white resize-none" placeholder="Cuentame sobre tu proyecto..."></textarea>
+              </div>
+              <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2" id="btnEnviar">
+                <i class="fas fa-paper-plane"></i>
+                <span>Enviar Mensaje</span>
+              </button>
+            </form>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold mb-6">Informacion de Contacto</h3>
+            <div class="space-y-6 mb-12">
+              <div class="flex items-start gap-4 bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300">
+                <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400"><i class="fas fa-envelope text-xl"></i></div>
+                <div>
+                  <h4 class="font-semibold mb-1">Email</h4>
+                  <a href="mailto:gamar30@gmail.com" class="text-slate-400 hover:text-purple-400 transition-colors">gamar30@gmail.com</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300">
+                <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400"><i class="fas fa-phone text-xl"></i></div>
+                <div>
+                  <h4 class="font-semibold mb-1">Telefono</h4>
+                  <div class="flex items-center gap-2">
+                    <a href="tel:+51973418632" class="text-slate-400 hover:text-purple-400 transition-colors">973 418 632</a>
+                    <a href="https://wa.me/51973418632" target="_blank" class="text-green-400 hover:text-green-300 transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300">
+                <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400"><i class="fas fa-location-dot text-xl"></i></div>
+                <div>
+                  <h4 class="font-semibold mb-1">Ubicacion</h4>
+                  <p class="text-slate-400">Lima, Peru</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300">
+                <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-purple-400"><i class="fas fa-globe text-xl"></i></div>
+                <div>
+                  <h4 class="font-semibold mb-1">Redes</h4>
+                  <div class="flex gap-3">
+                    <a href="https://github.com/acostajose94" target="_blank" class="text-slate-400 hover:text-purple-400 transition-colors text-xl"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ivan-acosta-figueroa/" target="_blank" class="text-slate-400 hover:text-purple-400 transition-colors text-xl"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+              <h4 class="text-xl font-semibold mb-4">Disponibilidad</h4>
+              <p class="text-slate-400 mb-4">Actualmente estoy disponible para proyectos freelance y oportunidades de tiempo completo.</p>
+              <div class="flex items-center gap-2">
+                <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <span class="text-green-400">Disponible para nuevos proyectos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative border-t border-white/10 py-8">
+    <div class="max-w-7xl mx-auto px-6 text-center text-slate-400">
+      <p>&copy; <span id="currentYear"></span> Jose Ivan Acosta Figueroa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/index.js"></script>
+</body>
+</html>

@@ -1,43 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página no encontrada | José Iván Acosta Figueroa</title>
-    <meta name="robots" content="noindex, follow" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <style>
-      .error-page {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 2rem;
-      }
-      .error-page h1 {
-        font-size: clamp(4rem, 10vw, 8rem);
-        font-weight: 800;
-        background: var(--gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      .error-page p {
-        font-size: 1.2rem;
-        color: var(--text-secondary);
-        margin-bottom: 2rem;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="error-page">
-      <div>
-        <h1>404</h1>
-        <p>La página que buscas no existe o fue movida.</p>
-        <a href="index.html" class="btn btn-primary-custom">Volver al inicio</a>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina no encontrada | Jose Ivan Acosta Figueroa</title>
+  <meta name="robots" content="noindex, follow">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white min-h-screen">
+  <div class="fixed inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
+  <div class="fixed inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent pointer-events-none"></div>
+
+  <div class="min-h-screen flex items-center justify-center px-6">
+    <div class="text-center">
+      <h1 class="text-8xl md:text-9xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">404</h1>
+      <div class="w-24 h-1 mx-auto bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mb-6"></div>
+      <p class="text-xl text-slate-400 mb-8 max-w-md mx-auto">
+        La pagina que buscas no existe o fue movida.
+      </p>
+      <a href="/" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105">
+        <i class="fas fa-arrow-left"></i>
+        Volver al inicio
+      </a>
     </div>
-  </body>
+  </div>
+</body>
 </html>
