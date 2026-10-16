@@ -1,140 +1,26 @@
-/* Base styles - Tailwind handles most styling */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-:root {
-  --accent: #a855f7;
-  --accent-light: #c084fc;
-  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Body base */
-body {
-  font-family: 'Outfit', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Navbar scroll effect */
-#navbar.scrolled {
-  background: rgba(2, 6, 23, 0.95);
-}
-
-#navbar.scrolled #nav-logo {
-  width: 2.5rem; /* w-10 */
-  height: 2.5rem; /* h-10 */
-  font-size: 0.875rem; /* text-sm */
-}
-
-/* Gradient text utility */
-.bg-gradient-to-r {
-  background-size: 200% 200%;
-}
-
-/* Glow effects */
-.group:hover .group-hover\:opacity-20 {
-  opacity: 0.2;
-}
-
-/* Skill bar animation */
-.h-full {
-  transition: width 1s ease-out;
-}
-
-/* Modal animations */
-#projectModal {
-  transition: opacity 0.3s ease;
-}
-
-#projectModal.hidden {
-  display: none;
-}
-
-#projectModal.flex {
-  display: flex;
-}
-
-/* Mobile menu */
-#mobileMenu.hidden {
-  display: none;
-}
-
-#mobileMenu.flex {
-  display: flex;
-}
-
-/* Form focus states */
-input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-/* Toast */
-.toast-notification {
-  animation: fadeInUp 0.3s ease;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive utilities */
-@media (max-width: 768px) {
-  .hidden {
-    display: none !important;
-  }
-}
-
-/* Button loader */
-.fa-spinner.fa-spin {
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* Swiper overrides */
-.swiper {
-  padding-bottom: 3.5rem;
-}
-.swiper-button-next,
-.swiper-button-prev {
-  color: #a855f7;
-  background: rgba(168, 85, 247, 0.1);
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  border: 1px solid rgba(168, 85, 247, 0.3);
-  transition: all 0.3s ease;
-}
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background: rgba(168, 85, 247, 0.25);
-}
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 1rem;
-}
-.swiper-pagination-bullet {
-  background: rgba(168, 85, 247, 0.4);
-  opacity: 1;
-}
-.swiper-pagination-bullet-active {
-  background: #a855f7;
-}
-.swiper-slide {
-  height: auto;
-}
+:root { --accent: #a855f7; --accent-light: #c084fc; --transition: .3s cubic-bezier(.4,0,.2,1); }
+html { scroll-behavior: smooth; }
+body { font-family: 'Outfit',sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+#navbar.scrolled { background: rgba(2,6,23,.95); }
+#navbar.scrolled #nav-logo { width: 2.5rem; height: 2.5rem; font-size: .875rem; }
+.bg-gradient-to-r { background-size: 200% 200%; }
+.h-full { transition: width 1s ease-out; }
+#projectModal { transition: opacity .3s ease; }
+#projectModal.hidden, #mobileMenu.hidden { display: none; }
+#projectModal.flex, #mobileMenu.flex { display: flex; }
+input:focus, textarea:focus { outline: none; border-color: var(--accent); }
+input:focus-visible, textarea:focus-visible, button:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.toast-notification { animation: fadeInUp .3s ease; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+.fa-spinner.fa-spin { animation: spin 1s linear infinite; }
+@keyframes spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+.swiper { padding-bottom: 3.5rem; }
+.swiper-button-next, .swiper-button-prev { color: #a855f7; background: rgba(168,85,247,.1); width: 2.5rem; height: 2.5rem; border-radius: 50%; border: 1px solid rgba(168,85,247,.3); transition: background .3s ease,color .3s ease; }
+.swiper-button-next:hover, .swiper-button-prev:hover { background: rgba(168,85,247,.25); }
+.swiper-button-next::after, .swiper-button-prev::after { font-size: 1rem; }
+.swiper-pagination-bullet { background: rgba(168,85,247,.4); opacity: 1; }
+.swiper-pagination-bullet-active { background: #a855f7; }
+.swiper-slide { height: auto; }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
