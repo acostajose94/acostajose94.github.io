@@ -1,0 +1,425 @@
+/* Component-level ports of the two reference sites, not recolours of Original.
+   Measurements are in px to retain each reference's original rem scale without
+   resizing the unrelated Tailwind/Original document. Sources: REFERENCES.md. */
+.reference-logo, .header__toggler__icon, .reference-menu-base,
+.header__submenu, .reference-footer, .reference-project-intro,
+.tecnofil-video-layer, .banner-motion-control, .reference-value-link { display: none; }
+.reference-menu-list { display: flex; flex-direction: column; gap: 16px; }
+.puntero { display: none; }
+.reference-nav-social, .systems-contact-widget { display: none; }
+
+/* SISTEMAS PERÚ WEB: Lato, Bootstrap container, blue/cyan and original canvas. */
+html[data-design="systems"] {
+  --header-height: 106px;
+  --ui-text: #212529;
+  --ui-muted: #6f7070;
+  --ui-accent: #3161a3;
+  --ui-soft: #fff;
+  --ui-radius: 0px;
+  --ui-border: #00f8ff;
+  --ui-tag-bg: #e7fcff;
+  --ui-tag-text: #3161a3;
+  scroll-padding-top: 20px;
+}
+html[data-design="systems"] body { font-size: 17px; letter-spacing: .9px; line-height: 1.5; }
+html[data-design="systems"] #navbar { position: relative; height: 106px; padding: 20px 0; border: 0; box-shadow: none; }
+html[data-design="systems"] #navbar > .nav-frame { max-width: 1140px; padding: 0 15px; }
+html[data-design="systems"] #navbar > .nav-frame > div { gap: 16px; }
+html[data-design="systems"] #navbar .site-logo { display: flex; flex: 0 0 232px; width: 232px; height: 62px; padding: 5px 0; border: 0; background: none; border-radius: 0; text-align: left; }
+html[data-design="systems"] #navbar .site-logo > div { display: none; }
+html[data-design="systems"] .reference-logo--systems { display: flex; align-items: center; gap: 9px; width: 100%; height: 52px; color: #3161a3; }
+.reference-logo--systems svg { flex: 0 0 75px; width: 75px; height: 52px; }
+.reference-logo--systems strong { display: block; font: 900 24px/1.1 'Lato', sans-serif; letter-spacing: -.8px; }
+.reference-logo--systems small { display: block; margin-top: 4px; font: 900 9px/1.2 'Lato', sans-serif; letter-spacing: 1.7px; white-space: nowrap; }
+html[data-design="systems"] #navbar .desktop-nav { display: flex; gap: 0; }
+html[data-design="systems"] #navbar .desktop-nav :is(a, button, span.font-semibold) { padding: 0 20px; margin-right: 8px; color: #3161a3; background: #fff; border-radius: 64px; font: 700 16px/40px 'Lato', sans-serif; text-transform: uppercase; }
+html[data-design="systems"] #navbar .desktop-nav :is(a, button):hover { color: #fff; background: #3161a3; }
+html[data-design="systems"] #navbar .desktop-nav a.reference-nav-social { display: grid; place-items: center; width: 35px; height: 35px; flex: 0 0 35px; padding: 0; margin: 0; color: #3161a3; background: #00f8ff; border-radius: 50%; font-size: 19px; }
+html[data-design="systems"] #navbar .desktop-nav button[onclick*="experience"],
+html[data-design="systems"] #navbar .desktop-nav span.font-semibold { display: none; }
+html[data-design="systems"] #navbar .menu-toggle { color: #fff; background: #3161a3; border: 0; border-radius: 4px; }
+html[data-design="systems"] #mobileMenu { inset: 106px 0 0; height: calc(100dvh - 106px); background: #fff; }
+html[data-design="systems"] #mobileMenu > div { width: 100%; max-width: 1140px; margin: 0 auto; padding: 32px 24px; }
+html[data-design="systems"] #mobileMenu :is(a, button, span.font-semibold) { display: block; width: fit-content; padding: 0 28px; margin: 0 auto; color: #3161a3; border-radius: 64px; font: 700 17.6px/40px 'Lato', sans-serif; text-align: center; text-transform: uppercase; }
+html[data-design="systems"] #mobileMenu :is(a, button):hover { color: #fff; background: #3161a3; text-decoration: none; }
+html[data-design="systems"] main.page-content { padding-top: 0; }
+html[data-design="systems"] #hero { display: flex; position: relative; isolation: isolate; flex-direction: column; align-items: stretch; justify-content: flex-start; min-height: max(715px, 100svh); padding: 32px 0 64px; margin: 0; background: #3161a3; overflow: hidden; }
+html[data-design="systems"] .systems-canvas-layer { display: block; position: absolute; inset: 0; z-index: -1; opacity: 1; mask-image: none; pointer-events: none; }
+html[data-design="systems"] .systems-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+html[data-design="systems"] .systems-canvas--cache { background: #3161a3; }
+html[data-design="systems"] #hero .hero-copy { width: 100%; max-width: none; padding: 15vh 24px 0; margin: 0; }
+html[data-design="systems"] #hero h1 { padding: 48px 0; margin: 0; color: #fff; background: none; font: 700 48px/1.2 'Lato', sans-serif; letter-spacing: 0; text-transform: uppercase; }
+html[data-design="systems"] #hero .hero-role { width: fit-content; max-width: 100%; margin: 0 auto 48px; padding: 8px; color: #3161a3; background: #fff; border-radius: 32px; }
+html[data-design="systems"] #hero .hero-role p,
+html[data-design="systems"] #hero #typing-text { color: #3161a3; font: 400 16px/24px 'Lato', sans-serif; }
+html[data-design="systems"] #hero :is(.hero-description, .hero-socials, .hero-actions, .hero-scroll) { display: none; }
+html[data-design="systems"] .systems-services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); position: relative; width: min(696px, calc(100% - 48px)); gap: 64px; margin: 0 auto; }
+html[data-design="systems"] .systems-services button { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 0; min-height: 304px; padding: 0; border: 0; border-radius: 0; background: none; color: #3161a3; text-align: center; }
+html[data-design="systems"] .systems-services button > svg { display: none; }
+html[data-design="systems"] .systems-service-image { display: block; width: 187px; max-width: 100%; height: 187px; margin: 0 0 16px; object-fit: contain; }
+html[data-design="systems"] .systems-services button + button .systems-service-image { width: 145px; height: 145px; }
+html[data-design="systems"] .systems-services button > span { display: grid; place-items: center; width: 100%; height: 101px; padding: 16px 12px; color: #3161a3; background: #fff; border-radius: 16px; font: 700 24px/1.2 'Lato', sans-serif; text-transform: uppercase; }
+html[data-design="systems"] .systems-services button > i { position: absolute; bottom: -24px; left: calc(50% - 26px); width: 52px; height: 52px; margin: 0; color: #3161a3; background: #00f8ff; border-radius: 50%; }
+html[data-design="systems"] .systems-services button > i::before { content: '+'; font: 700 51.2px/49px 'Lato', sans-serif; }
+html[data-design="systems"] main > section:not([id="hero"]) { padding: 64px 15px; background: #fff; }
+html[data-design="systems"] main > section:not([id="hero"]) > div { max-width: 1140px; }
+html[data-design="systems"] .section-heading { text-align: center; }
+html[data-design="systems"] .section-heading :is(h1, h2) { color: #004c91; background: none; font: 700 48px/1.2 'Lato', sans-serif; text-transform: uppercase; letter-spacing: 0; }
+html[data-design="systems"] .section-heading > .h-1 { display: none; }
+html[data-design="systems"] .reference-profile { display: block; }
+html[data-design="systems"] .reference-profile-copy { max-width: 840px; margin: 0 auto 48px; text-align: center; }
+html[data-design="systems"] .reference-profile-copy .bg-slate-900\/50 { padding: 0; border: 0; background: none; }
+html[data-design="systems"] .reference-profile-copy p { font-size: 17px; line-height: 1.6; }
+html[data-design="systems"] .reference-profile-values { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 30px; }
+html[data-design="systems"] .reference-value-card { padding: 24px 16px 59px; margin-bottom: 30px; text-align: center; color: #3161a3; background: #00f9ff; border: 0; border-radius: 0; }
+html[data-design="systems"] .reference-value-card :is(h3, p) { color: #3161a3; }
+html[data-design="systems"] .reference-value-card h3 { font: 700 17px/1.5 'Lato', sans-serif; text-transform: uppercase; }
+html[data-design="systems"] .reference-value-card p { font-size: 14px; line-height: 1.5; }
+html[data-design="systems"] .reference-value-card .w-12 { width: 100px; height: 100px; margin: 0 auto 24px; background: none; border: 0; color: #fff; }
+html[data-design="systems"] .reference-value-card .w-12 i { font-size: 54px; }
+html[data-design="systems"] .reference-value-link { position: absolute; bottom: -25px; left: calc(50% - 31.5px); display: block; width: 63px; height: 63px; color: #00f9ff; background: #004c91; border-radius: 50%; font: 700 51px/59px 'Lato', sans-serif; }
+html[data-design="systems"] .reference-stats > div { border: 0; border-radius: 0; border-top: 2px solid #00f8ff; padding: 24px; }
+html[data-design="systems"] .reference-stats .text-slate-400 { overflow-wrap: anywhere; }
+html[data-design="systems"] .reference-skills > div { background: #32bef0; color: #fff; border: 0; border-radius: 0; }
+html[data-design="systems"] .reference-skills h3 { color: #004c91; text-align: center; font-size: 21px; text-transform: uppercase; }
+html[data-design="systems"] .reference-skills :is(.text-slate-300, .text-slate-400) { color: #123d65; }
+html[data-design="systems"] .reference-skills .bg-slate-800 { background: #fff; }
+html[data-design="systems"] .reference-education > div { position: relative; margin-top: 16px; padding: 40px 24px 24px; border: 2px solid #3161a3; border-radius: 16px; text-align: center; }
+html[data-design="systems"] .reference-education > div > .w-16 { margin-left: auto; margin-right: auto; color: #3161a3; background: none; border: 0; }
+html[data-design="systems"] .reference-education > div > span { border: 0; background: #00f8ff; border-radius: 4px; color: #3161a3; }
+html[data-design="systems"] #projects > div { max-width: none; }
+html[data-design="systems"] .reference-project-grid { --reference-columns: 3; --reference-gap: 0px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; }
+html[data-design="systems"] .reference-project-card { position: relative; min-height: 0; border: 0; border-radius: 0; background: #fff; }
+html[data-design="systems"] .reference-project-card .aspect-video { aspect-ratio: 4 / 3; }
+html[data-design="systems"] .reference-project-card .p-6 { position: absolute; inset: 0; display: flex; justify-content: center; align-items: center; padding: 32px; background: rgba(0,76,145,.58); opacity: 0; transition: opacity .4s ease-in-out; }
+html[data-design="systems"] .reference-project-card:is(:hover, :focus-within) .p-6 { opacity: 1; }
+html[data-design="systems"] .reference-project-card :is(h3, h3 a, h3 a:hover) { color: #fff; font-size: 22px; line-height: 1.3; font-weight: 500; letter-spacing: .06em; text-align: center; }
+html[data-design="systems"] .reference-project-card .p-6 > :not(h3) { display: none; }
+html[data-design="systems"] .reference-project-card .project-preview { position: absolute; z-index: 3; bottom: 16px; left: 50%; transform: translateX(-50%); margin: 0; color: #fff; background: #004c91; border: 0; border-radius: 0; white-space: nowrap; }
+html[data-design="systems"] :is(.appsSwiper, .reference-app-grid) { max-width: 1140px; margin: 0 auto; }
+html[data-design="systems"] .appsSwiper .reference-project-grid { --reference-columns: 4; --reference-gap: 30px; gap: 30px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+html[data-design="systems"] .reference-app-card { color: #3161a3; background: #00f8ff; border: 0; border-radius: 0; text-align: center; }
+html[data-design="systems"] .reference-app-card :is(h3, p, a) { color: #3161a3; }
+html[data-design="systems"] .experience-content > div { padding: 24px; border: 2px solid #00f8ff; border-radius: 10px; }
+html[data-design="systems"] #contactForm :is(input:not([type="hidden"]), textarea) { border: 1px solid #3161a3; border-radius: 0; background: #fff; color: #3161a3; }
+html[data-design="systems"] footer { padding: 80px 0 0; color: #fff; background: #004c91; border: 0; }
+html[data-design="systems"] .reference-footer { display: block; max-width: 1140px; padding: 0 15px 64px; margin: 0 auto; }
+html[data-design="systems"] .reference-footer-brand { display: none; }
+html[data-design="systems"] .reference-footer-columns { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+html[data-design="systems"] .reference-footer h3 { margin-bottom: 16px; color: #00f8ff; font-size: 20.8px; }
+html[data-design="systems"] .reference-footer :is(a, p) { display: block; margin-bottom: 6px; color: #fff; font-size: 16px; }
+html[data-design="systems"] footer > .max-w-7xl { max-width: none; padding: 12px 24px; color: #fff; background: #093f63; font-size: 13px; }
+html[data-design="systems"] .design-switch { top: 50%; bottom: auto; right: 14px; width: 52px; height: 52px; justify-content: center; padding: 6px; transform: translateY(-50%); border: 0; background: #00f8ff; }
+html[data-design="systems"] .design-switch__copy { display: none; }
+html[data-design="systems"] .systems-contact-widget { display: block; position: fixed; z-index: 45; right: 20px; bottom: 20px; font-family: Arial, sans-serif; }
+.systems-contact-toggle { display: flex; align-items: center; justify-content: center; gap: 16px; width: 310px; height: 47px; padding: 1px 20px; color: #fff; background: #0dc152; border-radius: 50px; box-shadow: 0 1px 6px #0001, 0 2px 32px #0003; font-size: 16px; }
+.systems-contact-toggle i { font-size: 38px; }
+.systems-contact-box { position: absolute; bottom: 70px; right: 0; width: 310px; max-width: calc(100vw - 40px); overflow: hidden; color: #003770; background: #fff; border-radius: 6px; box-shadow: 0 8px 25px -5px #2d3e4f26; }
+.systems-contact-description { position: relative; padding: 20px 40px 20px 20px; color: #fff; background: #0dc152; font-size: 16px; line-height: 1.4; }
+.systems-contact-close { position: absolute; top: 5px; right: 8px; width: 28px; height: 28px; font-size: 26px; }
+.systems-contact-account { display: flex; align-items: center; gap: 14px; padding: 20px; }
+.systems-contact-account:hover { background: #f5f5f5; }
+.systems-contact-avatar { display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; color: #fff; background: #3161a3; font-weight: 700; }
+.systems-contact-account :is(strong, small) { display: block; }
+.systems-contact-account small { font-size: 12px; margin-top: 6px; }
+.overlay-is-open .systems-contact-widget { visibility: hidden; }
+
+/* TECNOFIL: transparent/folding header, 70vw menu and exact pointer geometry. */
+html[data-design="tecnofil"] { --header-height: 146px; --ui-text: #000; --ui-muted: #000; --ui-accent: #000; --ui-soft: #fff; --ui-border: #ffdb00; --ui-radius: 0px; }
+html[data-design="tecnofil"] body { font-family: 'HelveticaNeueLTStd', Arial, sans-serif; font-size: 12.8px; color: #000; background: #fff; }
+html[data-design="tecnofil"] #navbar { height: 146px; padding: 48px 0; color: #fff; background: transparent; border: 0; transition: transform .3s, background-color .3s; }
+html[data-design="tecnofil"] #navbar > .nav-frame { max-width: 2016px; padding: 0 48px; }
+html[data-design="tecnofil"] #navbar > .nav-frame > div { height: 50px; }
+html[data-design="tecnofil"] #navbar .desktop-nav { display: none; }
+html[data-design="tecnofil"] #navbar .site-logo { position: relative; z-index: 9; display: block; flex: 0 0 auto; width: auto; height: 50px; padding: 0; color: #ffdb00; background: none; border: 0; border-radius: 0; overflow: hidden; }
+html[data-design="tecnofil"] #navbar .site-logo > div { display: none; }
+html[data-design="tecnofil"] .reference-logo--tecnofil { display: flex; align-items: center; gap: 10px; }
+html[data-design="tecnofil"] .logo-anime__logo { display: block; flex: 0 0 48px; height: 50px; }
+html[data-design="tecnofil"] .logo-anime__logo svg { width: 48px; height: 50px; transition: transform 1s; }
+html[data-design="tecnofil"] .logo-anime__text { display: block; width: 0; overflow: hidden; height: 36px; transition: width 1s; }
+html[data-design="tecnofil"] .logo-anime__text > span { display: block; width: 164px; transform: translateX(-101%); transition: transform 1s; color: #fff; font: 700 30px/36px 'HelveticaNeueLTStd', sans-serif; white-space: nowrap; }
+html[data-design="tecnofil"] .site-logo:is(:hover, :focus-visible) .logo-anime__logo svg { transform: rotate(360deg); }
+html[data-design="tecnofil"] .site-logo:is(:hover, :focus-visible) .logo-anime__text { width: 164px; }
+html[data-design="tecnofil"] .site-logo:is(:hover, :focus-visible) .logo-anime__text > span { transform: translateX(0); }
+html[data-design="tecnofil"] #navbar .menu-toggle { display: block; position: relative; z-index: 14; width: 44px; height: 44px; margin-right: -9px; color: #fff; border: 0; border-radius: 0; background: transparent; }
+html[data-design="tecnofil"] #navbar .menu-toggle > i { display: none; }
+html[data-design="tecnofil"] .header__toggler__icon { display: block; position: absolute; width: 26px; height: 26px; top: 9px; left: 9px; border-bottom: 2px solid currentColor; transition: border-color .3s linear; }
+html[data-design="tecnofil"] .header__toggler__icon::before,
+html[data-design="tecnofil"] .header__toggler__icon::after { content: ''; position: absolute; left: 0; width: 26px; height: 2px; background: currentColor; transition: transform .3s linear, top .3s linear; }
+html[data-design="tecnofil"] .header__toggler__icon::before { top: 0; }
+html[data-design="tecnofil"] .header__toggler__icon::after { top: 12px; }
+html[data-design="tecnofil"] #navbar.reference-header-black { color: #000; background: #ffdb00; }
+html[data-design="tecnofil"] #navbar.reference-header-black :is(.site-logo, .menu-toggle, .logo-anime__text > span) { color: #000; }
+html[data-design="tecnofil"] #navbar.reference-header-hidden { transform: translateY(-100%); }
+html[data-design="tecnofil"] body.menu-is-open #navbar { transform: none; background: transparent; }
+html[data-design="tecnofil"] body.menu-is-open #navbar .menu-toggle { color: #000; }
+html[data-design="tecnofil"] body.menu-is-open .header__toggler__icon { border-bottom-color: transparent; }
+html[data-design="tecnofil"] body.menu-is-open .header__toggler__icon::before { top: 50%; transform: rotate(-45deg); }
+html[data-design="tecnofil"] body.menu-is-open .header__toggler__icon::after { top: 50%; transform: rotate(45deg); }
+html[data-design="tecnofil"] #mobileMenu { inset: 0; z-index: 10; height: 100dvh; background: rgba(0,0,0,.38); }
+html[data-design="tecnofil"] #mobileMenu > div { display: flex; justify-content: space-between; width: 70vw; min-width: 0; padding: 48px; gap: 32px; background: #ffdb00; animation: reference-menu-in .5s both; }
+html[data-design="tecnofil"] .reference-menu-list { flex: 0 0 auto; gap: 6px; max-width: calc(100% - 44px); }
+html[data-design="tecnofil"] .header__item { overflow: hidden; }
+html[data-design="tecnofil"] #mobileMenu .header__link { display: block; width: fit-content; padding: 0; margin: 0; color: #000; font: 700 48px/1.2 Helvetica, Arial, sans-serif; text-decoration: none; animation: reference-menu-text .3s .5s both; }
+html[data-design="tecnofil"] #mobileMenu .header__link:hover { color: #fff; }
+html[data-design="tecnofil"] #mobileMenu .header__submenu { display: grid; grid-template-rows: 0fr; padding-left: 48px; max-height: 0; overflow: hidden; transition: max-height .4s; }
+html[data-design="tecnofil"] #mobileMenu .header__item:is(:hover, :focus-within) .header__submenu { max-height: 160px; }
+html[data-design="tecnofil"] #mobileMenu .header__submenu a { display: block; padding: 6px 0; color: #000; font: 400 24px/1.2 Helvetica, sans-serif; }
+html[data-design="tecnofil"] #mobileMenu .header__submenu a:hover { color: #fff; }
+html[data-design="tecnofil"] .reference-menu-base { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; }
+html[data-design="tecnofil"] .header__socials { display: flex; flex-wrap: wrap; gap: 16px; }
+html[data-design="tecnofil"] #mobileMenu .header__socials a { padding: 0; color: #000; font: 700 24px/1.2 Helvetica, sans-serif; text-decoration: none; }
+html[data-design="tecnofil"] #mobileMenu .header__socials a:hover { color: #fff; }
+html[data-design="tecnofil"] .header__squares { display: flex; gap: 48px; overflow: hidden; }
+html[data-design="tecnofil"] #mobileMenu .header__square { display: block; width: 200px; height: 200px; padding: 24px; color: #000; background: #fff; font: 700 24px/1.2 Helvetica, sans-serif; text-decoration: none; animation: reference-square-in .3s .5s both; }
+html[data-design="tecnofil"] #mobileMenu .header__square:hover { color: #fff; background: #000; }
+@keyframes reference-menu-in { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes reference-menu-text { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@keyframes reference-square-in { from { transform: translateX(100%); } to { transform: translateX(0); } }
+
+/* The approved JA banner composition stays; only its background becomes video. */
+html[data-design="tecnofil"] #hero { isolation: isolate; min-height: max(740px, 100svh); background: #191919; }
+html[data-design="tecnofil"] .tecnofil-video-layer { display: block; position: absolute; inset: 0; z-index: -2; background: #191919 url('../img/references/coding-poster.jpg') center/cover no-repeat; }
+html[data-design="tecnofil"] .tecnofil-video { width: 100%; height: 100%; object-fit: cover; }
+html[data-design="tecnofil"] #hero::before { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.62) 56%, rgba(0,0,0,.35)); }
+html[data-design="tecnofil"] #hero .hero-copy { max-width: 1920px; }
+html[data-design="tecnofil"] .tecnofil-art { background-color: rgba(0,0,0,.26); }
+html[data-design="tecnofil"] .banner-motion-control { display: flex; align-items: center; gap: 8px; position: absolute; z-index: 15; left: 48px; bottom: 28px; padding: 10px 14px; color: #fff; border: 1px solid #ffffff80; background: #0008; font: 400 14px/1.4 'HelveticaNeueLTStd', sans-serif; }
+html[data-design="tecnofil"] .banner-motion-control[hidden] { display: none; }
+
+/* White image-led Nosotros block, oversized yellow titles and pastel products. */
+html[data-design="tecnofil"] main > section:not([id="hero"]) { padding: 72px 48px; color: #000; background: #fff; overflow: clip; }
+html[data-design="tecnofil"] main > section:not([id="hero"]) > div { max-width: 1920px; }
+html[data-design="tecnofil"] .section-heading :is(h1, h2) { color: #ffdb00; background: none; font: 700 208px/1.2 'HelveticaNeueLTStd', sans-serif; letter-spacing: 0; text-align: left; }
+html[data-design="tecnofil"] .section-heading > .h-1 { display: none; }
+html[data-design="tecnofil"] main h3 { font-family: 'HelveticaNeueLTStd', sans-serif; }
+html[data-design="tecnofil"] #about { padding: 0; }
+html[data-design="tecnofil"] .reference-about-banner { position: relative; display: flex; align-items: flex-start; min-height: min(85svh, 760px); padding: 64px 48px; margin: 0; isolation: isolate; overflow: hidden; background: #191919; }
+html[data-design="tecnofil"] .reference-about-banner::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(#0005, #0005), url('../img/references/coding-poster.jpg') center/cover; animation: reference-image-zoom 8s ease-in-out infinite alternate; }
+html[data-design="tecnofil"] .reference-about-banner h2 { color: #fff; font-size: clamp(80px, 14.45vw, 208px); }
+@keyframes reference-image-zoom { to { transform: scale(1.05); } }
+html[data-design="tecnofil"] .reference-profile { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: start; padding: 96px 48px; margin: 0; }
+html[data-design="tecnofil"] .reference-profile-copy .bg-slate-900\/50 { border: 0; padding: 0; background: none; }
+html[data-design="tecnofil"] .reference-profile-copy p { font-size: 20px; line-height: 1.48; }
+html[data-design="tecnofil"] .reference-profile-values { display: flex; gap: 32px; padding-bottom: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #ffdb00 #eee; }
+html[data-design="tecnofil"] .reference-profile-values.reference-is-dragging { scroll-snap-type: none; user-select: none; }
+html[data-design="tecnofil"] .reference-value-card { flex: 0 0 70%; min-height: 320px; scroll-snap-align: center; padding: 40px; border: 0; background: #f3f3f0; border-radius: 0; }
+html[data-design="tecnofil"] .reference-value-card .w-12 { width: 80px; height: 80px; border: 0; background: none; }
+html[data-design="tecnofil"] .reference-value-card i { color: #ffdb00; font-size: 48px; }
+html[data-design="tecnofil"] .reference-value-card h3 { font-size: 30px; }
+html[data-design="tecnofil"] .reference-value-card p { font-size: 20px; line-height: 1.48; }
+html[data-design="tecnofil"] .reference-stats { padding: 0 48px 72px; }
+html[data-design="tecnofil"] .reference-stats > div { padding: 24px 0; border: 0; border-top: 2px solid #ffdb00; background: transparent; text-align: left; }
+html[data-design="tecnofil"] .reference-stats .text-4xl { font-size: 64px; }
+html[data-design="tecnofil"] :is(#skills, #education, #experience) { background: #fff; }
+html[data-design="tecnofil"] .reference-skills > div { padding: 24px 0; background: none; border: 0; border-top: 2px solid #ffdb00; }
+html[data-design="tecnofil"] .reference-skills h3 { font-size: 24px; }
+html[data-design="tecnofil"] .reference-skills .bg-slate-800 { background: #e5e5e5; }
+html[data-design="tecnofil"] .reference-education > div { border: 2px solid #ffdb00; background: #fff; }
+html[data-design="tecnofil"] #projects { background: #000; padding-top: 48px; }
+html[data-design="tecnofil"] #projects .section-heading h2 { color: #ffdb00; }
+html[data-design="tecnofil"] #projects h3.bg-clip-text { color: #ffdb00; background: none; }
+html[data-design="tecnofil"] .reference-project-intro { display: block; max-width: 66.66%; margin: 0 0 96px; color: #fff; font-size: 24px; line-height: 1.3; column-count: 2; column-gap: 48px; }
+html[data-design="tecnofil"] .reference-project-grid { --reference-columns: 3; --reference-gap: 48px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; }
+html[data-design="tecnofil"] .reference-app-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; }
+html[data-design="tecnofil"] .reference-project-card { position: relative; aspect-ratio: 1; min-height: 0; border: 0; border-radius: 0; background: #fffbe3; overflow: hidden; }
+html[data-design="tecnofil"] .reference-project-card:nth-child(6n + 2),
+html[data-design="tecnofil"] .swiper-slide:nth-child(6n + 2) .reference-project-card { background: #fff6c3; }
+html[data-design="tecnofil"] .reference-project-card:nth-child(6n + 3),
+html[data-design="tecnofil"] .swiper-slide:nth-child(6n + 3) .reference-project-card { background: #fff3aa; }
+html[data-design="tecnofil"] .reference-project-card > .relative { position: static; }
+html[data-design="tecnofil"] .reference-project-card .aspect-video { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; background: none; }
+html[data-design="tecnofil"] main .reference-project-card .aspect-video.bg-gradient-to-br { background: transparent; }
+html[data-design="tecnofil"] .reference-project-card img { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .8s; }
+html[data-design="tecnofil"] .reference-project-card:is(:hover, :focus-within) img { opacity: 1; }
+html[data-design="tecnofil"] .reference-project-card .p-6 { position: absolute; inset: 0 0 auto; padding: 24px; background: none; }
+html[data-design="tecnofil"] .reference-project-card :is(h3, h3 a, h3 a:hover) { margin: 0; color: #000; font-size: 24px; line-height: 1.2; text-align: left; }
+html[data-design="tecnofil"] .reference-project-card .p-6 > :not(h3) { display: none; }
+html[data-design="tecnofil"] .reference-project-card .project-preview { position: absolute; bottom: 16px; left: 24px; z-index: 3; margin: 0; padding: 8px 0; border: 0; background: transparent; font-size: 16px; }
+html[data-design="tecnofil"] .reference-project-card:is(:hover, :focus-within) .project-preview { padding: 8px 12px; background: #ffdb00; }
+html[data-design="tecnofil"] .reference-app-card { padding: 0; border: 0; border-radius: 0; background: #ffef8e; }
+html[data-design="tecnofil"] .reference-app-card:nth-child(even),
+html[data-design="tecnofil"] .swiper-slide:nth-child(even) .reference-app-card { background: #ffec71; }
+html[data-design="tecnofil"] .reference-app-card .w-16 { width: 100px; height: 100px; margin-left: 0; color: #000; background: transparent; border: 0; }
+html[data-design="tecnofil"] .reference-app-card .w-16 i { font-size: 64px; }
+html[data-design="tecnofil"] .reference-app-card :is(h3, p, a) { color: #000; }
+html[data-design="tecnofil"] #projects > div > .text-center.mt-12 a { color: #ffdb00; background: transparent; font: 700 24.8px/1.2 'HelveticaNeueLTStd', sans-serif; }
+html[data-design="tecnofil"] main a.bg-gradient-to-r { padding: 0; color: #b59600; background: none; font-size: 24.8px; font-weight: 700; }
+html[data-design="tecnofil"] main a.bg-gradient-to-r:hover { color: #000; }
+html[data-design="tecnofil"] .experience-content > div { padding: 24px 0; border: 0; border-top: 2px solid #ffdb00; background: transparent; }
+html[data-design="tecnofil"] .experience-content li { font-size: 18px; line-height: 1.48; }
+html[data-design="tecnofil"] #contact { color: #000; background: #fff; }
+html[data-design="tecnofil"] #contact :is(h2, h1) { color: #ffdb00; -webkit-text-fill-color: currentColor; }
+html[data-design="tecnofil"] #contact .bg-slate-900\/50 { color: #000; background: transparent; border: 0; }
+html[data-design="tecnofil"] #contactForm :is(input:not([type="hidden"]), textarea) { padding: 18px 24px; color: #000; border: 2px solid #ffdb00; border-radius: 0; background: #fff; font-size: 24px; }
+html[data-design="tecnofil"] #contactForm label { font-size: 24px; }
+html[data-design="tecnofil"] #contactForm :is(input, textarea)::placeholder { color: #9c9b9b; }
+html[data-design="tecnofil"] #contactForm button[type="submit"] { min-height: 72px; color: #000; background: #ffdb00; border: 2px solid #ffdb00; font: 700 24px/1.2 'HelveticaNeueLTStd', sans-serif; }
+html[data-design="tecnofil"] footer { padding: 48px 0; color: #000; background: #ffdb00; border: 0; }
+html[data-design="tecnofil"] .reference-footer { display: block; max-width: 2016px; margin: auto; padding: 0 48px; }
+html[data-design="tecnofil"] .reference-footer-brand { display: inline-block; margin-bottom: 50px; color: #000; font: 700 32px/1.2 'HelveticaNeueLTStd', sans-serif; }
+html[data-design="tecnofil"] .reference-footer-columns { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+html[data-design="tecnofil"] .reference-footer h3 { display: none; }
+html[data-design="tecnofil"] .reference-footer :is(a:not(.reference-footer-brand), p) { display: block; margin-bottom: 12px; color: #000; font-size: 24px; line-height: 1.2; }
+html[data-design="tecnofil"] footer > .max-w-7xl { padding: 32px 48px 0; color: #000; text-align: left; font-size: 12.8px; }
+
+/* Alternate grids are real grids; Original alone owns the Swiper instances. */
+html:not([data-design="original"]) .swiper { padding-bottom: 0 !important; overflow: visible; }
+html:not([data-design="original"]) .swiper > :is(.swiper-pagination, .swiper-button-next, .swiper-button-prev) { display: none; }
+html:not([data-design="original"]) .reference-project-grid .swiper-slide { width: auto; min-width: 0; }
+html:not([data-design="original"]) .reference-project-grid .swiper-slide > div { height: 100%; }
+html:not([data-design="original"]) .swiper:not(.swiper-initialized) > .reference-project-grid { display: grid; grid-template-columns: repeat(var(--reference-columns, 3), minmax(0, 1fr)); gap: var(--reference-gap, 24px); }
+
+/* Cursor declarations use the source's 12.8px rem scale: 48/24/20.8px. */
+html[data-design="tecnofil"].tecnofil-cursor-ready,
+html[data-design="tecnofil"].tecnofil-cursor-ready body,
+html[data-design="tecnofil"].tecnofil-cursor-ready :is(a, button, img, .swiper) { cursor: none !important; }
+html[data-design="tecnofil"].tecnofil-cursor-ready :is(input, textarea, select) { cursor: text; }
+html[data-design="tecnofil"].tecnofil-cursor-ready .puntero { display: flex; }
+.puntero.cursor { --cursor-size: 48px; --cursor-dot: 24px; --cursor-icon: 20.8px; position: fixed; z-index: 99999; top: -200%; left: -200%; width: var(--cursor-size); height: var(--cursor-size); align-items: center; justify-content: center; color: #000; border-radius: 50%; pointer-events: none; font-size: 0; transition: transform .4s, width .4s, height .4s, background-color .4s, color .4s, font-size .4s, opacity .4s; }
+.cursor__bg { position: absolute; inset: 0; width: var(--cursor-dot); height: var(--cursor-dot); margin: auto; background: #ffdb00; border-radius: 50%; transition: width .4s, height .4s, background-color .4s; }
+.cursor--scale .cursor__bg { width: var(--cursor-size); height: var(--cursor-size); }
+.puntero.cursor--contrast { color: #ffdb00; }
+.cursor--contrast .cursor__bg { background: #000; }
+.puntero.cursor--yellow { color: #000; }
+.cursor--yellow .cursor__bg { background: #ffdb00; }
+.cursor-icon { position: absolute; width: var(--cursor-icon); height: var(--cursor-icon); fill: none; stroke: currentColor; stroke-width: 1.5; opacity: 0; }
+.cursor--plus .cursor-icon--plus, .cursor--close .cursor-icon--close,
+.cursor--left .cursor-icon--left, .cursor--right .cursor-icon--right,
+.cursor--drag .cursor-icon--drag { opacity: 1; }
+.cursor--input { opacity: 0; }
+
+/* Source reveal timings, contained so translating a title cannot widen the page. */
+html[data-design="tecnofil"] .reference-reveal { transition: transform .7s, opacity .7s; }
+html[data-design="systems"] .reference-reveal { transition: transform .4s, opacity .4s; }
+html[data-design="tecnofil"].reference-motion-enabled .reference-reveal:not(.reference-is-visible) { opacity: 0; transform: translateX(100vw); }
+html[data-design="systems"].reference-motion-enabled .reference-reveal:not(.reference-is-visible) { opacity: 0; transform: scale(.8); }
+
+@media (max-width: 1500px) {
+  html[data-design="tecnofil"] #mobileMenu .header__link { font-size: 3.5vw; }
+  html[data-design="tecnofil"] #mobileMenu .header__square { width: 15vw; height: 15vw; padding: 16px; font-size: 2vw; }
+  html[data-design="tecnofil"] #mobileMenu .header__socials a { font-size: 2vw; }
+}
+@media (max-width: 1400px) {
+  html[data-design="tecnofil"] .section-heading :is(h1, h2) { font-size: 128px; }
+}
+@media (max-width: 1200px) {
+  .puntero.cursor { --cursor-size: 45px; --cursor-dot: 22.5px; --cursor-icon: 19.5px; }
+  html[data-design="tecnofil"] { --header-height: 140px; }
+  html[data-design="tecnofil"] #navbar { height: 140px; padding: 45px 0; }
+  html[data-design="systems"] #navbar .desktop-nav :is(a, button) { padding: 0 12px; font-size: 14px; }
+  html[data-design="systems"] .reference-profile-values { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html[data-design="tecnofil"] .reference-profile { grid-template-columns: 1fr; padding: 48px; }
+  html[data-design="tecnofil"] .reference-profile-copy { max-width: 780px; }
+  html[data-design="tecnofil"] .reference-profile-values { gap: 30px; }
+  html[data-design="tecnofil"] .reference-value-card { flex-basis: 55%; }
+  html[data-design="tecnofil"] .reference-project-grid { --reference-columns: 2; --reference-gap: 32px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+  html[data-design="tecnofil"] .reference-app-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+  html[data-design="tecnofil"] .reference-project-intro { max-width: 100%; margin-bottom: 48px; }
+  html[data-design="tecnofil"] .reference-footer-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 1024px) {
+  html[data-design="tecnofil"] { --header-height: 110px; }
+  html[data-design="tecnofil"] #navbar { height: 110px; padding: 30px 0; }
+  html[data-design="tecnofil"] #navbar > .nav-frame { padding: 0 30px; }
+  html[data-design="tecnofil"] main > section:not([id="hero"]) { padding-right: 30px; padding-left: 30px; }
+  html[data-design="tecnofil"] #about { padding: 0; }
+  html[data-design="tecnofil"] .reference-profile { padding: 48px 30px; }
+  html[data-design="tecnofil"] #mobileMenu > div { padding: 30px; }
+  html[data-design="tecnofil"] .header__squares { gap: 30px; }
+  html[data-design="tecnofil"] .reference-menu-base { flex-wrap: wrap; gap: 24px; }
+}
+@media (max-width: 1023px) {
+  html[data-design="systems"] #navbar .desktop-nav { display: none; }
+  html[data-design="systems"] #navbar .menu-toggle { display: block; }
+}
+@media (max-width: 980px) {
+  html[data-design="tecnofil"] .puntero { display: none; }
+  html[data-design="systems"] .appsSwiper .reference-project-grid { --reference-columns: 2; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 920px) {
+  html[data-design="tecnofil"] .section-heading :is(h1, h2) { font-size: 64px; }
+}
+@media (max-width: 767px) {
+  html[data-design="systems"] #navbar .desktop-nav { display: none; }
+  html[data-design="systems"] #navbar .site-logo { flex-basis: 216px; width: 216px; }
+  .reference-logo--systems strong { font-size: 20px; white-space: nowrap; }
+  .reference-logo--systems small { font-size: 8px; letter-spacing: 1.2px; }
+  html[data-design="systems"] #hero { padding-top: 32px; }
+  html[data-design="systems"] #hero .hero-copy { padding-top: 10vh; }
+  html[data-design="systems"] #hero h1 { font-size: 38px; padding: 32px 0; }
+  html[data-design="systems"] .systems-services { width: calc(100% - 48px); gap: 32px; }
+  html[data-design="systems"] .systems-services button { min-height: 210px; }
+  html[data-design="systems"] .systems-service-image,
+  html[data-design="systems"] .systems-services button + button .systems-service-image { width: 145px; max-width: 100%; height: 145px; }
+  html[data-design="systems"] .systems-services button > span { min-height: 80px; padding: 16px 8px; font-size: 16px; }
+  html[data-design="systems"] main > section:not([id="hero"]) { padding: 48px 20px; }
+  html[data-design="systems"] .section-heading :is(h1, h2) { font-size: 32px; }
+  html[data-design="systems"] .reference-project-grid { --reference-columns: 1; grid-template-columns: 1fr; }
+  html[data-design="systems"] .reference-project-card .p-6 { top: auto; opacity: 1; padding: 24px 16px 64px; }
+  html[data-design="systems"] .reference-footer-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html[data-design="tecnofil"] { --header-height: 77px; }
+  html[data-design="tecnofil"] #navbar { height: 77px; padding: 15px 0 30px; }
+  html[data-design="tecnofil"] #navbar > .nav-frame { padding: 0 20px; }
+  html[data-design="tecnofil"] #navbar > .nav-frame > div { height: 32px; }
+  html[data-design="tecnofil"] #navbar .site-logo { height: 32px; }
+  html[data-design="tecnofil"] .logo-anime__logo { flex-basis: 30px; height: 32px; }
+  html[data-design="tecnofil"] .logo-anime__logo svg { width: 30px; height: 32px; }
+  html[data-design="tecnofil"] .logo-anime__text { height: 24px; }
+  html[data-design="tecnofil"] .logo-anime__text > span { width: 112px; font-size: 20px; line-height: 24px; }
+  html[data-design="tecnofil"] .site-logo:is(:hover, :focus-visible) .logo-anime__text { width: 112px; }
+  html[data-design="tecnofil"] .header__toggler__icon { width: 22px; height: 22px; left: 11px; top: 11px; }
+  html[data-design="tecnofil"] .header__toggler__icon::before,
+  html[data-design="tecnofil"] .header__toggler__icon::after { width: 22px; }
+  html[data-design="tecnofil"] .header__toggler__icon::after { top: 10px; }
+  html[data-design="tecnofil"] #mobileMenu > div { width: 100%; padding: 75px 20px 32px; gap: 32px; }
+  html[data-design="tecnofil"] #mobileMenu .header__link { font-size: 28px; }
+  html[data-design="tecnofil"] #mobileMenu .header__submenu { padding-left: 20px; }
+  html[data-design="tecnofil"] #mobileMenu .header__submenu a { font-size: 18px; }
+  html[data-design="tecnofil"] .reference-menu-base { flex-direction: column-reverse; align-items: flex-start; gap: 24px; }
+  html[data-design="tecnofil"] #mobileMenu .header__socials a { font-size: 18px; }
+  html[data-design="tecnofil"] #mobileMenu .header__square { width: 100px; height: 100px; padding: 14px 10px; font-size: 15px; }
+  html[data-design="tecnofil"] .header__squares { gap: 20px; }
+  html[data-design="tecnofil"] .banner-motion-control { left: 24px; bottom: 24px; font-size: 12px; }
+  html[data-design="tecnofil"] main > section:not([id="hero"]) { padding: 40px 20px; }
+  html[data-design="tecnofil"] #about { padding: 0; }
+  html[data-design="tecnofil"] .section-heading :is(h1, h2) { font-size: 64px; line-height: 1.05; }
+  html[data-design="tecnofil"] #projects .section-heading h2 { font-size: 70px; }
+  html[data-design="tecnofil"] .reference-about-banner { min-height: 440px; padding: 40px 20px; }
+  html[data-design="tecnofil"] .reference-about-banner h2 { font-size: clamp(58px, 18vw, 100px); }
+  html[data-design="tecnofil"] .reference-profile { gap: 32px; padding: 40px 20px; }
+  html[data-design="tecnofil"] .reference-profile-copy p { font-size: 16px; }
+  html[data-design="tecnofil"] .reference-value-card { flex-basis: 85%; padding: 24px; }
+  html[data-design="tecnofil"] .reference-value-card p { font-size: 16px; }
+  html[data-design="tecnofil"] .reference-stats { padding: 0 20px 40px; }
+  html[data-design="tecnofil"] .reference-stats .text-4xl { font-size: 48px; }
+  html[data-design="tecnofil"] .reference-project-intro { column-count: 1; font-size: 18px; }
+  html[data-design="tecnofil"] .reference-project-card :is(h3, h3 a) { font-size: 20px; }
+  html[data-design="tecnofil"] .reference-project-card .p-6 { padding: 20px; }
+  html[data-design="tecnofil"] .reference-project-card .project-preview { left: 20px; }
+  html[data-design="tecnofil"] .reference-footer { padding: 0 20px; }
+  html[data-design="tecnofil"] .reference-footer :is(a:not(.reference-footer-brand), p) { font-size: 18px; }
+  html[data-design="tecnofil"] footer > .max-w-7xl { padding-right: 20px; padding-left: 20px; }
+}
+@media (max-width: 500px) {
+  html[data-design="tecnofil"] .section-heading :is(h1, h2) { font-size: 45px; }
+  .systems-contact-toggle { width: 52px; height: 52px; padding: 0; }
+  .systems-contact-toggle span { display: none; }
+  html[data-design="tecnofil"] { --header-height: 62px; }
+  html[data-design="tecnofil"] #navbar { height: 62px; padding: 15px 0; }
+  html[data-design="systems"] .reference-profile-values { grid-template-columns: 1fr; }
+  html[data-design="systems"] .reference-footer-columns { grid-template-columns: 1fr; }
+  html[data-design="systems"] .appsSwiper .reference-project-grid { --reference-columns: 1; grid-template-columns: 1fr; }
+  html[data-design="tecnofil"] .reference-project-grid { --reference-columns: 1; grid-template-columns: 1fr; }
+  html[data-design="tecnofil"] .reference-app-grid { grid-template-columns: 1fr; }
+  html[data-design="tecnofil"] .reference-project-card { aspect-ratio: 4 / 3; }
+  html[data-design="tecnofil"] .reference-footer-columns { grid-template-columns: 1fr; }
+  html[data-design="tecnofil"] #contactForm :is(input:not([type="hidden"]), textarea) { font-size: 18px; }
+}
+@media (max-width: 400px) {
+  html[data-design="tecnofil"] #projects .section-heading h2 { font-size: 18vw; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-design="tecnofil"] .reference-about-banner::before { animation: none; }
+  .reference-reveal { opacity: 1 !important; transform: none !important; }
+}
