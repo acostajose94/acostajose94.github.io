@@ -3,6 +3,11 @@
  */
 var referenceAssetRoot = new URL('../', document.currentScript.src).href;
 
+// Personal JA mark for the footer and contact avatar; navbar uses the shared JA circle.
+function personalBrandMark() {
+  return '<svg class="personal-brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="' + referenceAssetRoot + 'img/brand/jose-acosta-mark.svg#ja-mark"></use></svg>';
+}
+
 function initializeReferenceDesigns() {
   initializeReferenceMarkup();
   initializeReferenceSectionOrder();
@@ -37,10 +42,6 @@ function initializeReferenceSectionOrder() {
 function initializeReferenceMarkup() {
   var header = document.getElementById('navbar');
   if (header && header.firstElementChild) header.firstElementChild.classList.add('nav-frame');
-  var logo = document.querySelector('#navbar .site-logo');
-  if (logo) {
-    logo.insertAdjacentHTML('beforeend', '<span class="reference-logo reference-logo--systems" aria-hidden="true"><svg viewBox="0 0 80 52"><path d="M25 2 2 26l23 24 10-10-14-14L35 12Zm30 0 23 24-23 24-10-10 14-14L45 12ZM43 0 25 52h13L56 0Z" fill="currentColor"/></svg><span><strong>JOSÉ ACOSTA</strong><small>INGENIERO DE SISTEMAS</small></span></span><span class="reference-logo reference-logo--tecnofil logo-anime__content" aria-hidden="true"><span class="logo-anime__logo"><svg viewBox="0 0 71 71"><path d="M35.4 38.2v3.6H0c3 16.5 17.6 29.1 35.2 29.1 18.8 0 34.3-14.4 35.7-32.7H35.4ZM35.4 29.1v3.6h35.4C69.5 14.4 54 0 35.2 0S3 12.5 0 29.1h35.4Z" fill="currentColor"/></svg></span><span class="logo-anime__text"><span>josé acosta</span></span></span>');
-  }
   var trigger = document.querySelector('.menu-toggle');
   if (trigger) trigger.insertAdjacentHTML('beforeend', '<span class="header__toggler__icon" aria-hidden="true"></span>');
   var desktopNav = document.querySelector('.desktop-nav');
@@ -102,7 +103,7 @@ function initializeReferenceMarkup() {
   if (projectsHeading) projectsHeading.insertAdjacentHTML('afterend', '<div class="reference-project-intro">Proyectos de desarrollo web, gestión de datos y aplicaciones: soluciones que conectan tecnología y necesidades reales.</div>');
 
   var footer = document.querySelector('footer');
-  if (footer) footer.insertAdjacentHTML('afterbegin', '<div class="reference-footer"><a class="reference-footer-brand" href="' + referenceAssetRoot + '">josé acosta</a><div class="reference-footer-columns"><div><h3>Especialidades</h3><a href="' + referenceAssetRoot + '#projects">Desarrollo web</a><a href="' + referenceAssetRoot + '#skills">Datos y sistemas</a><a href="' + referenceAssetRoot + 'portafolio/">Aplicaciones y proyectos</a></div><div><h3>Perfil profesional</h3><a href="' + referenceAssetRoot + '#about">Sobre mí</a><a href="' + referenceAssetRoot + 'experiencia/">Experiencia</a><a href="' + referenceAssetRoot + 'estudios/">Formación</a></div><div><h3>Contacto</h3><a href="mailto:gamar30@gmail.com">gamar30@gmail.com</a><a href="tel:+51973418632">+51 973 418 632</a><p>Lima, Perú</p></div><div><h3>Sígueme</h3><a href="https://github.com/acostajose94" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/ivan-acosta-figueroa/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></div>');
+  if (footer) footer.insertAdjacentHTML('afterbegin', '<div class="reference-footer"><a class="reference-footer-brand" href="' + referenceAssetRoot + '" aria-label="José Acosta — Inicio">' + personalBrandMark() + '<span>josé acosta</span></a><div class="reference-footer-columns"><div><h3>Especialidades</h3><a href="' + referenceAssetRoot + '#projects">Desarrollo web</a><a href="' + referenceAssetRoot + '#skills">Datos y sistemas</a><a href="' + referenceAssetRoot + 'portafolio/">Aplicaciones y proyectos</a></div><div><h3>Perfil profesional</h3><a href="' + referenceAssetRoot + '#about">Sobre mí</a><a href="' + referenceAssetRoot + 'experiencia/">Experiencia</a><a href="' + referenceAssetRoot + 'estudios/">Formación</a></div><div><h3>Contacto</h3><a href="mailto:gamar30@gmail.com">gamar30@gmail.com</a><a href="tel:+51973418632">+51 973 418 632</a><p>Lima, Perú</p></div><div><h3>Sígueme</h3><a href="https://github.com/acostajose94" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/ivan-acosta-figueroa/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></div>');
 }
 
 function initializeReferenceHeader() {
@@ -368,7 +369,7 @@ function initializeSystemsContact() {
   var widget = document.createElement('aside');
   widget.className = 'systems-contact-widget';
   widget.setAttribute('aria-label', 'Contacto por WhatsApp');
-  widget.innerHTML = '<div class="systems-contact-box" id="systems-contact-box" hidden><div class="systems-contact-description">¡Hola! Escríbeme para conversar sobre tu proyecto.<button type="button" class="systems-contact-close" aria-label="Cerrar contacto">×</button></div><a href="https://wa.me/51973418632" target="_blank" rel="noopener noreferrer" class="systems-contact-account"><span class="systems-contact-avatar" aria-hidden="true">JA</span><span><strong>José Acosta</strong><small>Ingeniero de Sistemas</small></span></a></div><button type="button" class="systems-contact-toggle" aria-controls="systems-contact-box" aria-expanded="false"><i class="fab fa-whatsapp" aria-hidden="true"></i><span>Haga sus consultas</span></button>';
+  widget.innerHTML = '<div class="systems-contact-box" id="systems-contact-box" hidden><div class="systems-contact-description">¡Hola! Escríbeme para conversar sobre tu proyecto.<button type="button" class="systems-contact-close" aria-label="Cerrar contacto">×</button></div><a href="https://wa.me/51973418632" target="_blank" rel="noopener noreferrer" class="systems-contact-account"><span class="systems-contact-avatar" aria-hidden="true">' + personalBrandMark() + '</span><span><strong>José Acosta</strong><small>Ingeniero de Sistemas</small></span></a></div><button type="button" class="systems-contact-toggle" aria-controls="systems-contact-box" aria-expanded="false"><i class="fab fa-whatsapp" aria-hidden="true"></i><span>Haga sus consultas</span></button>';
   document.body.appendChild(widget);
   var box = widget.querySelector('.systems-contact-box');
   var toggle = widget.querySelector('.systems-contact-toggle');

@@ -33,7 +33,7 @@ El dibujo se detiene al estabilizarse el resorte, salir del viewport, ocultarse 
 Componentes reproducidos:
 
 - HelveticaNeueLTStd, blanco/negro y amarillo `#FFDB00`; grandes títulos amarillos y tarjetas cuadradas en la gama pastel original.
-- Cabecera transparente de 146 px a 1440 px de viewport, con 48 px de separación superior/lateral, insignia circular de 48 × 50 px y hamburguesa de 26 px. La insignia gira y revela el nombre del portafolio al pasar el puntero o recibir foco.
+- Cabecera transparente de 146 px a 1440 px de viewport, con 48 px de separación superior/lateral, monograma personal JA de 48 × 50 px y hamburguesa de 26 px. El monograma gira y revela el nombre del portafolio al pasar el puntero o recibir foco; no se utiliza la insignia de Tecnofil.
 - Cabecera que se oculta al bajar, reaparece al subir y pasa a amarillo/negro fuera de la portada. En páginas sin portada comienza amarilla.
 - Menú de 70vw con fondo de cobertura negro al 38 %, panel amarillo, textos Helvetica de 3.5vw a 1440 px, entradas escalonadas, submenú y dos enlaces cuadrados inferiores. En móvil ocupa el ancho completo.
 - Puntero con contenedor de 48 px y círculo de 24 px, que crece a 48 px en controles; transición de .4 s y estados de contraste, «+», cierre y arrastre. A 981–1200 px se respeta la escala de 45/22.5 px del sitio fuente. Los iconos finos se dibujan con SVG en vez de distribuir Font Awesome Pro.
@@ -45,10 +45,12 @@ Las medidas de cada componente se convierten a píxeles para no cambiar el tama�
 ### Adaptaciones explícitas
 
 - Se mantienen nombre, datos, formación, experiencia y enlaces del portafolio; no se incorporan textos corporativos, contactos comerciales ni catálogos ajenos.
+- Los símbolos de marca de las empresas se sustituyeron por un **monograma JA propio**, dibujado para este portafolio y compartido por las tres cabeceras, pies de las variantes, avatar de contacto y favicon. Su vector maestro es `img/brand/jose-acosta-mark.svg`; los colores y las animaciones cambian con el diseño, no la identidad.
+- Los nombres, las capturas de proyectos y los iconos de plataformas/tecnologías conservan su función de referencia o enlace; no se usan como marca personal.
 - El banner inicial «José Acosta / JA.» es la excepción visual aprobada, con el nuevo video de programación detrás.
 - El selector de diseños y los botones accesibles de vista previa son controles propios del portafolio.
 - Se conservan Escape, foco de teclado, modales accesibles y preferencia de movimiento reducido. Los colores amarillos sobre blanco de los títulos de Tecnofil se reproducen por fidelidad: **no se afirma conformidad WCAG AA del esquema original**.
-- Las ilustraciones, la insignia y las fuentes de referencia no se presentan como recursos con licencia libre. Este documento registra su procedencia; para reutilizarlos fuera de esta demostración debe verificarse la autorización correspondiente.
+- Las ilustraciones y las fuentes de referencia no se presentan como recursos con licencia libre. Este documento registra su procedencia; para reutilizarlas fuera de esta demostración debe verificarse la autorización correspondiente. El monograma personal no utiliza trazados de los logos de las empresas.
 
 ## Video de programación
 

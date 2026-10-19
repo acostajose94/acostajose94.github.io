@@ -11,6 +11,13 @@ La adaptación anterior fue sustituida tras la aclaración del usuario: **se rep
 
 Procedencia de estilos y recursos, valores medidos, licencia del video y adaptaciones explícitas: **[REFERENCES.md](REFERENCES.md)**.
 
+### Identidad personal
+
+- Sustituidos los símbolos corporativos de las cabeceras por un monograma JA propio, común a las tres versiones y las cinco páginas del portafolio.
+- Aplicado también a los pies de las variantes, al avatar de contacto y al favicon, incluyendo juego y página 404.
+- Conservados el giro y revelado del nombre, los colores de cada tema, el puntero y las interacciones. El banner JA. aprobado no cambia.
+- Las marcas que aparecen en proyectos, redes o tecnologías permanecen únicamente en ese contexto, no como identidad del sitio.
+
 ### Verificación de la reproducción
 
 - Comparadas en navegador las dimensiones de la cabecera, del panel de menú y del puntero con las medidas del sitio real de Tecnofil: 146 px de cabecera, 48 px de margen, panel de 1008 px a 1440 px y círculo de 24/48 px.
