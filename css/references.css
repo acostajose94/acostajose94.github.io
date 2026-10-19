@@ -3,7 +3,7 @@
    resizing the unrelated Tailwind/Original document. Sources: REFERENCES.md. */
 .header__toggler__icon, .reference-menu-base,
 .header__submenu, .reference-footer, .reference-project-intro,
-.tecnofil-video-layer, .banner-motion-control, .reference-value-link { display: none; }
+.tecnofil-video-layer, .reference-value-link { display: none; }
 .reference-menu-list { display: flex; flex-direction: column; gap: 16px; }
 .puntero { display: none; }
 .reference-nav-social, .systems-contact-widget { display: none; }
@@ -150,10 +150,10 @@ html[data-design="tecnofil"] body.menu-is-open .header__toggler__icon { border-b
 html[data-design="tecnofil"] body.menu-is-open .header__toggler__icon::before { top: 50%; transform: rotate(-45deg); }
 html[data-design="tecnofil"] body.menu-is-open .header__toggler__icon::after { top: 50%; transform: rotate(45deg); }
 html[data-design="tecnofil"] #mobileMenu { inset: 0; z-index: 10; height: 100dvh; background: rgba(0,0,0,.38); }
-html[data-design="tecnofil"] #mobileMenu > div { display: flex; justify-content: space-between; width: 70vw; min-width: 0; padding: 48px; gap: 32px; background: #ffdb00; animation: reference-menu-in .5s both; }
+html[data-design="tecnofil"] #mobileMenu > div { display: flex; justify-content: space-between; width: 70vw; min-width: 0; padding: 48px; gap: 32px; background: #ffdb00; animation: reference-menu-in .3s both; }
 html[data-design="tecnofil"] .reference-menu-list { flex: 0 0 auto; gap: 6px; max-width: calc(100% - 44px); }
 html[data-design="tecnofil"] .header__item { overflow: hidden; }
-html[data-design="tecnofil"] #mobileMenu .header__link { display: block; width: fit-content; padding: 0; margin: 0; color: #000; font: 700 48px/1.2 Helvetica, Arial, sans-serif; text-decoration: none; animation: reference-menu-text .3s .5s both; }
+html[data-design="tecnofil"] #mobileMenu .header__link { display: block; width: fit-content; padding: 0; margin: 0; color: #000; font: 700 48px/1.2 Helvetica, Arial, sans-serif; text-decoration: none; animation: reference-menu-text .25s both; }
 html[data-design="tecnofil"] #mobileMenu .header__link:hover { color: #fff; }
 html[data-design="tecnofil"] #mobileMenu .header__submenu { display: grid; grid-template-rows: 0fr; padding-left: 48px; max-height: 0; overflow: hidden; transition: max-height .4s; }
 html[data-design="tecnofil"] #mobileMenu .header__item:is(:hover, :focus-within) .header__submenu { max-height: 160px; }
@@ -164,7 +164,7 @@ html[data-design="tecnofil"] .header__socials { display: flex; flex-wrap: wrap; 
 html[data-design="tecnofil"] #mobileMenu .header__socials a { padding: 0; color: #000; font: 700 24px/1.2 Helvetica, sans-serif; text-decoration: none; }
 html[data-design="tecnofil"] #mobileMenu .header__socials a:hover { color: #fff; }
 html[data-design="tecnofil"] .header__squares { display: flex; gap: 48px; overflow: hidden; }
-html[data-design="tecnofil"] #mobileMenu .header__square { display: block; width: 200px; height: 200px; padding: 24px; color: #000; background: #fff; font: 700 24px/1.2 Helvetica, sans-serif; text-decoration: none; animation: reference-square-in .3s .5s both; }
+html[data-design="tecnofil"] #mobileMenu .header__square { display: block; width: 200px; height: 200px; padding: 24px; color: #000; background: #fff; font: 700 24px/1.2 Helvetica, sans-serif; text-decoration: none; animation: reference-square-in .25s both; }
 html[data-design="tecnofil"] #mobileMenu .header__square:hover { color: #fff; background: #000; }
 @keyframes reference-menu-in { from { transform: translateX(100%); } to { transform: translateX(0); } }
 @keyframes reference-menu-text { from { transform: translateY(100%); } to { transform: translateY(0); } }
@@ -177,8 +177,6 @@ html[data-design="tecnofil"] .tecnofil-video { width: 100%; height: 100%; object
 html[data-design="tecnofil"] #hero::before { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.62) 56%, rgba(0,0,0,.35)); }
 html[data-design="tecnofil"] #hero .hero-copy { max-width: 1920px; }
 html[data-design="tecnofil"] .tecnofil-art { background-color: rgba(0,0,0,.26); }
-html[data-design="tecnofil"] .banner-motion-control { display: flex; align-items: center; gap: 8px; position: absolute; z-index: 15; left: 48px; bottom: 28px; padding: 10px 14px; color: #fff; border: 1px solid #ffffff80; background: #0008; font: 400 14px/1.4 'HelveticaNeueLTStd', sans-serif; }
-html[data-design="tecnofil"] .banner-motion-control[hidden] { display: none; }
 
 /* White image-led Nosotros block, oversized yellow titles and pastel products. */
 html[data-design="tecnofil"] main > section:not([id="hero"]) { padding: 72px 48px; color: #000; background: #fff; overflow: clip; }
@@ -364,7 +362,6 @@ html[data-design="systems"].reference-motion-enabled .reference-reveal:not(.refe
   html[data-design="tecnofil"] #mobileMenu .header__socials a { font-size: 18px; }
   html[data-design="tecnofil"] #mobileMenu .header__square { width: 100px; height: 100px; padding: 14px 10px; font-size: 15px; }
   html[data-design="tecnofil"] .header__squares { gap: 20px; }
-  html[data-design="tecnofil"] .banner-motion-control { left: 24px; bottom: 24px; font-size: 12px; }
   html[data-design="tecnofil"] main > section:not([id="hero"]) { padding: 40px 20px; }
   html[data-design="tecnofil"] #about { padding: 0; }
   html[data-design="tecnofil"] .section-heading :is(h1, h2) { font-size: 64px; line-height: 1.05; }

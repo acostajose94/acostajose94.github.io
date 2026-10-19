@@ -297,31 +297,22 @@ function initializeInteractiveNetwork() {
 
 function initializeReferenceVideo() {
   var video = document.querySelector('.tecnofil-video');
-  var button = document.querySelector('.banner-motion-control');
-  if (!video || !button) return;
+  if (!video) return;
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var visible = true, userPaused = false, userStarted = false;
-  function label() {
-    button.innerHTML = video.paused ? '<span aria-hidden="true">▷</span> Reproducir video' : '<span aria-hidden="true">Ⅱ</span> Pausar video';
-    button.setAttribute('aria-label', video.paused ? 'Reproducir video de fondo' : 'Pausar video de fondo');
-  }
+  var visible = true;
   function update() {
     var saveData = navigator.connection && navigator.connection.saveData;
-    var play = document.documentElement.dataset.design === 'tecnofil' && visible && !document.hidden && !userPaused && (userStarted || !reduced.matches && !saveData);
+    var play = document.documentElement.dataset.design === 'tecnofil' && visible && !document.hidden && !reduced.matches && !saveData;
     if (play) {
       if (!video.getAttribute('src')) video.src = video.dataset.src;
       video.muted = true;
       var result = video.play();
-      if (result) result.catch(label);
+      if (result) result.catch(function () { /* Keep the poster if autoplay is unavailable. */ });
     } else video.pause();
-    label();
   }
-  button.addEventListener('click', function () { userPaused = !video.paused; userStarted = !userPaused; update(); });
-  video.addEventListener('play', label); video.addEventListener('pause', label);
-  video.addEventListener('error', function () { button.hidden = true; });
   window.addEventListener('designchange', update);
   document.addEventListener('visibilitychange', update);
-  reduced.addEventListener('change', function () { userStarted = false; update(); });
+  reduced.addEventListener('change', update);
   if (typeof IntersectionObserver !== 'undefined') new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; update(); }).observe(video.closest('#hero'));
 }
 
