@@ -45,8 +45,9 @@ Las medidas de cada componente se convierten a píxeles para no cambiar el tama�
 ### Adaptaciones explícitas
 
 - Se mantienen nombre, datos, formación, experiencia y enlaces del portafolio; no se incorporan textos corporativos, contactos comerciales ni catálogos ajenos.
-- Los símbolos de marca de las empresas se sustituyeron por un **monograma JA propio**, dibujado para este portafolio y compartido por las tres cabeceras, pies de las variantes, avatar de contacto y favicon. Su vector maestro es `img/brand/jose-acosta-mark.svg`; los colores y las animaciones cambian con el diseño, no la identidad.
+- Los símbolos de marca de las empresas se sustituyeron por un **monograma JA propio**, dibujado para este portafolio y compartido por las tres cabeceras, pies de las variantes y avatar de contacto. Su vector maestro es `img/brand/jose-acosta-mark.svg`; el favicon usa una A simplificada.
 - Los nombres, las capturas de proyectos y los iconos de plataformas/tecnologías conservan su función de referencia o enlace; no se usan como marca personal.
+- `favicon.ico` y la ruta heredada `img/fav.ico` usan una única **A** blanca y sólida sobre fondo oscuro, definida en `img/brand/favicon.svg`, con imágenes de 16, 32, 48, 64, 128 y 256 px en un ICO real. El monograma JA del resto del sitio se conserva. Las siete páginas declaran las variantes ICO/SVG con rutas absolutas, también válidas desde una URL de error anidada.
 - El banner inicial «José Acosta / JA.» es la excepción visual aprobada, con el nuevo video de programación detrás.
 - El selector de diseños y los botones accesibles de vista previa son controles propios del portafolio.
 - Todos los selectores flotantes se centran verticalmente; solo Original muestra texto, A/B/C mantienen su estilo propio con un icono y nombre accesible.

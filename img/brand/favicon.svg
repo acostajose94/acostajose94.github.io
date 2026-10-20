@@ -1,8 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <title>José Acosta</title>
   <rect width="64" height="64" rx="14" fill="#0f172a"/>
-  <g fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M7 14h21v29a9 9 0 0 1-18 0v-4"/>
-    <path d="m33 52 12-40 12 40M38 36h14"/>
-  </g>
+  <path fill="#fff" fill-rule="evenodd" d="M27 12h10l16 40H43l-3-9H24l-3 9H11L27 12Zm5 11-5 13h10l-5-13Z"/>
 </svg>
