@@ -16,7 +16,7 @@ function initializeReferenceDesigns() {
   initializeInteractiveNetwork();
   initializeReferenceVideo();
   initializeReferenceReveals();
-  initializeReferenceDrag();
+  initializeReferenceSliders();
   initializeSystemsContact();
 }
 
@@ -25,11 +25,24 @@ function initializeReferenceSectionOrder() {
   if (!hero) return;
   var main = hero.parentElement;
   var orders = {
-    original: ['hero', 'about', 'skills', 'education', 'projects', 'experience', 'contact'],
+    original: ['hero', 'projects', 'about', 'skills', 'experience', 'education', 'contact'],
     systems: ['hero', 'about', 'projects', 'skills', 'education', 'experience', 'contact'],
-    tecnofil: ['hero', 'about', 'projects', 'skills', 'experience', 'education', 'contact'],
+    tecnofil: ['hero', 'about', 'projects', 'experience', 'education', 'contact'],
+    campus: ['hero', 'projects', 'about', 'experience', 'education', 'skills', 'contact'],
   };
   window.addEventListener('designchange', function () {
+    var tecnofil = document.documentElement.dataset.design === 'tecnofil';
+    var about = document.getElementById('about');
+    var skills = document.getElementById('skills');
+    if (about && skills) {
+      // Move the existing section, retaining its anchor and all its content.
+      if (tecnofil) about.firstElementChild.appendChild(skills);
+      else if (about.contains(skills)) main.appendChild(skills);
+      setHeadingLevel(skills.querySelector('.section-heading > :is(h2, h3)'), tecnofil ? 'h3' : 'h2');
+      skills.querySelectorAll('.reference-skills > div > :is(h3, h4)').forEach(function (heading) {
+        setHeadingLevel(heading, tecnofil ? 'h4' : 'h3');
+      });
+    }
     // Reorder actual nodes, not CSS order: reading and keyboard order stay aligned.
     var order = orders[document.documentElement.dataset.design] || orders.original;
     order.forEach(function (id) {
@@ -37,6 +50,13 @@ function initializeReferenceSectionOrder() {
       if (section && section.parentElement === main) main.appendChild(section);
     });
   });
+  function setHeadingLevel(heading, tag) {
+    if (!heading || heading.localName === tag) return;
+    var replacement = document.createElement(tag);
+    Array.from(heading.attributes).forEach(function (attribute) { replacement.setAttribute(attribute.name, attribute.value); });
+    while (heading.firstChild) replacement.appendChild(heading.firstChild);
+    heading.replaceWith(replacement);
+  }
 }
 
 function initializeReferenceMarkup() {
@@ -59,8 +79,9 @@ function initializeReferenceMarkup() {
       link.before(item);
       item.appendChild(link);
       link.classList.add('header__link');
+      if (/^Habilidades/.test(link.textContent.trim())) item.classList.add('reference-skills-menu-item');
       if (/Sobre/.test(link.textContent)) {
-        item.insertAdjacentHTML('beforeend', '<div class="header__submenu"><a href="' + referenceAssetRoot + '#education">Formación</a><a href="' + referenceAssetRoot + 'experiencia/">Experiencia completa</a></div>');
+        item.insertAdjacentHTML('beforeend', '<div class="header__submenu"><a class="reference-about-skills-link" href="' + referenceAssetRoot + '#skills">Habilidades</a><a href="' + referenceAssetRoot + '#education">Formación</a><a href="' + referenceAssetRoot + 'experiencia/">Experiencia completa</a></div>');
       }
     });
     menuPanel.insertAdjacentHTML('beforeend', '<div class="reference-menu-base"><div class="header__socials"><a href="https://github.com/acostajose94" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/ivan-acosta-figueroa/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div><div class="header__squares"><a href="' + referenceAssetRoot + 'portafolio/" class="header__square"><span>Portafolio</span></a><a href="' + referenceAssetRoot + 'contacto/" class="header__square"><span>Contacto</span></a></div></div>');
@@ -73,7 +94,6 @@ function initializeReferenceMarkup() {
 
   var about = document.getElementById('about');
   if (about) {
-    about.querySelector('.section-heading').classList.add('reference-about-banner');
     var profile = about.querySelector(':scope > div > .grid');
     profile.classList.add('reference-profile');
     profile.children[0].classList.add('reference-profile-copy');
@@ -86,7 +106,6 @@ function initializeReferenceMarkup() {
       link.addEventListener('click', function () { scrollToSection('skills'); });
       card.appendChild(link);
     });
-    about.querySelector(':scope > div > .grid:last-child').classList.add('reference-stats');
   }
   document.querySelectorAll('#skills > div > .grid').forEach(function (grid) { grid.classList.add('reference-skills'); });
   document.querySelectorAll('#education > div > .grid').forEach(function (grid) { grid.classList.add('reference-education'); });
@@ -158,7 +177,7 @@ function initializeTecnofilCursor() {
         cursor.classList.remove('cursor--plus');
         cursor.classList.add(control.matches('.swiper-button-prev') ? 'cursor--left' : 'cursor--right');
       }
-    } else if (target.closest('.reference-profile-values')) {
+    } else if (target.closest('.reference-slider-active')) {
       cursor.classList.add('cursor--scale', 'cursor--drag');
     }
     if (menuOpen && target.id === 'mobileMenu' || modalOpen && target.id === 'projectModal') {
@@ -329,30 +348,92 @@ function initializeReferenceReveals() {
   reduced.addEventListener('change', update); update();
 }
 
-function initializeReferenceDrag() {
-  var gallery = document.querySelector('.reference-profile-values');
-  if (!gallery) return;
-  var startX = 0, startScroll = 0, dragging = false, pointer = null;
-  gallery.addEventListener('pointerdown', function (event) {
-    if (document.documentElement.dataset.design !== 'tecnofil' || event.pointerType !== 'mouse' || event.button !== 0) return;
-    startX = event.clientX; startScroll = gallery.scrollLeft; pointer = event.pointerId;
-  });
-  gallery.addEventListener('pointermove', function (event) {
-    if (pointer !== event.pointerId) return;
-    var delta = event.clientX - startX;
-    if (!dragging && Math.abs(delta) > 4) {
-      dragging = true; gallery.classList.add('reference-is-dragging'); gallery.setPointerCapture(pointer);
+function initializeReferenceSliders() {
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll('.reference-profile-values').forEach(function (gallery, galleryIndex) {
+    var cards = Array.from(gallery.children);
+    var instance = null, track = null;
+    var shell = document.createElement('div');
+    shell.className = 'reference-slider-shell';
+    gallery.before(shell); shell.appendChild(gallery);
+    gallery.id = gallery.id || 'reference-gallery-' + galleryIndex;
+    var controls = document.createElement('div');
+    controls.className = 'reference-slider-controls';
+    controls.setAttribute('role', 'group');
+    controls.setAttribute('aria-label', 'Controles de especialidades');
+    controls.innerHTML = '<span class="reference-slider-status" role="status" aria-live="polite" aria-atomic="true"></span><button type="button" aria-label="Anterior" aria-controls="' + gallery.id + '">←</button><button type="button" aria-label="Siguiente" aria-controls="' + gallery.id + '">→</button>';
+    gallery.after(controls);
+    var buttons = controls.querySelectorAll('button');
+    buttons[0].addEventListener('click', function () { if (instance) instance.slidePrev(); });
+    buttons[1].addEventListener('click', function () { if (instance) instance.slideNext(); });
+    gallery.addEventListener('keydown', function (event) {
+      if (!instance || !['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      if (event.key === 'Home' || event.key === 'End') instance.slideToLoop(event.key === 'Home' ? 0 : cards.length - 1);
+      else if (event.key === 'ArrowLeft') instance.slidePrev();
+      else instance.slideNext();
+    });
+    function sync(swiper) {
+      controls.querySelector('.reference-slider-status').textContent = (swiper.realIndex % cards.length + 1) + ' de ' + cards.length;
+      // Preview cards remain visible, but only the fully readable active card
+      // exposes its links to keyboard/screen-reader navigation.
+      swiper.slides.forEach(function (card) {
+        var active = card === swiper.slides[swiper.activeIndex];
+        card.inert = !active;
+        card.setAttribute('aria-hidden', String(!active));
+      });
     }
-    if (dragging) { event.preventDefault(); gallery.scrollLeft = startScroll - delta; }
-  });
-  function stop() { dragging = false; pointer = null; gallery.classList.remove('reference-is-dragging'); }
-  gallery.addEventListener('pointerup', stop); gallery.addEventListener('pointercancel', stop);
-  gallery.addEventListener('lostpointercapture', stop);
-  window.addEventListener('pointerup', stop);
-  window.addEventListener('designchange', function () {
-    stop();
-    if (document.documentElement.dataset.design === 'tecnofil') { gallery.tabIndex = 0; gallery.setAttribute('aria-label', 'Especialidades, galería desplazable'); }
-    else { gallery.removeAttribute('tabindex'); gallery.removeAttribute('aria-label'); }
+    function update() {
+      var enabled = document.documentElement.dataset.design === 'tecnofil' && typeof Swiper !== 'undefined';
+      if (enabled && !instance) {
+        track = document.createElement('div');
+        track.className = 'reference-slider-track';
+        // Like Slick's clones in the source, a second set fills both preview
+        // edges while looping a short gallery. Inactive copies are inert.
+        var slides = cards.concat(cards.map(function (card) {
+          var copy = card.cloneNode(true);
+          copy.dataset.referenceClone = 'true';
+          var link = copy.querySelector('.reference-value-link');
+          if (link) link.addEventListener('click', function () { scrollToSection('skills'); });
+          return copy;
+        }));
+        slides.forEach(function (card, index) {
+          card.classList.add('reference-slider-slide');
+          card.setAttribute('role', 'group');
+          card.setAttribute('aria-roledescription', 'diapositiva');
+          card.setAttribute('aria-label', (index % cards.length + 1) + ' de ' + cards.length);
+          track.appendChild(card);
+        });
+        gallery.appendChild(track);
+        gallery.classList.add('reference-slider-active');
+        gallery.setAttribute('role', 'region');
+        gallery.setAttribute('aria-roledescription', 'carrusel');
+        gallery.setAttribute('aria-label', 'Especialidades profesionales');
+        gallery.tabIndex = 0;
+        instance = new Swiper(gallery, {
+          wrapperClass: 'reference-slider-track', slideClass: 'reference-slider-slide',
+          slidesPerView: 'auto', centeredSlides: true, loop: true,
+          spaceBetween: 32,
+          speed: reduced.matches ? 0 : 500,
+          watchSlidesProgress: true, a11y: false,
+          on: { init: sync, slideChange: sync },
+        });
+      } else if (!enabled && instance) {
+        instance.destroy(true, true); instance = null;
+        // Looping reorders slides. Restore the original DOM and reading order.
+        cards.forEach(function (card) {
+          card.classList.remove('reference-slider-slide');
+          card.inert = false;
+          ['role', 'aria-roledescription', 'aria-label', 'aria-hidden', 'data-swiper-slide-index'].forEach(function (name) { card.removeAttribute(name); });
+          gallery.appendChild(card);
+        });
+        track.remove(); track = null;
+        gallery.classList.remove('reference-slider-active');
+        ['role', 'aria-roledescription', 'aria-label', 'tabindex'].forEach(function (name) { gallery.removeAttribute(name); });
+      }
+    }
+    window.addEventListener('designchange', update);
+    reduced.addEventListener('change', function () { if (instance) instance.params.speed = reduced.matches ? 0 : 500; });
   });
 }
 

@@ -8,6 +8,11 @@
 .puntero { display: none; }
 .reference-nav-social, .systems-contact-widget { display: none; }
 .personal-brand-mark { display: block; width: 100%; height: 100%; flex-shrink: 0; }
+.reference-stats, .reference-stats > *, .reference-profile > * { min-width: 0; }
+.reference-stat .mt-2 { overflow-wrap: anywhere; }
+.reference-slider-controls { display: none; }
+.reference-slider-shell { display: contents; }
+html:not([data-design="tecnofil"]) #mobileMenu .reference-about-skills-link { display: none; }
 
 /* SISTEMAS PERÚ WEB: Lato, Bootstrap container, blue/cyan and original canvas. */
 html[data-design="systems"] {
@@ -75,7 +80,7 @@ html[data-design="systems"] .reference-value-card p { font-size: 14px; line-heig
 html[data-design="systems"] .reference-value-card .w-12 { width: 100px; height: 100px; margin: 0 auto 24px; background: none; border: 0; color: #fff; }
 html[data-design="systems"] .reference-value-card .w-12 i { font-size: 54px; }
 html[data-design="systems"] .reference-value-link { position: absolute; bottom: -25px; left: calc(50% - 31.5px); display: block; width: 63px; height: 63px; color: #00f9ff; background: #004c91; border-radius: 50%; font: 700 51px/59px 'Lato', sans-serif; }
-html[data-design="systems"] .reference-stats > div { border: 0; border-radius: 0; border-top: 2px solid #00f8ff; padding: 24px; }
+html[data-design="systems"] .reference-stat { border: 0; border-radius: 0; border-top: 2px solid #00f8ff; padding: 24px; }
 html[data-design="systems"] .reference-stats .text-slate-400 { overflow-wrap: anywhere; }
 html[data-design="systems"] .reference-skills > div { background: #32bef0; color: #fff; border: 0; border-radius: 0; }
 html[data-design="systems"] .reference-skills h3 { color: #004c91; text-align: center; font-size: 21px; text-transform: uppercase; }
@@ -153,6 +158,7 @@ html[data-design="tecnofil"] #mobileMenu { inset: 0; z-index: 10; height: 100dvh
 html[data-design="tecnofil"] #mobileMenu > div { display: flex; justify-content: space-between; width: 70vw; min-width: 0; padding: 48px; gap: 32px; background: #ffdb00; animation: reference-menu-in .3s both; }
 html[data-design="tecnofil"] .reference-menu-list { flex: 0 0 auto; gap: 6px; max-width: calc(100% - 44px); }
 html[data-design="tecnofil"] .header__item { overflow: hidden; }
+html[data-design="tecnofil"] .reference-skills-menu-item { display: none; }
 html[data-design="tecnofil"] #mobileMenu .header__link { display: block; width: fit-content; padding: 0; margin: 0; color: #000; font: 700 48px/1.2 Helvetica, Arial, sans-serif; text-decoration: none; animation: reference-menu-text .25s both; }
 html[data-design="tecnofil"] #mobileMenu .header__link:hover { color: #fff; }
 html[data-design="tecnofil"] #mobileMenu .header__submenu { display: grid; grid-template-rows: 0fr; padding-left: 48px; max-height: 0; overflow: hidden; transition: max-height .4s; }
@@ -185,26 +191,39 @@ html[data-design="tecnofil"] .section-heading :is(h1, h2) { color: #ffdb00; back
 html[data-design="tecnofil"] .section-heading > .h-1 { display: none; }
 html[data-design="tecnofil"] main h3 { font-family: 'HelveticaNeueLTStd', sans-serif; }
 html[data-design="tecnofil"] #about { padding: 0; }
-html[data-design="tecnofil"] .reference-about-banner { position: relative; display: flex; align-items: flex-start; min-height: min(85svh, 760px); padding: 64px 48px; margin: 0; isolation: isolate; overflow: hidden; background: #191919; }
-html[data-design="tecnofil"] .reference-about-banner::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(#0005, #0005), url('../img/references/coding-poster.jpg') center/cover; animation: reference-image-zoom 8s ease-in-out infinite alternate; }
-html[data-design="tecnofil"] .reference-about-banner h2 { color: #fff; font-size: clamp(80px, 14.45vw, 208px); }
-@keyframes reference-image-zoom { to { transform: scale(1.05); } }
-html[data-design="tecnofil"] .reference-profile { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: start; padding: 96px 48px; margin: 0; }
+html[data-design="tecnofil"] .reference-about-heading { padding: 96px 48px 0; margin: 0; text-align: left; }
+html[data-design="tecnofil"] .reference-about-heading h2 { margin: 0; font-size: clamp(64px, 14.45vw, 208px); }
+html[data-design="tecnofil"] .reference-profile { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; align-items: start; padding: 72px 48px; margin: 0; }
 html[data-design="tecnofil"] .reference-profile-copy .bg-slate-900\/50 { border: 0; padding: 0; background: none; }
 html[data-design="tecnofil"] .reference-profile-copy p { font-size: 20px; line-height: 1.48; }
 html[data-design="tecnofil"] .reference-profile-values { display: flex; gap: 32px; padding-bottom: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #ffdb00 #eee; }
-html[data-design="tecnofil"] .reference-profile-values.reference-is-dragging { scroll-snap-type: none; user-select: none; }
-html[data-design="tecnofil"] .reference-value-card { flex: 0 0 70%; min-height: 320px; scroll-snap-align: center; padding: 40px; border: 0; background: #f3f3f0; border-radius: 0; }
+html[data-design="tecnofil"] .reference-value-card { flex: 0 0 70%; min-height: 320px; height: auto; scroll-snap-align: center; padding: 40px; border: 0; background: #f3f3f0; border-radius: 0; }
 html[data-design="tecnofil"] .reference-value-card .w-12 { width: 80px; height: 80px; border: 0; background: none; }
 html[data-design="tecnofil"] .reference-value-card i { color: #ffdb00; font-size: 48px; }
 html[data-design="tecnofil"] .reference-value-card h3 { font-size: 30px; }
 html[data-design="tecnofil"] .reference-value-card p { font-size: 20px; line-height: 1.48; }
 html[data-design="tecnofil"] .reference-stats { padding: 0 48px 72px; }
-html[data-design="tecnofil"] .reference-stats > div { padding: 24px 0; border: 0; border-top: 2px solid #ffdb00; background: transparent; text-align: left; }
-html[data-design="tecnofil"] .reference-stats .text-4xl { font-size: 64px; }
+html[data-design="tecnofil"] .reference-stat { min-height: 160px; height: auto; padding: 24px 0; border: 0; border-top: 2px solid #ffdb00; background: transparent; text-align: left; }
+/* Large numbers must grow their line box, not overflow Tailwind's 40px line. */
+html[data-design="tecnofil"] .reference-stats .text-4xl { font-size: 64px; line-height: 1.2; }
+/* Centered, variable-width, looping drag galleries, as in the reference.
+   Dedicated classes keep these independent from Original/C project Swipers. */
+html[data-design="tecnofil"] .reference-slider-active { display: block; position: relative; overflow: clip; padding-bottom: 0; touch-action: pan-y; scroll-snap-type: none; }
+html[data-design="tecnofil"] .reference-slider-shell { display: block; min-width: 0; }
+.reference-slider-track { position: relative; display: flex; align-items: stretch; width: 100%; height: 100%; box-sizing: content-box; transition-property: transform; }
+.reference-slider-slide { position: relative; flex-shrink: 0; transition-property: transform; }
+html[data-design="tecnofil"] .reference-slider-slide { transition-property: opacity, color, background-color, border-color, box-shadow; }
+html[data-design="tecnofil"] .reference-profile-values .reference-slider-slide { width: 70%; flex-basis: auto; }
+html[data-design="tecnofil"] .reference-slider-active + .reference-slider-controls { display: flex; align-items: center; justify-content: flex-end; gap: 16px; padding-top: 16px; }
+.reference-slider-controls button { width: 44px; height: 44px; color: #000; background: #ffdb00; font-size: 24px; }
+.reference-slider-status { margin-right: auto; color: #000; font-size: 14px; font-variant-numeric: tabular-nums; }
 html[data-design="tecnofil"] :is(#skills, #education, #experience) { background: #fff; }
+html[data-design="tecnofil"] #about #skills { padding: 0 48px 72px; }
+html[data-design="tecnofil"] #about #skills > div { max-width: none; }
+html[data-design="tecnofil"] #about #skills .section-heading { margin-bottom: 32px; text-align: left; }
+html[data-design="tecnofil"] #about #skills .section-heading h3 { margin: 0; color: #ffdb00; background: none; font-size: clamp(28px, 3.5vw, 48px); line-height: 1.2; }
 html[data-design="tecnofil"] .reference-skills > div { padding: 24px 0; background: none; border: 0; border-top: 2px solid #ffdb00; }
-html[data-design="tecnofil"] .reference-skills h3 { font-size: 24px; }
+html[data-design="tecnofil"] .reference-skills :is(h3, h4) { font-size: 24px; }
 html[data-design="tecnofil"] .reference-skills .bg-slate-800 { background: #e5e5e5; }
 html[data-design="tecnofil"] .reference-education > div { border: 2px solid #ffdb00; background: #fff; }
 html[data-design="tecnofil"] #projects { background: #000; padding-top: 48px; }
@@ -283,7 +302,8 @@ html[data-design="tecnofil"].tecnofil-cursor-ready .puntero { display: flex; }
 /* Source reveal timings, contained so translating a title cannot widen the page. */
 html[data-design="tecnofil"] .reference-reveal { transition: transform .7s, opacity .7s; }
 html[data-design="systems"] .reference-reveal { transition: transform .4s, opacity .4s; }
-html[data-design="tecnofil"].reference-motion-enabled .reference-reveal:not(.reference-is-visible) { opacity: 0; transform: translateX(100vw); }
+html[data-design="tecnofil"].reference-motion-enabled .reference-reveal:not(.reference-is-visible) { opacity: 0; transform: translateX(48px); }
+html[data-design="tecnofil"].reference-motion-enabled .reference-slider-active .reference-reveal:not(.reference-is-visible) { opacity: 1; transform: none; }
 html[data-design="systems"].reference-motion-enabled .reference-reveal:not(.reference-is-visible) { opacity: 0; transform: scale(.8); }
 
 @media (max-width: 1500px) {
@@ -304,6 +324,7 @@ html[data-design="systems"].reference-motion-enabled .reference-reveal:not(.refe
   html[data-design="tecnofil"] .reference-profile-copy { max-width: 780px; }
   html[data-design="tecnofil"] .reference-profile-values { gap: 30px; }
   html[data-design="tecnofil"] .reference-value-card { flex-basis: 55%; }
+  html[data-design="tecnofil"] .reference-profile-values .reference-slider-slide { width: 55%; }
   html[data-design="tecnofil"] .reference-project-grid { --reference-columns: 2; --reference-gap: 32px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
   html[data-design="tecnofil"] .reference-app-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
   html[data-design="tecnofil"] .reference-project-intro { max-width: 100%; margin-bottom: 48px; }
@@ -316,6 +337,8 @@ html[data-design="systems"].reference-motion-enabled .reference-reveal:not(.refe
   html[data-design="tecnofil"] main > section:not([id="hero"]) { padding-right: 30px; padding-left: 30px; }
   html[data-design="tecnofil"] #about { padding: 0; }
   html[data-design="tecnofil"] .reference-profile { padding: 48px 30px; }
+  html[data-design="tecnofil"] .reference-about-heading { padding: 64px 30px 0; }
+  html[data-design="tecnofil"] #about #skills { padding-right: 30px; padding-left: 30px; }
   html[data-design="tecnofil"] #mobileMenu > div { padding: 30px; }
   html[data-design="tecnofil"] .header__squares { gap: 30px; }
   html[data-design="tecnofil"] .reference-menu-base { flex-wrap: wrap; gap: 24px; }
@@ -366,13 +389,16 @@ html[data-design="systems"].reference-motion-enabled .reference-reveal:not(.refe
   html[data-design="tecnofil"] #about { padding: 0; }
   html[data-design="tecnofil"] .section-heading :is(h1, h2) { font-size: 64px; line-height: 1.05; }
   html[data-design="tecnofil"] #projects .section-heading h2 { font-size: 70px; }
-  html[data-design="tecnofil"] .reference-about-banner { min-height: 440px; padding: 40px 20px; }
-  html[data-design="tecnofil"] .reference-about-banner h2 { font-size: clamp(58px, 18vw, 100px); }
+  html[data-design="tecnofil"] .reference-about-heading { padding: 40px 20px 0; }
+  html[data-design="tecnofil"] .reference-about-heading h2 { font-size: clamp(45px, 18vw, 100px); }
   html[data-design="tecnofil"] .reference-profile { gap: 32px; padding: 40px 20px; }
   html[data-design="tecnofil"] .reference-profile-copy p { font-size: 16px; }
   html[data-design="tecnofil"] .reference-value-card { flex-basis: 85%; padding: 24px; }
+  html[data-design="tecnofil"] .reference-profile-values .reference-slider-slide { width: 85%; }
   html[data-design="tecnofil"] .reference-value-card p { font-size: 16px; }
   html[data-design="tecnofil"] .reference-stats { padding: 0 20px 40px; }
+  html[data-design="tecnofil"] #about #skills { padding: 0 20px 40px; }
+  html[data-design="tecnofil"] .reference-stat { min-height: 144px; }
   html[data-design="tecnofil"] .reference-stats .text-4xl { font-size: 48px; }
   html[data-design="tecnofil"] .reference-project-intro { column-count: 1; font-size: 18px; }
   html[data-design="tecnofil"] .reference-project-card :is(h3, h3 a) { font-size: 20px; }
@@ -401,6 +427,5 @@ html[data-design="systems"].reference-motion-enabled .reference-reveal:not(.refe
   html[data-design="tecnofil"] #projects .section-heading h2 { font-size: 18vw; }
 }
 @media (prefers-reduced-motion: reduce) {
-  html[data-design="tecnofil"] .reference-about-banner::before { animation: none; }
   .reference-reveal { opacity: 1 !important; transform: none !important; }
 }

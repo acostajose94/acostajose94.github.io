@@ -101,12 +101,14 @@ html[data-design="tecnofil"] #hero .hero-actions { justify-content: flex-start; 
 html[data-design="tecnofil"] .hero-actions button { border-radius: 0; }
 html[data-design="tecnofil"] .hero-actions button:last-child { color: #fff; border-color: #96968d; }
 html[data-design="tecnofil"] .tecnofil-art { position: absolute; display: grid; place-content: center; gap: 16px; right: max(24px, calc((100vw - 1280px) / 2)); top: 30%; width: 30%; max-width: 380px; aspect-ratio: 1; border: 1px solid #565448; background: repeating-linear-gradient(0deg, transparent 0 39px, #ffffff08 39px 40px), repeating-linear-gradient(90deg, transparent 0 39px, #ffffff08 39px 40px); }
-.tecnofil-art strong { color: #ffdb00; font-size: clamp(80px, 12vw, 180px); font-weight: 700; line-height: 1; letter-spacing: -.08em; }
+.tecnofil-art strong { color: #ffdb00; font-size: clamp(80px, 12vw, 180px); font-weight: 700; line-height: 1; letter-spacing: -.08em; text-align: center; }
 .tecnofil-art span { color: #d0d0c8; font-size: 12px; letter-spacing: .18em; text-align: center; }
 
-.design-switch { position: fixed; z-index: 40; right: 20px; bottom: 20px; display: flex; align-items: center; gap: 10px; max-width: calc(100vw - 32px); padding: 10px 16px 10px 10px; color: var(--ui-text); background: var(--ui-surface); border: 1px solid var(--ui-border); border-radius: 40px; box-shadow: 0 4px 20px #0002; text-align: left; }
+.design-switch { position: fixed; z-index: 40; right: 20px; top: 50%; bottom: auto; transform: translateY(-50%); display: flex; align-items: center; gap: 10px; max-width: calc(100vw - 32px); padding: 10px 16px 10px 10px; color: var(--ui-text); background: var(--ui-surface); border: 1px solid var(--ui-border); border-radius: 40px; box-shadow: 0 4px 20px #0002; text-align: left; }
 .design-switch__icon { display: grid; place-items: center; flex: 0 0 36px; width: 36px; height: 36px; color: var(--ui-button); background: var(--ui-gradient); border-radius: 50%; }
 .design-switch__copy { display: grid; gap: 1px; }
+html:not([data-design="original"]) .design-switch { width: 52px; height: 52px; justify-content: center; gap: 0; padding: 6px; }
+html:not([data-design="original"]) .design-switch__copy { display: none; }
 .design-switch__eyebrow { color: var(--ui-muted); font-size: 10px; letter-spacing: .06em; }
 .design-switch__label { font-size: 13px; font-weight: 700; }
 .design-switch__next { display: none; }
@@ -136,7 +138,7 @@ html:not([data-design="original"]) .experience-entry:last-child { grid-column: 1
   html[data-design="tecnofil"] #hero .hero-copy { padding-right: 0; }
   html[data-design="tecnofil"] .tecnofil-art { display: none; }
   html:not([data-design="original"]) .experience-timeline { grid-template-columns: 1fr; }
-  .design-switch { right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); gap: 8px; padding: 8px 12px 8px 8px; }
+  .design-switch { right: 12px; gap: 8px; padding: 8px 12px 8px 8px; }
   .design-switch__eyebrow { font-size: 9px; }
   .design-switch__label { font-size: 12px; }
 }

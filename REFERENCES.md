@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Reproducir los componentes y las interacciones de las dos referencias con el **contenido de José Acosta**, no convertirlos en variantes de color del diseño violeta. La composición del banner Tecnofil con «JA.» se conserva por indicación del usuario; su fondo se sustituye por un video de programación.
+Adaptar los componentes y las interacciones de las referencias con el **contenido y la identidad de José Acosta**. Las variantes públicas se llaman **A**, **B** y **C**; los nombres de las fuentes se documentan aquí únicamente para registrar su procedencia. **Original** tiene una dirección futurista propia y no utiliza el anterior diseño violeta.
 
 Inspección de HTML, CSS, JavaScript y navegador realizada el **15 de octubre de 2026**.
 
@@ -38,7 +38,7 @@ Componentes reproducidos:
 - Menú de 70vw con fondo de cobertura negro al 38 %, panel amarillo, textos Helvetica de 3.5vw a 1440 px, entradas escalonadas, submenú y dos enlaces cuadrados inferiores. En móvil ocupa el ancho completo.
 - Puntero con contenedor de 48 px y círculo de 24 px, que crece a 48 px en controles; transición de .4 s y estados de contraste, «+», cierre y arrastre. A 981–1200 px se respeta la escala de 45/22.5 px del sitio fuente. Los iconos finos se dibujan con SVG en vez de distribuir Font Awesome Pro.
 - El puntero sigue inmediatamente al mouse, sin retardo inventado. No se oculta el cursor nativo hasta que el personalizado esté listo, y no se activa en pantallas táctiles ni a 980 px o menos.
-- Bloque de perfil con imagen de fondo, título blanco, zoom suave y galería horizontal realmente arrastrable. Productos/proyectos en cuadrícula con imágenes que aparecen al hover/foco durante .8 s; formulario blanco con bordes amarillos y pie amarillo por columnas.
+- Bloque de perfil con título único amarillo (`seccion__titulo`), sin segundo banner de imagen. Las especialidades usan una galería centrada, de ancho variable, arrastrable y circular, adaptando el comportamiento del slider de la referencia con Swiper ya disponible en la portada; no se agrega jQuery/Slick. Hay botones, teclado, posición anunciada y copias inactivas fuera de la navegación accesible. Al cambiar de diseño se restauran las tarjetas y su orden original. Las cifras mantienen la cuadrícula responsive original, sin slider; se amplían únicamente la altura de las tarjetas y la altura de línea de sus números para evitar recortes verticales. Productos/proyectos en cuadrícula con imágenes que aparecen al hover/foco durante .8 s; formulario blanco con bordes amarillos y pie amarillo por columnas.
 
 Las medidas de cada componente se convierten a píxeles para no cambiar el tamaño raíz de las utilidades del modo Original. No se importan el reset de WordPress, el código de analítica, formularios ajenos ni dependencias completas de los sitios de referencia.
 
@@ -49,6 +49,8 @@ Las medidas de cada componente se convierten a píxeles para no cambiar el tama�
 - Los nombres, las capturas de proyectos y los iconos de plataformas/tecnologías conservan su función de referencia o enlace; no se usan como marca personal.
 - El banner inicial «José Acosta / JA.» es la excepción visual aprobada, con el nuevo video de programación detrás.
 - El selector de diseños y los botones accesibles de vista previa son controles propios del portafolio.
+- Todos los selectores flotantes se centran verticalmente; solo Original muestra texto, A/B/C mantienen su estilo propio con un icono y nombre accesible.
+- Solo en B, Habilidades se integra como subsección de Sobre mí, conservando `#skills` y pasando su acceso de menú al submenú del perfil. Al cambiar de diseño vuelve a ser una sección independiente, con su jerarquía de títulos original.
 - Se conservan Escape, foco de teclado, modales accesibles y preferencia de movimiento reducido. Los colores amarillos sobre blanco de los títulos de Tecnofil se reproducen por fidelidad: **no se afirma conformidad WCAG AA del esquema original**.
 - Las ilustraciones y las fuentes de referencia no se presentan como recursos con licencia libre. Este documento registra su procedencia; para reutilizarlas fuera de esta demostración debe verificarse la autorización correspondiente. El monograma personal no utiliza trazados de los logos de las empresas.
 
@@ -69,5 +71,26 @@ Se descarga y reproduce únicamente al activar Tecnofil. Se pausa fuera de panta
 - `css/themes.css`: primitivas compartidas, modo Original y composición aprobada del banner.
 - `css/references.css`: reglas de los componentes de cada sitio, aisladas por `data-design`.
 - `js/reference-designs.js`: estructura de referencia, canvas, puntero, cabecera, menú, galería, video, animaciones de entrada y contacto flotante.
-- `js/index.js`: selector, ciclo de vida de Swiper exclusivo de Original, navegación común, formularios y modales.
+- `js/index.js`: selector, ciclo de vida de Swiper en Original y C, navegación común, formularios y modales.
 - `js/theme-init.js`: selección persistente antes de pintar.
+
+## Modo C — referencia institucional
+
+- Sitio inspeccionado: <https://cef.pucp.edu.pe/>, el **19 de octubre de 2026**.
+- Hoja consultada: `https://cef.pucp.edu.pe/wp-content/themes/pucp-cef/style.css?ver=0.1.6`.
+- Estructura adaptada: barra auxiliar y navegación principal sobre fondo `#0D0022`, banner `#00274F` dividido entre texto e imagen, títulos serif, controles circulares con indicadores lineales, proyectos en carrusel, secciones claras y pie en columnas.
+- Tipografías: Roboto y Source Serif 4, obtenidas de Google Fonts. No se distribuye la fuente de iconos Pro del sitio de referencia.
+- El banner tiene tres diapositivas del portafolio, botones anterior/siguiente, indicadores, navegación por flechas y anuncio de posición. No avanza automáticamente.
+- Se utilizan el monograma JA, datos de contacto y contenido propios. No se descargan logos, afiches, fotografías institucionales, analítica, WordPress ni scripts de la universidad.
+- Las imágenes del banner son recursos locales ya presentes y `img/brand/technology-core.svg`, una ilustración propia creada para este proyecto.
+- Cabecera contrastada también con <https://cef.pucp.edu.pe/en/>: barra auxiliar de 53 px que desaparece al desplazar y fila principal de 100 px que permanece adherida arriba; contenido de 1170 px, logo de 60 px y enlaces Roboto de 18 px (16 px en escritorio estrecho). A 920 px o menos se oculta la barra auxiliar y se muestran búsqueda y menú, sin bordes decorativos.
+- El menú móvil tiene fondo negro, navegación de 18 px y enlaces secundarios. Se conserva el cierre con Escape y el manejo del foco. Los saltos de sección descuentan la altura visible de la cabecera fija.
+- La lupa abre una búsqueda local real de las secciones y páginas del portafolio, con filtro que admite acentos, enlaces navegables y diálogo nativo accesible. No se añaden controles ES/EN ficticios: el contenido del portafolio permanece en español.
+
+## Original — interfaz tecnológica
+
+- Paleta propia: negro azulado `#070D12`, paneles `#0D171F`, acento menta/cian `#6DEBC8`, tipografías Space Grotesk e IBM Plex Mono.
+- Portada asimétrica, retícula técnica, panel de visualización, indicadores de especialidad y secciones numeradas. Las habilidades se muestran como herramientas, sin porcentajes de dominio arbitrarios en este modo.
+- La franja superior y el panel con pestañas se eliminaron. El campo de partículas ocupa el fondo completo de la portada, con 42–126 nodos según el tamaño: el mouse los atrae e ilumina y un clic/toque en el fondo genera una onda. Un botón en primer plano permite activar el mismo efecto con Enter y Espacio. La capa gráfica no captura eventos ni bloquea los enlaces; una capa oscura mantiene la legibilidad del texto.
+- El Canvas limita la densidad a 2 y solo anima al interactuar; se detiene al estabilizarse, salir de pantalla, ocultar la pestaña o cambiar de diseño. Con movimiento reducido la respuesta es inmediata y las ondas son estáticas. Incluye una alternativa SVG si Canvas no está disponible. Solo aparece en Original; se conserva la ilustración del banner C.
+- `css/modern-designs.css` y `js/modern-designs.js` contienen ambos modos, aislados por `data-design`. Están integrados en la portada y en las cuatro páginas profesionales internas.

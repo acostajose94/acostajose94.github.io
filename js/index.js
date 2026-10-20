@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (year) year.textContent = new Date().getFullYear();
 
   if (typeof initializeReferenceDesigns === 'function') initializeReferenceDesigns();
+  if (typeof initializeModernDesigns === 'function') initializeModernDesigns();
   initializeDesignSwitch();
   initializeProjectPreviews();
   initializeCarousels();
@@ -53,20 +54,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Reference modes use their source grids; only Original uses carousels.
+  // A and B use grids. Original and C have independently configured carousels.
 });
 
 function initializeCarousels() {
   if (typeof Swiper === 'undefined') return;
   function update() {
+    var design = document.documentElement.dataset.design;
     document.querySelectorAll('.swiper').forEach(function (element) {
-      if (document.documentElement.dataset.design !== 'original') {
+      if (element.swiper && element.dataset.carouselDesign !== design) element.swiper.destroy(true, true);
+      if (!['original', 'campus'].includes(design)) {
         if (element.swiper) element.swiper.destroy(true, true);
         element.querySelectorAll('.swiper-slide').forEach(function (slide) { slide.inert = false; });
         return;
       }
       if (element.swiper) { element.swiper.update(); return; }
       var apps = element.classList.contains('appsSwiper');
+      element.dataset.carouselDesign = design;
       new Swiper(element, {
         slidesPerView: 1,
         spaceBetween: 24,
@@ -86,8 +90,8 @@ function initializeCarousels() {
           containerMessage: apps ? 'Aplicaciones y juegos' : 'Proyectos destacados',
         },
         breakpoints: apps
-          ? { 640: { slidesPerView: 2 }, 1200: { slidesPerView: 4 } }
-          : { 768: { slidesPerView: 2 }, 1200: { slidesPerView: 3 } },
+          ? { 640: { slidesPerView: 2 }, 1200: { slidesPerView: design === 'campus' ? 3 : 4 } }
+          : { 768: { slidesPerView: 2 }, 1200: { slidesPerView: design === 'campus' ? 2 : 3 } },
         on: { init: updateVisibleSlides, setTranslate: updateVisibleSlides, update: updateVisibleSlides },
       });
     });
@@ -126,9 +130,10 @@ function updateVisibleSlides(swiper) {
 function initializeDesignSwitch() {
   var root = document.documentElement;
   var designs = [
-    { id: 'original', name: 'Original', color: '#020617' },
-    { id: 'systems', name: 'Sistemas Perú Web', color: '#3161a3' },
-    { id: 'tecnofil', name: 'Tecnofil', color: '#ffdb00' },
+    { id: 'original', name: 'Original', color: '#070d12' },
+    { id: 'systems', name: 'A', color: '#3161a3' },
+    { id: 'tecnofil', name: 'B', color: '#ffdb00' },
+    { id: 'campus', name: 'C', color: '#0d0022' },
   ];
   var switcher = document.createElement('button');
   switcher.type = 'button';
@@ -206,8 +211,10 @@ function scrollToSection(id) {
   var element = document.getElementById(id);
   if (!element) return;
   var header = document.getElementById('navbar');
-  var fixedHeader = header && getComputedStyle(header).position === 'fixed';
-  var top = element.getBoundingClientRect().top + window.scrollY - (fixedHeader ? header.offsetHeight : 0) - 20;
+  var headerPosition = header ? getComputedStyle(header).position : '';
+  var headerOffset = headerPosition === 'fixed' ? header.offsetHeight : 0;
+  if (headerPosition === 'sticky') headerOffset = header.querySelector('.nav-frame').offsetHeight;
+  var top = element.getBoundingClientRect().top + window.scrollY - headerOffset - 20;
   if (id === 'hero') top = 0;
   window.scrollTo({ top: top, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
 }
