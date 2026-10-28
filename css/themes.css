@@ -115,6 +115,15 @@ html:not([data-design="original"]) .design-switch__copy { display: none; }
 .design-switch:hover { border-color: var(--ui-accent); }
 .menu-is-open .design-switch { visibility: hidden; }
 
+/* First-visit cue, anchored to the switch on desktop and mobile. */
+.design-switch__hint { position: absolute; right: 0; bottom: calc(100% + 18px); display: grid; gap: 5px; width: min(250px, calc(100vw - 40px)); padding: 16px 18px; color: var(--ui-text); background: var(--ui-surface); border: 1px solid var(--ui-accent); border-radius: 14px; box-shadow: 0 12px 36px #0004; font-size: 14px; line-height: 1.5; white-space: normal; }
+.design-switch__hint strong { color: var(--ui-accent); font-size: 15px; }
+.design-switch__hint::after { content: ''; position: absolute; right: 22px; bottom: -7px; width: 12px; height: 12px; background: var(--ui-surface); border-right: 1px solid var(--ui-accent); border-bottom: 1px solid var(--ui-accent); transform: rotate(45deg); }
+.design-switch--hint::after { content: ''; position: absolute; inset: -6px; border: 2px solid var(--ui-accent); border-radius: inherit; pointer-events: none; animation: design-hint-pulse 1.5s ease-out infinite; }
+.overlay-is-open .design-switch__hint { visibility: hidden; }
+@keyframes design-hint-pulse { from { opacity: .8; scale: 1; } to { opacity: 0; scale: 1.12; } }
+@media (prefers-reduced-motion: reduce) { .design-switch--hint::after { animation: none; opacity: .6; } }
+
 html:not([data-design="original"]) .experience-timeline { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 html:not([data-design="original"]) .experience-timeline > .absolute,
 html:not([data-design="original"]) .experience-entry > .absolute { display: none; }

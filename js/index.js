@@ -160,6 +160,7 @@ function initializeDesignSwitch() {
     window.dispatchEvent(new Event('designchange'));
   }
   update();
+  initializeDesignHint(switcher);
   switcher.addEventListener('click', function () {
     var section = Array.from(document.querySelectorAll('main > section')).find(function (item) {
       var rect = item.getBoundingClientRect();
@@ -174,6 +175,39 @@ function initializeDesignSwitch() {
     update();
     if (section && keepPosition) window.scrollTo({ top: window.scrollY + section.getBoundingClientRect().top - offset, behavior: 'instant' });
   });
+}
+
+function initializeDesignHint(switcher) {
+  var storageKey = 'ja-design-hint-seen';
+  try {
+    if (localStorage.getItem(storageKey)) return;
+    localStorage.setItem(storageKey, '1');
+  } catch (error) { /* The hint still works when storage is unavailable. */ }
+
+  var hint = document.createElement('span');
+  hint.id = 'design-switch-hint';
+  hint.className = 'design-switch__hint';
+  hint.innerHTML = '<strong>¡Prueba otro diseño!</strong><span>Haz clic aquí para cambiar el aspecto de la web.</span>';
+  switcher.appendChild(hint);
+  switcher.setAttribute('aria-describedby', hint.id);
+  switcher.classList.add('design-switch--hint');
+
+  var timer = window.setTimeout(dismiss, 7000);
+  switcher.addEventListener('click', dismiss);
+  document.addEventListener('keydown', onKeyDown);
+
+  function dismiss() {
+    window.clearTimeout(timer);
+    hint.remove();
+    switcher.removeAttribute('aria-describedby');
+    switcher.classList.remove('design-switch--hint');
+    switcher.removeEventListener('click', dismiss);
+    document.removeEventListener('keydown', onKeyDown);
+  }
+
+  function onKeyDown(event) {
+    if (event.key === 'Escape') dismiss();
+  }
 }
 
 function initializeProjectPreviews() {
