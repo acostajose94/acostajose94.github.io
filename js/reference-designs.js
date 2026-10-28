@@ -12,12 +12,12 @@ function initializeReferenceDesigns() {
   initializeReferenceMarkup();
   initializeReferenceSectionOrder();
   initializeReferenceHeader();
-  initializeTecnofilCursor();
+  initializeContrastCursor();
   initializeInteractiveNetwork();
   initializeReferenceVideo();
   initializeReferenceReveals();
   initializeReferenceSliders();
-  initializeSystemsContact();
+  initializeNetworkContact();
 }
 
 function initializeReferenceSectionOrder() {
@@ -26,21 +26,21 @@ function initializeReferenceSectionOrder() {
   var main = hero.parentElement;
   var orders = {
     original: ['hero', 'projects', 'about', 'skills', 'experience', 'education', 'contact'],
-    systems: ['hero', 'about', 'projects', 'skills', 'education', 'experience', 'contact'],
-    tecnofil: ['hero', 'about', 'projects', 'experience', 'education', 'contact'],
+    network: ['hero', 'about', 'projects', 'skills', 'education', 'experience', 'contact'],
+    contrast: ['hero', 'about', 'projects', 'experience', 'education', 'contact'],
     campus: ['hero', 'projects', 'about', 'experience', 'education', 'skills', 'contact'],
   };
   window.addEventListener('designchange', function () {
-    var tecnofil = document.documentElement.dataset.design === 'tecnofil';
+    var contrast = document.documentElement.dataset.design === 'contrast';
     var about = document.getElementById('about');
     var skills = document.getElementById('skills');
     if (about && skills) {
       // Move the existing section, retaining its anchor and all its content.
-      if (tecnofil) about.firstElementChild.appendChild(skills);
+      if (contrast) about.firstElementChild.appendChild(skills);
       else if (about.contains(skills)) main.appendChild(skills);
-      setHeadingLevel(skills.querySelector('.section-heading > :is(h2, h3)'), tecnofil ? 'h3' : 'h2');
+      setHeadingLevel(skills.querySelector('.section-heading > :is(h2, h3)'), contrast ? 'h3' : 'h2');
       skills.querySelectorAll('.reference-skills > div > :is(h3, h4)').forEach(function (heading) {
-        setHeadingLevel(heading, tecnofil ? 'h4' : 'h3');
+        setHeadingLevel(heading, contrast ? 'h4' : 'h3');
       });
     }
     // Reorder actual nodes, not CSS order: reading and keyboard order stay aligned.
@@ -133,10 +133,10 @@ function initializeReferenceHeader() {
   function update() {
     scheduled = false;
     var y = window.scrollY;
-    var tecnofil = document.documentElement.dataset.design === 'tecnofil';
+    var contrast = document.documentElement.dataset.design === 'contrast';
     var hero = document.getElementById('hero');
-    header.classList.toggle('reference-header-black', tecnofil && (!hero || y > hero.offsetHeight - header.offsetHeight));
-    header.classList.toggle('reference-header-hidden', tecnofil && !document.body.classList.contains('menu-is-open') && !header.querySelector(':focus-visible') && y > previousScroll + 2 && previousScroll > 120);
+    header.classList.toggle('reference-header-black', contrast && (!hero || y > hero.offsetHeight - header.offsetHeight));
+    header.classList.toggle('reference-header-hidden', contrast && !document.body.classList.contains('menu-is-open') && !header.querySelector(':focus-visible') && y > previousScroll + 2 && previousScroll > 120);
     previousScroll = y;
   }
   window.addEventListener('scroll', function () {
@@ -147,7 +147,7 @@ function initializeReferenceHeader() {
   update();
 }
 
-function initializeTecnofilCursor() {
+function initializeContrastCursor() {
   var cursor = document.createElement('div');
   cursor.id = 'puntero';
   cursor.className = 'puntero cursor';
@@ -186,8 +186,8 @@ function initializeTecnofilCursor() {
     if (target.closest('input, textarea, select')) cursor.classList.add('cursor--input');
   }
   function refresh() {
-    var enabled = fine.matches && document.documentElement.dataset.design === 'tecnofil' && hasPointer;
-    document.documentElement.classList.toggle('tecnofil-cursor-ready', enabled);
+    var enabled = fine.matches && document.documentElement.dataset.design === 'contrast' && hasPointer;
+    document.documentElement.classList.toggle('contrast-cursor-ready', enabled);
     var radius = window.innerWidth <= 1200 ? 22.5 : 24;
     cursor.style.left = lastX - radius + 'px';
     cursor.style.top = lastY - radius + 'px';
@@ -196,7 +196,7 @@ function initializeTecnofilCursor() {
   document.addEventListener('pointermove', function (event) {
     if (event.pointerType === 'touch') return;
     lastX = event.clientX; lastY = event.clientY; hasPointer = true;
-    if (document.documentElement.dataset.design === 'tecnofil') refresh();
+    if (document.documentElement.dataset.design === 'contrast') refresh();
   }, { passive: true });
   document.addEventListener('pointerover', function (event) { if (fine.matches) applyState(event.target); });
   document.documentElement.addEventListener('pointerleave', function () { hasPointer = false; refresh(); });
@@ -207,11 +207,11 @@ function initializeTecnofilCursor() {
   fine.addEventListener('change', refresh);
 }
 
-/* Port of Sistemas Perú Web's techy paths, spring constants and pointer mapping. */
+/* Interactive network paths, spring constants and pointer mapping. */
 function initializeInteractiveNetwork() {
   var hero = document.getElementById('hero');
-  var canvas = hero && hero.querySelector('.systems-canvas--main');
-  var cache = hero && hero.querySelector('.systems-canvas--cache');
+  var canvas = hero && hero.querySelector('.network-canvas--main');
+  var cache = hero && hero.querySelector('.network-canvas--cache');
   if (!canvas || !cache) return;
   var ctx = canvas.getContext('2d'), cacheCtx = cache.getContext('2d');
   if (!ctx || !cacheCtx) return;
@@ -219,7 +219,7 @@ function initializeInteractiveNetwork() {
   var t = .5, target = 1, velocity = 0, frame = 0;
   var inView = true;
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  function active() { return document.documentElement.dataset.design === 'systems' && inView && !document.hidden; }
+  function active() { return document.documentElement.dataset.design === 'network' && inView && !document.hidden; }
   function clamp(n, min, max) { return Math.min(Math.max(n, min), max); }
   function randomPoint(size) { var grid = 100 / dpr; return Math.floor(Math.random() * size / grid) * grid + grid / 2; }
   function makePaths(x, y) {
@@ -278,7 +278,7 @@ function initializeInteractiveNetwork() {
     if (!frame && active()) frame = requestAnimationFrame(loop);
   }
   function resize() {
-    if (document.documentElement.dataset.design !== 'systems') return;
+    if (document.documentElement.dataset.design !== 'network') return;
     var w = hero.clientWidth, h = hero.clientHeight;
     var density = Math.min(window.devicePixelRatio || 1, 2);
     if (w === width && h === height && density === dpr) { start(); return; }
@@ -302,7 +302,7 @@ function initializeInteractiveNetwork() {
   }, { passive: true });
   window.addEventListener('designchange', function () {
     cancelAnimationFrame(frame); frame = 0;
-    if (document.documentElement.dataset.design === 'systems') resize();
+    if (document.documentElement.dataset.design === 'network') resize();
   });
   document.addEventListener('visibilitychange', function () { if (document.hidden) { cancelAnimationFrame(frame); frame = 0; } else start(); });
   reduced.addEventListener('change', function () { cancelAnimationFrame(frame); frame = 0; start(); });
@@ -315,13 +315,13 @@ function initializeInteractiveNetwork() {
 }
 
 function initializeReferenceVideo() {
-  var video = document.querySelector('.tecnofil-video');
+  var video = document.querySelector('.contrast-video');
   if (!video) return;
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   var visible = true;
   function update() {
     var saveData = navigator.connection && navigator.connection.saveData;
-    var play = document.documentElement.dataset.design === 'tecnofil' && visible && !document.hidden && !reduced.matches && !saveData;
+    var play = document.documentElement.dataset.design === 'contrast' && visible && !document.hidden && !reduced.matches && !saveData;
     if (play) {
       if (!video.getAttribute('src')) video.src = video.dataset.src;
       video.muted = true;
@@ -384,7 +384,7 @@ function initializeReferenceSliders() {
       });
     }
     function update() {
-      var enabled = document.documentElement.dataset.design === 'tecnofil' && typeof Swiper !== 'undefined';
+      var enabled = document.documentElement.dataset.design === 'contrast' && typeof Swiper !== 'undefined';
       if (enabled && !instance) {
         track = document.createElement('div');
         track.className = 'reference-slider-track';
@@ -437,17 +437,17 @@ function initializeReferenceSliders() {
   });
 }
 
-function initializeSystemsContact() {
+function initializeNetworkContact() {
   var widget = document.createElement('aside');
-  widget.className = 'systems-contact-widget';
+  widget.className = 'network-contact-widget';
   widget.setAttribute('aria-label', 'Contacto por WhatsApp');
-  widget.innerHTML = '<div class="systems-contact-box" id="systems-contact-box" hidden><div class="systems-contact-description">¡Hola! Escríbeme para conversar sobre tu proyecto.<button type="button" class="systems-contact-close" aria-label="Cerrar contacto">×</button></div><a href="https://wa.me/51973418632" target="_blank" rel="noopener noreferrer" class="systems-contact-account"><span class="systems-contact-avatar" aria-hidden="true">' + personalBrandMark() + '</span><span><strong>José Acosta</strong><small>Ingeniero de Sistemas</small></span></a></div><button type="button" class="systems-contact-toggle" aria-controls="systems-contact-box" aria-expanded="false"><i class="fab fa-whatsapp" aria-hidden="true"></i><span>Haga sus consultas</span></button>';
+  widget.innerHTML = '<div class="network-contact-box" id="network-contact-box" hidden><div class="network-contact-description">¡Hola! Escríbeme para conversar sobre tu proyecto.<button type="button" class="network-contact-close" aria-label="Cerrar contacto">×</button></div><a href="https://wa.me/51973418632" target="_blank" rel="noopener noreferrer" class="network-contact-account"><span class="network-contact-avatar" aria-hidden="true">' + personalBrandMark() + '</span><span><strong>José Acosta</strong><small>Ingeniero de Sistemas</small></span></a></div><button type="button" class="network-contact-toggle" aria-controls="network-contact-box" aria-expanded="false"><i class="fab fa-whatsapp" aria-hidden="true"></i><span>Haga sus consultas</span></button>';
   document.body.appendChild(widget);
-  var box = widget.querySelector('.systems-contact-box');
-  var toggle = widget.querySelector('.systems-contact-toggle');
+  var box = widget.querySelector('.network-contact-box');
+  var toggle = widget.querySelector('.network-contact-toggle');
   function close() { box.hidden = true; toggle.setAttribute('aria-expanded', 'false'); }
   toggle.addEventListener('click', function () { box.hidden = !box.hidden; toggle.setAttribute('aria-expanded', String(!box.hidden)); });
-  widget.querySelector('.systems-contact-close').addEventListener('click', function () { close(); toggle.focus(); });
+  widget.querySelector('.network-contact-close').addEventListener('click', function () { close(); toggle.focus(); });
   document.addEventListener('click', function (event) { if (!widget.contains(event.target)) close(); });
   document.addEventListener('keydown', function (event) { if (event.key === 'Escape' && !box.hidden) { close(); toggle.focus(); } });
   window.addEventListener('designchange', close);

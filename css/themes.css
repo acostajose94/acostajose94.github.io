@@ -15,7 +15,7 @@
   --ui-nav: rgba(2, 6, 23, .96); --ui-focus: #c084fc;
   --ui-radius: 16px; --header-height: 80px;
 }
-html[data-design="systems"] {
+html[data-design="network"] {
   --ui-font: 'Lato', sans-serif;
   --ui-bg: #fff; --ui-surface: #fff; --ui-soft: #fff;
   --ui-text: #212529; --ui-muted: #6f7070; --ui-accent: #3161a3;
@@ -24,7 +24,7 @@ html[data-design="systems"] {
   --ui-heading: linear-gradient(#3161a3, #3161a3);
   --ui-nav: #fff; --ui-focus: #24558f; --ui-radius: 0px;
 }
-html[data-design="tecnofil"] {
+html[data-design="contrast"] {
   --ui-font: 'HelveticaNeueLTStd', Arial, sans-serif;
   --ui-bg: #fff; --ui-surface: #fff; --ui-soft: #fff;
   --ui-text: #000; --ui-muted: #000; --ui-accent: #000;
@@ -76,7 +76,7 @@ html:not([data-design="original"]) #about .absolute.blur-xl { display: none; }
 #mobileMenu :is(a, button, span.font-semibold) { padding: 12px 0; color: var(--ui-text); font: 700 clamp(20px, 3vw, 28px)/1.35 var(--ui-font); text-align: left; }
 #mobileMenu :is(a, button):hover { color: var(--ui-accent); text-decoration: underline; text-underline-offset: 6px; }
 
-/* Original cover and the approved Tecnofil banner composition. */
+/* Original cover and the approved design B banner composition. */
 #hero { min-height: max(740px, 100svh); padding: calc(var(--header-height) + 64px) 24px 104px; }
 #hero .hero-copy { width: 100%; }
 #hero h1 { font-size: clamp(48px, 7vw, 96px); line-height: 1.1; letter-spacing: -.04em; }
@@ -88,21 +88,21 @@ html:not([data-design="original"]) #about .absolute.blur-xl { display: none; }
 .hero-scroll { bottom: 24px; }
 .hero-scroll button { width: 44px; height: 44px; }
 #hero .hero-scroll i { color: #a8b6cb; }
-.systems-canvas-layer, .systems-services, .tecnofil-art { display: none; }
-html[data-design="tecnofil"] #hero { justify-content: flex-start; color: #fff; background: #191919; overflow: hidden; }
+.network-canvas-layer, .network-services, .contrast-art { display: none; }
+html[data-design="contrast"] #hero { justify-content: flex-start; color: #fff; background: #191919; overflow: hidden; }
 html:not([data-design="original"]) #hero > .overflow-hidden { display: none; }
-html[data-design="tecnofil"] #hero .hero-copy { position: relative; max-width: 1280px; padding-right: 36%; text-align: left; }
-html[data-design="tecnofil"] #hero h1 { color: #ffdb00; background: none; font-size: clamp(54px, 7vw, 100px); -webkit-text-fill-color: currentColor; }
-html[data-design="tecnofil"] #hero #typing-text { color: #fff; }
-html[data-design="tecnofil"] #hero .hero-description { margin-left: 0; color: #d0d0c8; }
-html[data-design="tecnofil"] .hero-socials { justify-content: flex-start; margin-bottom: 32px; }
-html[data-design="tecnofil"] .hero-socials a { color: #ffdb00; border-color: #6d6a47; }
-html[data-design="tecnofil"] #hero .hero-actions { justify-content: flex-start; }
-html[data-design="tecnofil"] .hero-actions button { border-radius: 0; }
-html[data-design="tecnofil"] .hero-actions button:last-child { color: #fff; border-color: #96968d; }
-html[data-design="tecnofil"] .tecnofil-art { position: absolute; display: grid; place-content: center; gap: 16px; right: max(24px, calc((100vw - 1280px) / 2)); top: 30%; width: 30%; max-width: 380px; aspect-ratio: 1; border: 1px solid #565448; background: repeating-linear-gradient(0deg, transparent 0 39px, #ffffff08 39px 40px), repeating-linear-gradient(90deg, transparent 0 39px, #ffffff08 39px 40px); }
-.tecnofil-art strong { color: #ffdb00; font-size: clamp(80px, 12vw, 180px); font-weight: 700; line-height: 1; letter-spacing: -.08em; text-align: center; }
-.tecnofil-art span { color: #d0d0c8; font-size: 12px; letter-spacing: .18em; text-align: center; }
+html[data-design="contrast"] #hero .hero-copy { position: relative; max-width: 1280px; padding-right: 36%; text-align: left; }
+html[data-design="contrast"] #hero h1 { color: #ffdb00; background: none; font-size: clamp(54px, 7vw, 100px); -webkit-text-fill-color: currentColor; }
+html[data-design="contrast"] #hero #typing-text { color: #fff; }
+html[data-design="contrast"] #hero .hero-description { margin-left: 0; color: #d0d0c8; }
+html[data-design="contrast"] .hero-socials { justify-content: flex-start; margin-bottom: 32px; }
+html[data-design="contrast"] .hero-socials a { color: #ffdb00; border-color: #6d6a47; }
+html[data-design="contrast"] #hero .hero-actions { justify-content: flex-start; }
+html[data-design="contrast"] .hero-actions button { border-radius: 0; }
+html[data-design="contrast"] .hero-actions button:last-child { color: #fff; border-color: #96968d; }
+html[data-design="contrast"] .contrast-art { position: absolute; display: grid; place-content: center; gap: 16px; right: max(24px, calc((100vw - 1280px) / 2)); top: 30%; width: 30%; max-width: 380px; aspect-ratio: 1; border: 1px solid #565448; background: repeating-linear-gradient(0deg, transparent 0 39px, #ffffff08 39px 40px), repeating-linear-gradient(90deg, transparent 0 39px, #ffffff08 39px 40px); }
+.contrast-art strong { color: #ffdb00; font-size: clamp(80px, 12vw, 180px); font-weight: 700; line-height: 1; letter-spacing: -.08em; text-align: center; }
+.contrast-art span { color: #d0d0c8; font-size: 12px; letter-spacing: .18em; text-align: center; }
 
 .design-switch { position: fixed; z-index: 40; right: 20px; top: 50%; bottom: auto; transform: translateY(-50%); display: flex; align-items: center; gap: 10px; max-width: calc(100vw - 32px); padding: 10px 16px 10px 10px; color: var(--ui-text); background: var(--ui-surface); border: 1px solid var(--ui-border); border-radius: 40px; box-shadow: 0 4px 20px #0002; text-align: left; }
 .design-switch__icon { display: grid; place-items: center; flex: 0 0 36px; width: 36px; height: 36px; color: var(--ui-button); background: var(--ui-gradient); border-radius: 50%; }
@@ -134,8 +134,8 @@ html:not([data-design="original"]) .experience-entry:last-child { grid-column: 1
 @media (max-width: 1023px) {
   #navbar .desktop-nav { display: none; }
   #navbar .menu-toggle { display: block; }
-  html[data-design="tecnofil"] #hero .hero-copy { padding-right: 32%; }
-  html[data-design="tecnofil"] .tecnofil-art { width: 27%; }
+  html[data-design="contrast"] #hero .hero-copy { padding-right: 32%; }
+  html[data-design="contrast"] .contrast-art { width: 27%; }
 }
 @media (max-width: 767px) {
   :root { --header-height: 72px; }
@@ -144,8 +144,8 @@ html:not([data-design="original"]) .experience-entry:last-child { grid-column: 1
   .hero-socials { margin-bottom: 28px; }
   #hero .hero-actions { gap: 12px; }
   .hero-actions button { padding: 12px 20px; }
-  html[data-design="tecnofil"] #hero .hero-copy { padding-right: 0; }
-  html[data-design="tecnofil"] .tecnofil-art { display: none; }
+  html[data-design="contrast"] #hero .hero-copy { padding-right: 0; }
+  html[data-design="contrast"] .contrast-art { display: none; }
   html:not([data-design="original"]) .experience-timeline { grid-template-columns: 1fr; }
   .design-switch { right: 12px; gap: 8px; padding: 8px 12px 8px 8px; }
   .design-switch__eyebrow { font-size: 9px; }

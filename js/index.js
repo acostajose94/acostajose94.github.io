@@ -131,8 +131,8 @@ function initializeDesignSwitch() {
   var root = document.documentElement;
   var designs = [
     { id: 'original', name: 'Original', color: '#070d12' },
-    { id: 'systems', name: 'A', color: '#3161a3' },
-    { id: 'tecnofil', name: 'B', color: '#ffdb00' },
+    { id: 'network', name: 'A', color: '#3161a3' },
+    { id: 'contrast', name: 'B', color: '#ffdb00' },
     { id: 'campus', name: 'C', color: '#0d0022' },
   ];
   var switcher = document.createElement('button');
@@ -265,7 +265,7 @@ function syncOverlayState() {
   var switcher = document.querySelector('.design-switch');
   if (nav) nav.inert = modalOpen;
   if (switcher) switcher.inert = menuOpen || modalOpen;
-  var contactWidget = document.querySelector('.systems-contact-widget');
+  var contactWidget = document.querySelector('.network-contact-widget');
   if (contactWidget) contactWidget.inert = menuOpen || modalOpen;
   if (nav && menuOpen) nav.classList.remove('reference-header-hidden');
   window.dispatchEvent(new Event('reference-menuchange'));

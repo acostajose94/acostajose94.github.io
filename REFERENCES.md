@@ -2,16 +2,15 @@
 
 ## Objetivo
 
-Adaptar los componentes y las interacciones de las referencias con el **contenido y la identidad de José Acosta**. Las variantes públicas se llaman **A**, **B** y **C**; los nombres de las fuentes se documentan aquí únicamente para registrar su procedencia. **Original** tiene una dirección futurista propia y no utiliza el anterior diseño violeta.
+Adaptar los componentes y las interacciones de las referencias con el **contenido y la identidad de José Acosta**. Las variantes públicas se llaman **A**, **B** y **C**; el código y este documento utilizan nombres neutros, sin nombres ni dominios de las webs de referencia. **Original** tiene una dirección futurista propia y no utiliza el anterior diseño violeta. Esta limpieza de nombres no concede derechos sobre los recursos de terceros.
 
 Inspección de HTML, CSS, JavaScript y navegador realizada el **15 de octubre de 2026**.
 
-## Sistemas Perú Web
+## Diseño A — red interactiva
 
-- Sitio: <https://sistemasperuweb.com/>
-- Estilos de referencia: <https://sistemasperuweb.com/css/estilos.css?v=1.4>
+- Identificador interno: `network`.
 - Algoritmo de nodos: script inline de la portada, bloque `Animacion de inicio`.
-- Ilustraciones de portada: `https://sistemasperuweb.com/img/diseno-web.png` y `https://sistemasperuweb.com/img/sistemas.png`, guardadas en `img/references/`.
+- Ilustraciones de portada: copias de referencia guardadas en `img/references/`.
 
 Componentes reproducidos:
 
@@ -23,17 +22,16 @@ Componentes reproducidos:
 
 El dibujo se detiene al estabilizarse el resorte, salir del viewport, ocultarse la pestaña o cambiar de diseño. Con movimiento reducido se conserva la interacción de clic con un resultado estático.
 
-## Tecnofil
+## Diseño B — contraste y portada audiovisual
 
-- Sitio: <https://tecnofil.com.pe/es/>
-- Tema de referencia: `https://tecnofil.com.pe/wp-content/themes/teampicol-tecnofil-institucional-12824b48d116/`
+- Identificador interno: `contrast`.
 - Archivos inspeccionados: `style.css?v=1.2.3` y `concat.min.js?v=1.2.3`.
 - Fuentes locales ya presentes: `fonts/HelveticaNeueLTStd-Lt.otf` y `fonts/HelveticaNeueLTStd-Bd.otf`.
 
 Componentes reproducidos:
 
 - HelveticaNeueLTStd, blanco/negro y amarillo `#FFDB00`; grandes títulos amarillos y tarjetas cuadradas en la gama pastel original.
-- Cabecera transparente de 146 px a 1440 px de viewport, con 48 px de separación superior/lateral, monograma personal JA de 48 × 50 px y hamburguesa de 26 px. El monograma gira y revela el nombre del portafolio al pasar el puntero o recibir foco; no se utiliza la insignia de Tecnofil.
+- Cabecera transparente de 146 px a 1440 px de viewport, con 48 px de separación superior/lateral, monograma personal JA de 48 × 50 px y hamburguesa de 26 px. El monograma gira y revela el nombre del portafolio al pasar el puntero o recibir foco; no se utiliza la insignia corporativa de la referencia.
 - Cabecera que se oculta al bajar, reaparece al subir y pasa a amarillo/negro fuera de la portada. En páginas sin portada comienza amarilla.
 - Menú de 70vw con fondo de cobertura negro al 38 %, panel amarillo, textos Helvetica de 3.5vw a 1440 px, entradas escalonadas, submenú y dos enlaces cuadrados inferiores. En móvil ocupa el ancho completo.
 - Puntero con contenedor de 48 px y círculo de 24 px, que crece a 48 px en controles; transición de .4 s y estados de contraste, «+», cierre y arrastre. A 981–1200 px se respeta la escala de 45/22.5 px del sitio fuente. Los iconos finos se dibujan con SVG en vez de distribuir Font Awesome Pro.
@@ -46,13 +44,13 @@ Las medidas de cada componente se convierten a píxeles para no cambiar el tama�
 
 - Se mantienen nombre, datos, formación, experiencia y enlaces del portafolio; no se incorporan textos corporativos, contactos comerciales ni catálogos ajenos.
 - Los símbolos de marca de las empresas se sustituyeron por un **monograma JA propio**, dibujado para este portafolio y compartido por las tres cabeceras, pies de las variantes y avatar de contacto. Su vector maestro es `img/brand/jose-acosta-mark.svg`; el favicon usa una A simplificada.
-- Los nombres, las capturas de proyectos y los iconos de plataformas/tecnologías conservan su función de referencia o enlace; no se usan como marca personal.
+- Las tarjetas y archivos de los proyectos de referencia usan nombres neutros, sin enlaces a sus dominios. Las capturas se conservan sin retocar y pueden contener marcas dentro de la imagen; los iconos de plataformas/tecnologías no se usan como marca personal.
 - `favicon.ico` y la ruta heredada `img/fav.ico` usan una única **A** blanca y sólida sobre fondo oscuro, definida en `img/brand/favicon.svg`, con imágenes de 16, 32, 48, 64, 128 y 256 px en un ICO real. El monograma JA del resto del sitio se conserva. Las siete páginas declaran las variantes ICO/SVG con rutas absolutas, también válidas desde una URL de error anidada.
 - El banner inicial «José Acosta / JA.» es la excepción visual aprobada, con el nuevo video de programación detrás.
 - El selector de diseños y los botones accesibles de vista previa son controles propios del portafolio.
 - Todos los selectores flotantes se centran verticalmente; solo Original muestra texto, A/B/C mantienen su estilo propio con un icono y nombre accesible.
 - Solo en B, Habilidades se integra como subsección de Sobre mí, conservando `#skills` y pasando su acceso de menú al submenú del perfil. Al cambiar de diseño vuelve a ser una sección independiente, con su jerarquía de títulos original.
-- Se conservan Escape, foco de teclado, modales accesibles y preferencia de movimiento reducido. Los colores amarillos sobre blanco de los títulos de Tecnofil se reproducen por fidelidad: **no se afirma conformidad WCAG AA del esquema original**.
+- Se conservan Escape, foco de teclado, modales accesibles y preferencia de movimiento reducido. Los colores amarillos sobre blanco de los títulos de B se reproducen por fidelidad: **no se afirma conformidad WCAG AA del esquema original**.
 - Las ilustraciones y las fuentes de referencia no se presentan como recursos con licencia libre. Este documento registra su procedencia; para reutilizarlas fuera de esta demostración debe verificarse la autorización correspondiente. El monograma personal no utiliza trazados de los logos de las empresas.
 
 ## Video de programación
@@ -65,7 +63,7 @@ Las medidas de cada componente se convierten a píxeles para no cambiar el tama�
 - Copia optimizada: `media/coding-banner.mp4`, 18 s, 1280 × 720, H.264, 24 fps, sin audio, `faststart`, unos 660 KiB.
 - Póster local: `img/references/coding-poster.jpg`.
 
-Se descarga y reproduce únicamente al activar Tecnofil. Se pausa fuera de pantalla, al ocultar la pestaña y al cambiar de diseño. El usuario puede pausar/reanudar; con movimiento reducido o ahorro de datos no se reproduce automáticamente.
+Se descarga y reproduce únicamente al activar B. Se pausa fuera de pantalla, al ocultar la pestaña y al cambiar de diseño. El usuario puede pausar/reanudar; con movimiento reducido o ahorro de datos no se reproduce automáticamente.
 
 ## Implementación
 
@@ -77,15 +75,15 @@ Se descarga y reproduce únicamente al activar Tecnofil. Se pausa fuera de panta
 
 ## Modo C — referencia institucional
 
-- Sitio inspeccionado: <https://cef.pucp.edu.pe/>, el **19 de octubre de 2026**.
-- Hoja consultada: `https://cef.pucp.edu.pe/wp-content/themes/pucp-cef/style.css?ver=0.1.6`.
+- Identificador interno: `campus`. Referencia institucional inspeccionada el **19 de octubre de 2026**.
+- Hoja de estilos de referencia consultada en su versión `0.1.6`.
 - Estructura adaptada: barra auxiliar y navegación principal sobre fondo `#0D0022`, banner `#00274F` dividido entre texto e imagen, títulos serif, controles circulares con indicadores lineales, proyectos en carrusel, secciones claras y pie en columnas.
 - Tipografías: Roboto y Source Serif 4, obtenidas de Google Fonts. No se distribuye la fuente de iconos Pro del sitio de referencia.
 - El banner tiene tres diapositivas del portafolio, botones anterior/siguiente, indicadores, navegación por flechas y anuncio de posición. No avanza automáticamente.
 - Se utilizan el monograma JA, datos de contacto y contenido propios. No se descargan logos, afiches, fotografías institucionales, analítica, WordPress ni scripts de la universidad.
 - Las imágenes del banner son recursos locales ya presentes y `img/brand/technology-core.svg`, una ilustración propia creada para este proyecto.
-- El proyecto **CEF PUCP** aparece en la portada y en `/portafolio/`, con enlace a <https://cef.pucp.edu.pe/> y captura real de su página de inicio en `img/cef-pucp.png` (1600 × 900 px), generada el **20 de octubre de 2026**. Las marcas presentes en esa captura identifican el proyecto externo, no la identidad personal del portafolio.
-- Cabecera contrastada también con <https://cef.pucp.edu.pe/en/>: barra auxiliar de 53 px que desaparece al desplazar y fila principal de 100 px que permanece adherida arriba; contenido de 1170 px, logo de 60 px y enlaces Roboto de 18 px (16 px en escritorio estrecho). A 920 px o menos se oculta la barra auxiliar y se muestran búsqueda y menú, sin bordes decorativos.
+- El **Portal académico** aparece en la portada y en `/portafolio/`, con captura de referencia en `img/institutional-project.png` (1600 × 900 px), generada el **20 de octubre de 2026**. Las otras capturas usan `img/web-development-project.png` e `img/corporate-project.png`. Las marcas presentes dentro de las capturas identifican referencias externas, no la identidad personal del portafolio.
+- Cabecera contrastada también con la versión en inglés de la referencia: barra auxiliar de 53 px que desaparece al desplazar y fila principal de 100 px que permanece adherida arriba; contenido de 1170 px, logo de 60 px y enlaces Roboto de 18 px (16 px en escritorio estrecho). A 920 px o menos se oculta la barra auxiliar y se muestran búsqueda y menú, sin bordes decorativos.
 - El menú móvil tiene fondo negro, navegación de 18 px y enlaces secundarios. Se conserva el cierre con Escape y el manejo del foco. Los saltos de sección descuentan la altura visible de la cabecera fija.
 - La lupa abre una búsqueda local real de las secciones y páginas del portafolio, con filtro que admite acentos, enlaces navegables y diálogo nativo accesible. No se añaden controles ES/EN ficticios: el contenido del portafolio permanece en español.
 
