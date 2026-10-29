@@ -73,6 +73,12 @@ Se descarga y reproduce únicamente al activar B. Se pausa fuera de pantalla, al
 - `js/index.js`: selector, ciclo de vida de Swiper en Original y C, navegación común, formularios y modales.
 - `js/theme-init.js`: selección persistente antes de pintar.
 
+### Entrega optimizada
+
+Los archivos anteriores se conservan como fuentes editables. `npm run build` genera una hoja CSS local y scripts minificados, sin CDN de presentación en las páginas profesionales. Las fuentes de código abierto se sirven como WOFF2 locales con sus licencias OFL; los iconos necesarios de Font Awesome Free se incorporan como SVG en CSS con atribución en `licenses/fontawesome.txt`, y Swiper conserva `licenses/swiper.txt`. Las fuentes OTF locales del diseño B no se sustituyen ni se presentan como recursos de licencia libre.
+
+Las tarjetas y el banner usan versiones WebP de `img/optimized/`; los originales se mantienen como fuentes. Las vistas previas completas se descargan solo al abrirlas. Detalles de generación y verificación: [README.md](README.md) y [PERFORMANCE.md](PERFORMANCE.md).
+
 ## Modo C — referencia institucional
 
 - Identificador interno: `campus`. Referencia institucional inspeccionada el **19 de octubre de 2026**.

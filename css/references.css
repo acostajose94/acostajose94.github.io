@@ -62,7 +62,7 @@ html[data-design="network"] .network-service-image { display: block; width: 187p
 html[data-design="network"] .network-services button + button .network-service-image { width: 145px; height: 145px; }
 html[data-design="network"] .network-services button > span { display: grid; place-items: center; width: 100%; height: 101px; padding: 16px 12px; color: #3161a3; background: #fff; border-radius: 16px; font: 700 24px/1.2 'Lato', sans-serif; text-transform: uppercase; }
 html[data-design="network"] .network-services button > i { position: absolute; bottom: -24px; left: calc(50% - 26px); width: 52px; height: 52px; margin: 0; color: #3161a3; background: #00f8ff; border-radius: 50%; }
-html[data-design="network"] .network-services button > i::before { content: '+'; font: 700 51.2px/49px 'Lato', sans-serif; }
+html[data-design="network"] .network-services button > i::before { content: '+'; width: 100%; height: 100%; background: none; -webkit-mask: none; mask: none; font: 700 51.2px/49px 'Lato', sans-serif; }
 html[data-design="network"] main > section:not([id="hero"]) { padding: 64px 15px; background: #fff; }
 html[data-design="network"] main > section:not([id="hero"]) > div { max-width: 1140px; }
 html[data-design="network"] .section-heading { text-align: center; }
@@ -83,7 +83,7 @@ html[data-design="network"] .reference-value-link { position: absolute; bottom: 
 html[data-design="network"] .reference-stat { border: 0; border-radius: 0; border-top: 2px solid #00f8ff; padding: 24px; }
 html[data-design="network"] .reference-stats .text-slate-400 { overflow-wrap: anywhere; }
 html[data-design="network"] .reference-skills > div { background: #32bef0; color: #fff; border: 0; border-radius: 0; }
-html[data-design="network"] .reference-skills h3 { color: #004c91; text-align: center; font-size: 21px; text-transform: uppercase; }
+html[data-design="network"] .reference-skills h3 { color: #004c91; text-align: center; font-size: 21px; font-weight: 700; text-transform: uppercase; }
 html[data-design="network"] .reference-skills :is(.text-slate-300, .text-slate-400) { color: #123d65; }
 html[data-design="network"] .reference-skills .bg-slate-800 { background: #fff; }
 html[data-design="network"] .reference-education > div { position: relative; margin-top: 16px; padding: 40px 24px 24px; border: 2px solid #3161a3; border-radius: 16px; text-align: center; }
@@ -178,7 +178,7 @@ html[data-design="contrast"] #mobileMenu .header__square:hover { color: #fff; ba
 
 /* The approved JA banner composition stays; only its background becomes video. */
 html[data-design="contrast"] #hero { isolation: isolate; min-height: max(740px, 100svh); background: #191919; }
-html[data-design="contrast"] .contrast-video-layer { display: block; position: absolute; inset: 0; z-index: -2; background: #191919 url('../img/references/coding-poster.jpg') center/cover no-repeat; }
+html[data-design="contrast"] .contrast-video-layer { display: block; position: absolute; inset: 0; z-index: -2; background: #191919 url('../img/optimized/coding-poster.webp') center/cover no-repeat; }
 html[data-design="contrast"] .contrast-video { width: 100%; height: 100%; object-fit: cover; }
 html[data-design="contrast"] #hero::before { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.62) 56%, rgba(0,0,0,.35)); }
 html[data-design="contrast"] #hero .hero-copy { max-width: 1920px; }

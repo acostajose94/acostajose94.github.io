@@ -1,5 +1,13 @@
 # Avance del rediseño del portafolio
 
+## Rendimiento — 28 de octubre de 2026
+
+- Eliminados los CDN de presentación en las páginas profesionales y reemplazados por recursos locales generados con `npm run build`. Tailwind deja de compilar en el navegador; las fuentes y los iconos conservan sus licencias.
+- Añadidas miniaturas WebP responsivas con carga diferida nativa y vistas previas completas bajo demanda. Se conservan los archivos originales como fuentes.
+- Corregidas las áreas táctiles del carrusel y las etiquetas del monograma y del selector.
+- Comparación móvil local con gzip: rendimiento **63 → 98**, LCP optimizado de **1,7–2,3 s** en dos ejecuciones, transferencia **7134 → 266 KiB**. Accesibilidad, prácticas recomendadas y SEO: **100**. No se publicó el sitio. Condiciones y límites: [PERFORMANCE.md](PERFORMANCE.md).
+- Cinco pruebas automatizadas del build y 40 combinaciones funcionales verificadas. Las dependencias CDN descritas en los apartados históricos siguientes ya no se utilizan en las páginas profesionales.
+
 ## Nombres neutros — 28 de octubre de 2026
 
 - Las variantes siguen llamándose Original, A, B y C. Sus identificadores internos son `original`, `network`, `contrast` y `campus`.

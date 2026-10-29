@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Roboto:wght@400;500;700&family=Source+Serif+4:wght@600;700&display=swap');
-
 .future-only, .campus-cover, .campus-utility, .campus-brand-copy,
 .campus-search-toggle--mobile, .campus-mobile-secondary { display: none; }
 .campus-slide[hidden], .campus-page-title[hidden] { display: none; }

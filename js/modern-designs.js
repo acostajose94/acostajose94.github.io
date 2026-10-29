@@ -86,6 +86,12 @@ function initializeCampusSlider() {
     slide.setAttribute('aria-roledescription', 'diapositiva');
     slide.setAttribute('aria-label', (i + 1) + ' de ' + slides.length);
   });
+  function prioritizeCover() {
+    if (document.documentElement.dataset.design !== 'campus') return;
+    var image = slides[index].querySelector('img');
+    if (image) { image.fetchPriority = 'high'; image.loading = 'eager'; }
+  }
+  window.addEventListener('designchange', prioritizeCover);
   // Give the banner a persistent page heading, including on slides 2 and 3.
   var heading = cover.querySelector('h1');
   function show(next) {
@@ -98,6 +104,7 @@ function initializeCampusSlider() {
     cover.querySelector('.campus-slider-status').textContent = (index + 1) + ' de ' + slides.length;
     // A screen-reader-only heading remains available when its slide is hidden.
     cover.querySelector('.campus-page-title').hidden = index === 0;
+    prioritizeCover();
   }
   var pageTitle = document.createElement('h1');
   pageTitle.className = 'campus-page-title sr-only';

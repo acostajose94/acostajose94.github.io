@@ -135,8 +135,11 @@ function initializeReferenceHeader() {
     var y = window.scrollY;
     var contrast = document.documentElement.dataset.design === 'contrast';
     var hero = document.getElementById('hero');
-    header.classList.toggle('reference-header-black', contrast && (!hero || y > hero.offsetHeight - header.offsetHeight));
-    header.classList.toggle('reference-header-hidden', contrast && !document.body.classList.contains('menu-is-open') && !header.querySelector(':focus-visible') && y > previousScroll + 2 && previousScroll > 120);
+    // Read geometry before invalidating styles with class changes.
+    var black = contrast && (!hero || y > hero.offsetHeight - header.offsetHeight);
+    var hidden = contrast && !document.body.classList.contains('menu-is-open') && !header.querySelector(':focus-visible') && y > previousScroll + 2 && previousScroll > 120;
+    header.classList.toggle('reference-header-black', black);
+    header.classList.toggle('reference-header-hidden', hidden);
     previousScroll = y;
   }
   window.addEventListener('scroll', function () {
@@ -323,6 +326,7 @@ function initializeReferenceVideo() {
     var saveData = navigator.connection && navigator.connection.saveData;
     var play = document.documentElement.dataset.design === 'contrast' && visible && !document.hidden && !reduced.matches && !saveData;
     if (play) {
+      if (!video.poster) video.poster = video.dataset.poster;
       if (!video.getAttribute('src')) video.src = video.dataset.src;
       video.muted = true;
       var result = video.play();
@@ -445,6 +449,7 @@ function initializeNetworkContact() {
   document.body.appendChild(widget);
   var box = widget.querySelector('.network-contact-box');
   var toggle = widget.querySelector('.network-contact-toggle');
+  toggle.setAttribute('aria-label', 'Haga sus consultas por WhatsApp');
   function close() { box.hidden = true; toggle.setAttribute('aria-expanded', 'false'); }
   toggle.addEventListener('click', function () { box.hidden = !box.hidden; toggle.setAttribute('aria-expanded', String(!box.hidden)); });
   widget.querySelector('.network-contact-close').addEventListener('click', function () { close(); toggle.focus(); });

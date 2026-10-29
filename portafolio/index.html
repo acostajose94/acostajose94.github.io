@@ -7,29 +7,10 @@
   <link rel="icon" href="/img/brand/favicon.svg?v=3" type="image/svg+xml" sizes="any">
   <title>Portafolio | Jose Ivan Acosta Figueroa</title>
   <meta name="description" content="Portafolio de proyectos de Jose Ivan Acosta Figueroa, Ingeniero de Sistemas.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/themes.css">
-  <link rel="stylesheet" href="../css/references.css">
-  <link rel="stylesheet" href="../css/modern-designs.css">
-  <script src="../js/theme-init.js"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { slate: { 950: '#020617' } },
-          animation: { 'gradient': 'gradient 3s ease infinite' },
-          keyframes: {
-            gradient: {
-              '0%, 100%': { backgroundPosition: '0% 50%' },
-              '50%': { backgroundPosition: '100% 50%' },
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <!-- site:head -->
+  <script>!function(){var o="original";try{"classic"===(o=localStorage.getItem("ja-design")||o)&&(o="original"),"atelier"===o&&(o="contrast")}catch(o){}o=["original","network","contrast","campus"].includes(o)?o:"original",document.documentElement.dataset.design=o;({original:["space-grotesk-latin-wght-normal.woff2","ibm-plex-mono-latin-400-normal.woff2"],network:["lato-latin-400-normal.woff2"],campus:["roboto-latin-wght-normal.woff2","source-serif-4-latin-wght-normal.woff2"]}[o]||[]).forEach(function(o){var n=document.createElement("link");n.rel="preload",n.as="font",n.type="font/woff2",n.crossOrigin="anonymous",n.href="/fonts/local/"+o,document.head.appendChild(n)})}();</script>
+  <link rel="stylesheet" href="../css/site.min.css?v=df97d2f89ac3">
+  <!-- /site:head -->
 </head>
 <body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white min-h-screen">
   <div class="fixed inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
@@ -38,7 +19,7 @@
   <nav class="fixed top-0 left-0 right-0 z-50" id="navbar">
     <div class="nav-frame max-w-7xl mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
-        <a href="/" class="site-logo w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 via-blue-400 to-purple-600 p-[3px] shadow-lg transition-all duration-300" aria-label="José Acosta — Inicio">
+        <a href="/" class="site-logo w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 via-blue-400 to-purple-600 p-[3px] shadow-lg transition-all duration-300" aria-label="JA — José Acosta — Inicio">
           <div class="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-xl font-bold text-white">JA</div>
         </a>
         <div class="desktop-nav hidden md:flex items-center gap-8">
@@ -75,10 +56,10 @@
 
         <h2 class="text-3xl font-semibold mb-8 text-purple-400"><i class="fas fa-laptop-code mr-3"></i>Proyectos Web</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105" onclick="openProjectModal('../img/web-development-project.png', 'Desarrollo web')">
+          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105" onclick="openProjectModal('../img/optimized/web-development-project-preview.webp', 'Desarrollo web')">
             <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
             <div class="relative">
-              <div class="aspect-video overflow-hidden"><img src="../img/web-development-project.png" alt="Desarrollo web" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
+              <div class="aspect-video overflow-hidden"><img src="../img/optimized/web-development-project-800.webp" srcset="../img/optimized/web-development-project-480.webp 480w, ../img/optimized/web-development-project-800.webp 800w, ../img/optimized/web-development-project-1200.webp 1200w" sizes="auto, (min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw" data-preview="../img/optimized/web-development-project-preview.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Desarrollo web" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
               <div class="p-6">
                 <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">Desarrollo web</h3>
                 <p class="text-slate-400 mb-4">Empresa de desarrollo de software en Lima, Peru. Soluciones tecnologicas personalizadas.</p>
@@ -86,10 +67,10 @@
               </div>
             </div>
           </div>
-          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105" onclick="openProjectModal('../img/corporate-project.png', 'Sitio corporativo')">
+          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105" onclick="openProjectModal('../img/optimized/corporate-project-preview.webp', 'Sitio corporativo')">
             <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
             <div class="relative">
-              <div class="aspect-video overflow-hidden"><img src="../img/corporate-project.png" alt="Sitio corporativo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
+              <div class="aspect-video overflow-hidden"><img src="../img/optimized/corporate-project-800.webp" srcset="../img/optimized/corporate-project-480.webp 480w, ../img/optimized/corporate-project-800.webp 800w, ../img/optimized/corporate-project-1200.webp 1200w" sizes="auto, (min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw" data-preview="../img/optimized/corporate-project-preview.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Sitio corporativo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
               <div class="p-6">
                 <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">Sitio corporativo</h3>
                 <p class="text-slate-400 mb-4">Sitio web para empresa de servicios tecnologicos y soluciones digitales.</p>
@@ -97,10 +78,10 @@
               </div>
             </div>
           </div>
-          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105" onclick="openProjectModal('../img/institutional-project.png', 'Portal académico')">
+          <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:scale-105" onclick="openProjectModal('../img/optimized/institutional-project-preview.webp', 'Portal académico')">
             <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
             <div class="relative">
-              <div class="aspect-video overflow-hidden"><img src="../img/institutional-project.png" alt="Portal académico — vista previa" width="1600" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"></div>
+              <div class="aspect-video overflow-hidden"><img src="../img/optimized/institutional-project-800.webp" srcset="../img/optimized/institutional-project-480.webp 480w, ../img/optimized/institutional-project-800.webp 800w, ../img/optimized/institutional-project-1200.webp 1200w" sizes="auto, (min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw" data-preview="../img/optimized/institutional-project-preview.webp" alt="Portal académico — vista previa" width="1200" height="675" loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"></div>
               <div class="p-6">
                 <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">Portal académico</h3>
                 <p class="text-slate-400 mb-4">Portal institucional con actividades académicas, novedades y publicaciones.</p>
@@ -174,8 +155,8 @@
     </div>
   </footer>
 
-  <script src="../js/reference-designs.js"></script>
-  <script src="../js/modern-designs.js"></script>
-  <script src="../js/index.js"></script>
+  <!-- site:scripts -->
+  <script defer src="../js/site.min.js?v=cdb253a7ab3a"></script>
+  <!-- /site:scripts -->
 </body>
 </html>

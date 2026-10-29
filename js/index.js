@@ -78,7 +78,11 @@ function initializeCarousels() {
         watchOverflow: true,
         watchSlidesProgress: true,
         speed: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 300,
-        pagination: { el: element.querySelector('.swiper-pagination'), clickable: true },
+        pagination: {
+          el: element.querySelector('.swiper-pagination'), clickable: true,
+          bulletElement: 'button',
+          renderBullet: function (index, className) { return '<button type="button" class="' + className + '" aria-label="Ir al grupo ' + (index + 1) + '"></button>'; },
+        },
         navigation: {
           nextEl: element.querySelector('.swiper-button-next'),
           prevEl: element.querySelector('.swiper-button-prev'),
@@ -138,7 +142,7 @@ function initializeDesignSwitch() {
   var switcher = document.createElement('button');
   switcher.type = 'button';
   switcher.className = 'design-switch';
-  switcher.innerHTML = '<span class="design-switch__icon" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span><span class="design-switch__copy"><span class="design-switch__eyebrow">DISEÑO</span><span class="design-switch__label" aria-live="polite"></span><span class="design-switch__next"></span></span>';
+  switcher.innerHTML = '<span class="design-switch__icon" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span><span class="design-switch__copy"><span class="design-switch__eyebrow">DISEÑO</span> <span class="design-switch__label" aria-live="polite"></span><span class="design-switch__next"></span></span>';
   document.body.appendChild(switcher);
   var themeMeta = document.querySelector('meta[name="theme-color"]');
   if (!themeMeta) {
@@ -154,7 +158,7 @@ function initializeDesignSwitch() {
     var next = designs[(index + 1) % designs.length];
     switcher.querySelector('.design-switch__label').textContent = designs[index].name;
     switcher.querySelector('.design-switch__next').textContent = 'Cambiar a ' + next.name;
-    switcher.setAttribute('aria-label', 'Diseño actual: ' + designs[index].name + '. Cambiar a ' + next.name);
+    switcher.setAttribute('aria-label', 'Diseño ' + designs[index].name + '. Cambiar a ' + next.name);
     switcher.title = switcher.getAttribute('aria-label');
     themeMeta.content = designs[index].color;
     window.dispatchEvent(new Event('designchange'));
@@ -184,11 +188,12 @@ function initializeDesignHint(switcher) {
     localStorage.setItem(storageKey, '1');
   } catch (error) { /* The hint still works when storage is unavailable. */ }
 
-  var hint = document.createElement('span');
+  var hint = document.createElement('div');
   hint.id = 'design-switch-hint';
   hint.className = 'design-switch__hint';
   hint.innerHTML = '<strong>¡Prueba otro diseño!</strong><span>Haz clic aquí para cambiar el aspecto de la web.</span>';
-  switcher.appendChild(hint);
+  // Keep explanatory text outside the button's visible label and accessible name.
+  document.body.appendChild(hint);
   switcher.setAttribute('aria-describedby', hint.id);
   switcher.classList.add('design-switch--hint');
 
@@ -234,10 +239,11 @@ function initializeProjectPreviews() {
     button.className = 'project-preview';
     button.innerHTML = '<i class="fas fa-expand" aria-hidden="true"></i> Ampliar captura';
     button.setAttribute('aria-label', 'Ampliar captura de ' + image.alt);
-    button.addEventListener('click', function () { openProjectModal(image.src, image.alt); });
+    var preview = image.dataset.preview || image.currentSrc || image.src;
+    button.addEventListener('click', function () { openProjectModal(preview, image.alt); });
     card.appendChild(button);
     image.style.cursor = 'zoom-in';
-    image.addEventListener('click', function () { openProjectModal(image.src, image.alt, button); });
+    image.addEventListener('click', function () { openProjectModal(preview, image.alt, button); });
   });
 }
 

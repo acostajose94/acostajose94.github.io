@@ -8,38 +8,10 @@
   <link rel="icon" href="/img/brand/favicon.svg?v=3" type="image/svg+xml" sizes="any">
   <title>José Iván Acosta Figueroa | Ingeniero de Sistemas y Analista TI</title>
   <meta name="description" content="Ingeniero de Sistemas titulado con más de 5 años de experiencia en proyectos de tecnología de la información">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/themes.css">
-  <link rel="stylesheet" href="css/references.css">
-  <link rel="stylesheet" href="css/modern-designs.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="js/theme-init.js"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            slate: {
-              950: '#020617',
-            }
-          },
-          animation: {
-            'gradient': 'gradient 3s ease infinite',
-            'pulse-slow': 'pulse 4s ease-in-out infinite',
-          },
-          keyframes: {
-            gradient: {
-              '0%, 100%': { backgroundPosition: '0% 50%' },
-              '50%': { backgroundPosition: '100% 50%' },
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <!-- site:head -->
+  <script>!function(){var o="original";try{"classic"===(o=localStorage.getItem("ja-design")||o)&&(o="original"),"atelier"===o&&(o="contrast")}catch(o){}o=["original","network","contrast","campus"].includes(o)?o:"original",document.documentElement.dataset.design=o;({original:["space-grotesk-latin-wght-normal.woff2","ibm-plex-mono-latin-400-normal.woff2"],network:["lato-latin-400-normal.woff2"],campus:["roboto-latin-wght-normal.woff2","source-serif-4-latin-wght-normal.woff2"]}[o]||[]).forEach(function(o){var n=document.createElement("link");n.rel="preload",n.as="font",n.type="font/woff2",n.crossOrigin="anonymous",n.href="/fonts/local/"+o,document.head.appendChild(n)})}();</script>
+  <link rel="stylesheet" href="css/site.min.css?v=df97d2f89ac3">
+  <!-- /site:head -->
 </head>
 <body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white min-h-screen">
   <a class="skip-to-content" href="#hero">Saltar al contenido</a>
@@ -51,7 +23,7 @@
   <nav class="fixed top-0 left-0 right-0 z-50" id="navbar">
     <div class="nav-frame max-w-7xl mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
-        <button class="site-logo w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 via-blue-400 to-purple-600 p-[3px] shadow-lg transition-all duration-300" id="nav-logo" onclick="scrollToSection('hero')" aria-label="José Acosta — Inicio">
+        <button class="site-logo w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 via-blue-400 to-purple-600 p-[3px] shadow-lg transition-all duration-300" id="nav-logo" onclick="scrollToSection('hero')" aria-label="JA — José Acosta — Inicio">
           <div class="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-xl font-bold text-white">
             JA
           </div>
@@ -108,11 +80,11 @@
         <div class="campus-slides">
           <article class="campus-slide" data-campus-slide>
             <div class="campus-slide__copy"><p class="campus-eyebrow">José Acosta / Ingeniero de Sistemas</p><h1>Tecnología que conecta ideas y soluciones.</h1><p>Desarrollo de software, gestión de datos y análisis de sistemas. Más de 5 años convirtiendo necesidades reales en soluciones digitales.</p><a class="campus-button" href="#about">Conoce mi perfil <span aria-hidden="true">›</span></a></div>
-            <figure><img src="img/references/coding-poster.jpg" alt="Entorno de trabajo de desarrollo de software" width="1280" height="720"></figure>
+            <figure><img src="img/optimized/coding-poster.webp" alt="Entorno de trabajo de desarrollo de software" width="1280" height="720" loading="lazy" decoding="async"></figure>
           </article>
           <article class="campus-slide" data-campus-slide hidden>
             <div class="campus-slide__copy"><p class="campus-eyebrow">Desarrollo web</p><h2>De una idea a una experiencia digital.</h2><p>Interfaces, aplicaciones y plataformas web. Explora una selección de proyectos de desarrollo y soluciones tecnológicas.</p><a class="campus-button" href="#projects">Explorar proyectos <span aria-hidden="true">›</span></a></div>
-            <figure class="campus-slide__screenshot"><img src="img/web-development-project.png" alt="Captura de un proyecto de desarrollo web del portafolio" width="1280" height="800" loading="lazy"></figure>
+            <figure class="campus-slide__screenshot"><img src="img/optimized/web-development-project-800.webp" srcset="img/optimized/web-development-project-480.webp 480w, img/optimized/web-development-project-800.webp 800w, img/optimized/web-development-project-1200.webp 1200w" sizes="(min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw" alt="Captura de un proyecto de desarrollo web del portafolio" width="1200" height="675" loading="lazy" decoding="async"></figure>
           </article>
           <article class="campus-slide" data-campus-slide hidden>
             <div class="campus-slide__copy"><p class="campus-eyebrow">Datos y sistemas</p><h2>Información que se convierte en decisiones.</h2><p>SQL Server, procesos ETL y reportes automatizados: experiencia en el análisis, la integración y la calidad de datos.</p><a class="campus-button" href="#experience">Ver experiencia <span aria-hidden="true">›</span></a></div>
@@ -123,7 +95,7 @@
       </div>
       <div class="network-canvas-layer" aria-hidden="true"><canvas class="network-canvas network-canvas--cache"></canvas><canvas class="network-canvas network-canvas--main"></canvas></div>
       <div class="contrast-video-layer" aria-hidden="true">
-        <video class="contrast-video" muted loop playsinline preload="none" poster="img/references/coding-poster.jpg" data-src="media/coding-banner.mp4"></video>
+        <video class="contrast-video" muted loop playsinline preload="none" data-poster="img/optimized/coding-poster.webp" data-src="media/coding-banner.mp4"></video>
       </div>
       <div class="contrast-art" aria-hidden="true"><strong>JA.</strong><span>CÓDIGO / DATOS / SOLUCIONES</span></div>
       <div class="absolute inset-0 overflow-hidden">
@@ -189,12 +161,12 @@
 
       <div class="network-services" aria-label="Áreas de especialidad">
         <button type="button" onclick="scrollToSection('projects')">
-          <img src="img/references/network-web.png" alt="" class="network-service-image" width="187" height="187">
+          <img src="img/references/network-web.png" alt="" class="network-service-image" width="187" height="187" loading="lazy" decoding="async">
           <svg viewBox="0 0 120 90" aria-hidden="true"><rect x="12" y="8" width="96" height="61" rx="7"/><path d="M43 82h34M60 69v13M26 21h68M33 31h25M33 40h16M33 52h44M84 35l9 8-9 9"/></svg>
           <span>Desarrollo de software</span><i class="fa-solid fa-plus" aria-hidden="true"></i>
         </button>
         <button type="button" onclick="scrollToSection('skills')">
-          <img src="img/references/network-apps.png" alt="" class="network-service-image" width="145" height="145">
+          <img src="img/references/network-apps.png" alt="" class="network-service-image" width="145" height="145" loading="lazy" decoding="async">
           <svg viewBox="0 0 120 90" aria-hidden="true"><rect x="9" y="10" width="102" height="67" rx="7"/><path d="M23 27h18M23 39h18M23 51h18M53 27h44M53 39h44M53 51h44M41 77v8M79 77v8M30 85h60"/><circle cx="27" cy="19" r="2"/><circle cx="35" cy="19" r="2"/></svg>
           <span>Datos y sistemas</span><i class="fa-solid fa-plus" aria-hidden="true"></i>
         </button>
@@ -505,11 +477,11 @@
         <div class="swiper projectSwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 h-full" onclick="openProjectModal('img/web-development-project.png', 'Desarrollo web')">
+              <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 h-full" onclick="openProjectModal('img/optimized/web-development-project-preview.webp', 'Desarrollo web')">
                 <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
                 <div class="relative">
                   <div class="aspect-video overflow-hidden">
-                    <img src="img/web-development-project.png" alt="Desarrollo web" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="img/optimized/web-development-project-800.webp" srcset="img/optimized/web-development-project-480.webp 480w, img/optimized/web-development-project-800.webp 800w, img/optimized/web-development-project-1200.webp 1200w" sizes="auto, (min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw" data-preview="img/optimized/web-development-project-preview.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Desarrollo web" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                   </div>
                   <div class="p-6">
                     <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">
@@ -525,11 +497,11 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 h-full" onclick="openProjectModal('img/corporate-project.png', 'Sitio corporativo')">
+              <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 h-full" onclick="openProjectModal('img/optimized/corporate-project-preview.webp', 'Sitio corporativo')">
                 <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
                 <div class="relative">
                   <div class="aspect-video overflow-hidden">
-                    <img src="img/corporate-project.png" alt="Sitio corporativo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="img/optimized/corporate-project-800.webp" srcset="img/optimized/corporate-project-480.webp 480w, img/optimized/corporate-project-800.webp 800w, img/optimized/corporate-project-1200.webp 1200w" sizes="auto, (min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw" data-preview="img/optimized/corporate-project-preview.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Sitio corporativo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                   </div>
                   <div class="p-6">
                     <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">
@@ -545,11 +517,11 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 h-full" onclick="openProjectModal('img/institutional-project.png', 'Portal académico')">
+              <div class="group relative bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 h-full" onclick="openProjectModal('img/optimized/institutional-project-preview.webp', 'Portal académico')">
                 <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-all duration-300"></div>
                 <div class="relative">
                   <div class="aspect-video overflow-hidden">
-                    <img src="img/institutional-project.png" alt="Portal académico — vista previa" width="1600" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                    <img src="img/optimized/institutional-project-800.webp" srcset="img/optimized/institutional-project-480.webp 480w, img/optimized/institutional-project-800.webp 800w, img/optimized/institutional-project-1200.webp 1200w" sizes="auto, (min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw" data-preview="img/optimized/institutional-project-preview.webp" alt="Portal académico — vista previa" width="1200" height="675" loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500">
                   </div>
                   <div class="p-6">
                     <h3 class="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">
@@ -968,9 +940,9 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/reference-designs.js"></script>
-  <script src="js/modern-designs.js"></script>
-  <script src="js/index.js"></script>
+  <!-- site:scripts -->
+  <script defer src="js/carousel.min.js?v=ed5b41adda95"></script>
+  <script defer src="js/site.min.js?v=cdb253a7ab3a"></script>
+  <!-- /site:scripts -->
 </body>
 </html>

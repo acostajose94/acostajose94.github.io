@@ -1,0 +1,27 @@
+{
+  "name": "jose-acosta-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@fontsource-variable/outfit": "5.3.0",
+    "@fontsource-variable/roboto": "5.3.0",
+    "@fontsource-variable/source-serif-4": "5.3.1",
+    "@fontsource-variable/space-grotesk": "5.3.0",
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "@fontsource/lato": "5.3.0",
+    "@fortawesome/fontawesome-free": "6.5.1",
+    "lightningcss": "1.33.0",
+    "postcss": "8.5.32",
+    "sharp": "0.34.5",
+    "swiper": "11.2.10",
+    "tailwindcss": "3.4.17",
+    "terser": "5.51.2"
+  }
+}
